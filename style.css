@@ -5,13 +5,16 @@
 }
 
 /* Estilos globais */
-body {
-    position: relative; /* Necessário para o pseudo-elemento funcionar */
+body, footer, header, nav, main {
     font-family: 'VCR OSD Mono', monospace;
-    background-color: #292929;
-    color: white;
     margin: 0;
     padding: 0;
+}
+
+body {
+    position: relative; /* Necessário para o pseudo-elemento funcionar */
+    background-color: #292929;
+    color: white;
     line-height: 1.6;
 }
 
@@ -25,8 +28,8 @@ body::before {
     background-image: url('https://images-ext-1.discordapp.net/external/q_4hzgsleyuoft_4FdLZpCa8DelRKff5-r3P-__nf-k/https/i.pinimg.com/originals/e2/85/66/e285661a023fb83c8d7f975980422c22.gif?width=1000&height=420');
     background-size: cover;
     background-position: center;
-    opacity: 0.2; /* Ajuste a opacidade aqui (0.0 = invisível, 1.0 = totalmente visível) */
-    z-index: -1; /* Coloca o fundo atrás de todo o conteúdo */
+    opacity: 0.2;
+    z-index: -1;
 }
 
 /* Cabeçalho */
@@ -43,26 +46,19 @@ header {
     overflow: hidden; /* Garante que a imagem não ultrapasse o header */
     position: relative; /* Necessário para o pseudo-elemento funcionar */
     padding: 20px; /* Adiciona espaçamento interno */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra na parte inferior */
     z-index: 2; /* Garante que o conteúdo do header fique acima do gradiente */
 }
 
 header::after {
     content: '';
     position: absolute;
-    bottom: -4rem; /* Abaixa a fumaça em 4rem */
+    bottom: -4rem; /* Posiciona a caixa preta 4rem abaixo do header */
     left: 0;
     width: 100%;
-    height: 200px; /* Aumenta a altura da fumaça */
-    background: linear-gradient(
-        to bottom,
-        rgba(0, 0, 0, 0.9), /* Gradiente mais denso no topo */
-        rgba(0, 0, 0, 0.6), /* Gradualmente mais claro */
-        rgba(0, 0, 0, 0.3), /* Ainda mais claro */
-        transparent /* Totalmente transparente no final */
-    );
-    z-index: 1; /* Garante que o gradiente fique acima do fundo */
-    pointer-events: none; /* Garante que o gradiente não interfira na interação com outros elementos */
+    height: 200px; /* Define a altura da caixa preta */
+    background-color: #000000; /* Cor preta sólida */
+    z-index: 1; /* Garante que a caixa fique acima do fundo */
+    pointer-events: none; /* Garante que a caixa não interfira na interação com outros elementos */
 }
 
 header h1 {
@@ -98,12 +94,11 @@ nav a {
     transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Adiciona transição para hover */
     font-family: 'VCR OSD Mono', monospace; /* Fonte personalizada */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra individual */
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.9); /* Aumenta a sombra ao passar o mouse */
 }
 
 nav a:hover {
     background-color: #9932cc; /* Altera a cor de fundo ao passar o mouse */
-    
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3); /* Aumenta a sombra ao passar o mouse */
 }
 
 /* Seções principais */
@@ -134,10 +129,10 @@ main section#intro img {
 }
 
 .gif-intro {
-    max-width: 80px; /* Define o tamanho máximo do vídeo */
-    height: auto; /* Mantém a proporção do vídeo */
-    border-radius: 10px; /* Opcional: bordas arredondadas */
-    display: block; /* Garante que o vídeo seja tratado como um bloco */
+    max-width: 80px;
+    height: auto;
+    border-radius: 10px;
+    display: block;
 }
 
 /* Seção de Doação */
@@ -166,9 +161,14 @@ main section#intro img {
     border-radius: 5px;
     text-decoration: none;
     transition: background-color 0.3s ease;
-    font-family: 'VCR OSD Mono', monospace; /* Fonte personalizada */
+    font-family: 'VCR OSD Mono', monospace;
 }
-.btn-linkedin{
+
+.btn-doacao:hover {
+    background-color: #1da14f;
+}
+
+.btn-linkedin {
     padding: 12px 25px;
     background-color: #0076b500;
     color: #fff;
@@ -177,11 +177,7 @@ main section#intro img {
     border-radius: 5px;
     text-decoration: none;
     transition: background-color 0.3s ease;
-    font-family: 'VCR OSD Mono', monospace; /* Fonte personalizada */
-}
-
-.btn-doacao:hover {
-    background-color: #1da14f;
+    font-family: 'VCR OSD Mono', monospace;
 }
 
 /* Rodapé */
@@ -230,6 +226,47 @@ footer p {
     margin: 0; /* Remove margens extras */
 }
 
+/* Estilo genérico para os botões do rodapé */
+.footer-btn {
+    display: inline-block; /* Garante que os botões fiquem alinhados horizontalmente */
+    padding: 12px 20px; /* Espaçamento interno */
+    background-color: #0076b5; /* Cor de fundo padrão (LinkedIn azul) */
+    color: #ffffff; /* Cor do texto */
+    font-weight: bold; /* Texto em negrito */
+    border: none; /* Remove bordas padrão */
+    border-radius: 5px; /* Bordas arredondadas */
+    text-decoration: none; /* Remove sublinhado */
+    font-family: 'VCR OSD Mono', monospace; /* Fonte personalizada */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transições suaves */
+    margin: 5px; /* Espaçamento entre os botões */
+    text-align: center; /* Centraliza o texto */
+}
+
+.footer-btn:hover {
+    transform: scale(1.05); /* Aumenta levemente o botão ao passar o mouse */
+}
+
+/* Estilos específicos para cada botão */
+.footer-btn.linkedin {
+    background-color: #0076b5; /* Azul do LinkedIn */
+}
+
+.footer-btn.whatsapp {
+    background-color: #25d366; /* Verde do WhatsApp */
+}
+
+.footer-btn.discord {
+    background-color: #5865F2; /* Azul do Discord */
+}
+
+.footer-btn.github {
+    background-color: #333333; /* Preto do GitHub */
+}
+
+.footer-btn.email {
+    background-color: #d44638; /* Vermelho do Gmail */
+}
+
 /* Responsividade */
 @media (max-width: 768px) {
     header h1 {
@@ -265,6 +302,8 @@ footer p {
     border-radius: 10px;
     line-height: 1.8;
     max-width: 800px;
+    position: relative; /* Garante que ele não interfira no pseudo-elemento do header */
+    z-index: 0; /* Certifique-se de que ele não está acima do header */
 }
 
 #sobre h2 {
@@ -285,20 +324,6 @@ footer p {
     list-style: disc;
 }
 
-.btn-doacao {
-    color: #fff;
-    background-color: #21c25e;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-}
-
-.btn-doacao:hover {
-    background-color: #1da14f;
-}
-
 /* Estilo para as caixas de conteúdo */
 .caixa-conteudo {
     background-color: #ffffff; /* Fundo branco */
@@ -315,37 +340,37 @@ footer p {
 
 /* Estilo para o título com animação */
 .titulo-animado {
-    position: relative; /* Necessário para posicionar o pseudo-elemento em relação ao texto */
+    position: relative;
     display: inline-block;
     font-size: 36px;
     color: #333;
-    transition: color 0.3s ease; /* Transição suave para a cor do texto */
-    z-index: 1; /* Garante que o texto fique acima da espada */
+    transition: color 0.3s ease;
+    z-index: 1;
 }
 
 .titulo-animado:hover {
-    color: #800080; /* Muda a cor do texto ao passar o mouse */
+    color: #800080;
 }
 
 .titulo-animado::before {
     content: '';
-    position: absolute; /* Ajusta a posição da espada em relação ao texto */
-    top: 170%; /* Centraliza verticalmente no meio do texto */
-    left: 110%; /* Centraliza horizontalmente no meio do texto */
-    width: 150%; /* Ajusta o tamanho da espada para ser maior que o texto */
-    height: 150%; /* Ajusta a altura da espada para ser maior que o texto */
-    background-image: url('img/sword-pixel-art.png'); /* Caminho da espada em pixel art */
-    background-size: contain; /* Ajusta o tamanho da espada para caber no espaço */
+    position: absolute;
+    top: 170%;
+    left: 110%;
+    width: 150%;
+    height: 150%;
+    background-image: url('img/sword-pixel-art.png');
+    background-size: contain;
     background-repeat: no-repeat;
-    opacity: 0; /* Esconde a espada inicialmente */
-    z-index: -1; /* Coloca a espada atrás do texto */
-    transform: translate(-50%, -50%) rotate(15deg); /* Centraliza e gira a espada 15 graus no sentido horário */
-    transition: opacity 0.3s ease, transform 0.3s ease; /* Transição suave para a animação */
+    opacity: 0;
+    z-index: -1;
+    transform: translate(-50%, -50%) rotate(15deg);
+    transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .titulo-animado:hover::before {
-    opacity: 1; /* Faz a espada aparecer ao passar o mouse */
-    transform: translate(-50%, -50%) rotate(15deg); /* Mantém a rotação de 15 graus */
+    opacity: 1;
+    transform: translate(-50%, -50%) rotate(15deg);
 }
 
 /* Adicionando a seção #intro */
