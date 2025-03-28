@@ -155,7 +155,11 @@ main section#intro img {
 
 /* Rodapé */
 footer {
+    text-shadow: #000000;
+    font-size: bold;
+    color: #fff;
     text-align: center;
+    text
     padding: 20px;
     background-color: #1a1a1a;
     border-top: 1px solid #444;
