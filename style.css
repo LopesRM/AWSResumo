@@ -5,13 +5,31 @@
 }
 
 /* Estilos globais */
+/* Estilos globais */
 body {
-    font-family: 'VCR OSD Mono', monospace; /* Alterado para usar apenas VCR OSD Mono */
-    background-color: #121212; /* Cor de fundo neutra */
+    font-family: 'VCR OSD Mono', monospace;
+    background-color: #292929;
     color: white;
     margin: 0;
     padding: 0;
     line-height: 1.6;
+    background-image: url('https://images-ext-1.discordapp.net/external/q_4hzgsleyuoft_4FdLZpCa8DelRKff5-r3P-__nf-k/https/i.pinimg.com/originals/e2/85/66/e285661a023fb83c8d7f975980422c22.gif?width=1000&height=420');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+/ Escurecendo o fundo /
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9); / Camada preta com 50% de opacidade /
+
 }
 
 /* Cabeçalho */
@@ -76,11 +94,12 @@ main section#intro img {
     justify-content: center;
     gap: 20px; /* Espaçamento entre o título e a GIF */
     text-align: center;
+    
 }
 
 .intro-container h2 {
     font-size: 36px;
-    color: #333;
+    color: #ececec;
 }
 
 .gif-intro {
@@ -110,6 +129,17 @@ main section#intro img {
 .btn-doacao {
     padding: 12px 25px;
     background-color: #21c25e;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    font-family: 'VCR OSD Mono', monospace; /* Fonte personalizada */
+}
+.btn-linkedin{
+    padding: 12px 25px;
+    background-color: #0076b500;
     color: #fff;
     font-weight: bold;
     border: none;
@@ -232,14 +262,14 @@ footer p {
 }
 
 .titulo-animado:hover {
-    color: #ff0000; /* Muda a cor do texto ao passar o mouse */
+    color: #800080; /* Muda a cor do texto ao passar o mouse */
 }
 
 .titulo-animado::before {
     content: '';
-    position: absolute;
-    top: 50%; /* Centraliza verticalmente no meio do texto */
-    left: 50%; /* Centraliza horizontalmente no meio do texto */
+    position: absolute; /* Ajusta a posição da espada em relação ao texto */
+    top: 170%; /* Centraliza verticalmente no meio do texto */
+    left: 110%; /* Centraliza horizontalmente no meio do texto */
     width: 150%; /* Ajusta o tamanho da espada para ser maior que o texto */
     height: 150%; /* Ajusta a altura da espada para ser maior que o texto */
     background-image: url('img/sword-pixel-art.png'); /* Caminho da espada em pixel art */
@@ -272,7 +302,7 @@ footer p {
 
 .intro-container h2 {
     font-size: 36px;
-    color: #333;
+    color: #ffffff;
 }
 
 .gif-intro {
