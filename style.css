@@ -52,13 +52,20 @@ header {
 header::after {
     content: '';
     position: absolute;
-    bottom: -4rem; /* Posiciona a caixa preta 4rem abaixo do header */
+    bottom: 0; /* Posiciona o gradiente exatamente na borda inferior do header */
     left: 0;
     width: 100%;
-    height: 200px; /* Define a altura da caixa preta */
-    background-color: #000000; /* Cor preta sólida */
-    z-index: 1; /* Garante que a caixa fique acima do fundo */
-    pointer-events: none; /* Garante que a caixa não interfira na interação com outros elementos */
+    height: 200px; /* Define a altura do gradiente */
+    background: linear-gradient(
+        to top, /* Gira o gradiente em 180 graus */
+        rgba(0, 0, 0, 1), /* Preto sólido na parte inferior */
+        rgba(0, 0, 0, 0.9), /* Quase totalmente escuro no meio */
+        rgba(0, 0, 0, 0.5), /* Gradualmente mais claro */
+        rgba(0, 0, 0, 0.1), /* Muito claro próximo ao topo */
+        transparent /* Totalmente transparente no topo */
+    );
+    z-index: 1; /* Garante que o gradiente fique acima do fundo */
+    pointer-events: none; /* Garante que o gradiente não interfira na interação com outros elementos */
 }
 
 header h1 {
@@ -102,6 +109,30 @@ nav a:hover {
 }
 
 /* Seções principais */
+main {
+    position: relative; /* Necessário para o pseudo-elemento funcionar */
+    z-index: 1; /* Garante que o conteúdo do main fique acima do gradiente */
+}
+
+main::before {
+    content: '';
+    position: absolute;
+    top: 0; /* Posiciona o gradiente no topo da main */
+    left: 0;
+    width: 100%;
+    height: 200px; /* Define a altura do gradiente */
+    background: linear-gradient(
+        to bottom, /* Gradiente de cima para baixo */
+        rgba(0, 0, 0, 1), /* Preto sólido no topo */
+        rgba(0, 0, 0, 0.9), /* Quase totalmente escuro no meio */
+        rgba(0, 0, 0, 0.5), /* Gradualmente mais claro */
+        rgba(0, 0, 0, 0.1), /* Muito claro próximo ao final */
+        transparent /* Totalmente transparente no final */
+    );
+    z-index: 0; /* Garante que o gradiente fique acima do background, mas abaixo de outros itens */
+    pointer-events: none; /* Garante que o gradiente não interfira na interação com outros elementos */
+}
+
 main section {
     padding: 40px 20px;
     text-align: center;
@@ -130,6 +161,7 @@ main section#intro img {
 
 .gif-intro {
     max-width: 80px;
+    z-index: 9999;
     height: auto;
     border-radius: 10px;
     display: block;
@@ -338,6 +370,11 @@ footer p {
     text-align: left; /* Alinhamento do texto */
 }
 
+.caixa-conteudo p {
+    font-size: 18px; /* Aumenta o tamanho da fonte */
+    line-height: 1.8; /* Mantém uma boa altura de linha para legibilidade */
+}
+
 /* Estilo para o título com animação */
 .titulo-animado {
     position: relative;
@@ -397,4 +434,24 @@ footer p {
     height: auto;
     border-radius: 10px;
     display: block;
+}
+
+/* Gradiente para a seção main */
+main::before {
+    content: '';
+    position: absolute;
+    top: 0; /* Posiciona o gradiente no topo da main */
+    left: 0;
+    width: 100%;
+    height: 200px; /* Define a altura do gradiente */
+    background: linear-gradient(
+        to bottom, /* Gradiente de cima para baixo */
+        rgba(0, 0, 0, 1), /* Preto sólido no topo */
+        rgba(0, 0, 0, 0.9), /* Quase totalmente escuro no meio */
+        rgba(0, 0, 0, 0.5), /* Gradualmente mais claro */
+        rgba(0, 0, 0, 0.1), /* Muito claro próximo ao final */
+        transparent /* Totalmente transparente no final */
+    );
+    z-index: 0; /* Garante que o gradiente fique acima do background, mas abaixo de outros itens */
+    pointer-events: none; /* Garante que o gradiente não interfira na interação com outros elementos */
 }

@@ -9,33 +9,10 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=VCR+OSD+Mono&display=swap" rel="stylesheet">
     <script src="script.js" defer></script>
-    <style>
-        header::after {
-            content: '';
-            position: absolute;
-            bottom: 0; /* Posiciona o gradiente exatamente na borda inferior do header */
-            left: 0;
-            width: 100%;
-            height: 70px; /* Define a altura do gradiente */
-            background: linear-gradient(
-                to bottom,
-                rgba(0, 0, 0, 0.9), /* Gradiente mais denso no topo */
-                rgba(0, 0, 0, 0.6), /* Gradualmente mais claro */
-                rgba(0, 0, 0, 0.3), /* Ainda mais claro */
-                transparent /* Totalmente transparente no final */
-            );
-            z-index: 1; /* Garante que o gradiente fique acima do fundo */
-            pointer-events: none; /* Garante que o gradiente não interfira na interação com outros elementos */
-        }
-
-        header {
-            position: relative; /* Necessário para o pseudo-elemento funcionar */
-            z-index: 2; /* Garante que o conteúdo do header fique acima do gradiente */
-        }
-    </style>
 </head>
 <body>
     <header>
+        <h1>AWS Adventure Foundation</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -46,7 +23,7 @@
         </nav>
     </header>
     
-    <main >
+    <main>
         <section id="intro">
             <div class="intro-container">
                 <h2 class="titulo-animado">Bem-vindo à Aventura AWS!</h2>
