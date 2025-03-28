@@ -1,0 +1,55 @@
+/* CSS Reset Completo */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%; /* Define tamanho base da fonte */
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%; /* Evita ajustes de tamanho de texto no Safari */
+}
+
+body {
+  height: 100%;
+  font-family: sans-serif; /* Substitua pelo padrão que preferir */
+}
+
+img, video, audio {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button, input, textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  border: none; /* Remove bordas padrão */
+  background: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit; /* Remove o estilo padrão de links */
+}
+
+ul, ol {
+  list-style: none; /* Remove bullets de listas */
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+code, pre {
+  font-family: monospace;
+}
+
+iframe {
+  border: 0; /* Remove borda padrão de iframes */
+}
