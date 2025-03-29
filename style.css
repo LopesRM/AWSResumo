@@ -41,14 +41,14 @@ header {
     justify-content: center;
     padding: 20px;
     text-align: center;
-    background-image: url('img/background.png'); /* Caminho da imagem do header */
-    background-size: cover; /* Faz a imagem cobrir o tamanho do header */
-    background-repeat: no-repeat; /* Evita que a imagem se repita */
-    background-position: center; /* Centraliza a imagem no header */
-    height: 400px; /* Define a altura fixa do header */
-    overflow: hidden; /* Garante que a imagem não ultrapasse o header */
-    position: relative; /* Necessário para o pseudo-elemento funcionar */
-    z-index: 2; /* Garante que o conteúdo do header fique acima do gradiente */
+    background-image: url('img/background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
 }
 
 header::after {
@@ -74,20 +74,19 @@ header h1 {
     font-size: 48px;
     color: white;
     text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
-    font-family: 'VCR OSD Mono', monospace; /* Fonte personalizada para o título */
-    margin-bottom: 20px; /* Adiciona espaço entre o título e o menu */
-    text-align: center; /* Centraliza o texto */
+    margin-bottom: 20px;
+    text-align: center;
 }
 
 /* Navegação */
 nav ul {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap; /* Permite que os itens quebrem linha em telas menores */
+    flex-wrap: wrap;
     list-style: none;
     padding: 0;
     margin: 10px 0;
-    gap: 15px; /* Espaçamento entre os itens */
+    gap: 15px;
 }
 
 nav ul li {
@@ -98,23 +97,22 @@ nav a {
     text-decoration: none;
     color: white;
     padding: 10px 20px;
-    background-color: #800080; /* Cor roxa */
+    background-color: #800080;
     border-radius: 5px;
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
-    font-family: 'VCR OSD Mono', monospace; /* Fonte personalizada */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.9); /* Adiciona uma sombra suave */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.9);
 }
 
 nav a:hover {
-    background-color: #9932cc; /* Roxo mais claro ao passar o mouse */
-    box-shadow: 0 6px 8px rgba(255, 255, 255, 0.9); /* Aumenta a sombra ao passar o mouse */
+    background-color: #9932cc;
+    box-shadow: 0 6px 8px rgba(255, 255, 255, 0.9);
 }
 
 /* Seções principais */
 main {
     padding: 20px;
-    position: relative; /* Necessário para o pseudo-elemento funcionar */
-    z-index: 1; /* Garante que o conteúdo do main fique acima do gradiente */
+    position: relative;
+    z-index: 1;
 }
 
 main::before {
@@ -251,7 +249,7 @@ footer {
     color: #ffffff;
     padding: 20px;
     text-align: center;
-    position: relative; /* Necessário para o pseudo-elemento funcionar */
+    position: relative;
 }
 
 .footer-container {
@@ -271,8 +269,7 @@ footer {
 footer p {
     color: #ccc;
     font-size: 14px;
-    font-family: 'VCR OSD Mono', monospace; /* Fonte personalizada */
-    margin: 0; /* Remove margens extras */
+    margin: 0;
 }
 
 /* Estilo genérico para os botões do rodapé */
@@ -507,11 +504,6 @@ video {
     border: 1px solid #ddd;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* Estilo para ocultar seções */
-.hidden {
-    display: none; /* Oculta as seções que não estão sendo exibidas */
 }
 
 /* Estilo para serviços */

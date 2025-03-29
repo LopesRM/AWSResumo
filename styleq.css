@@ -20,6 +20,10 @@
     display: block; /* Exibe a seção ativa */
 }
 
+main .hidden {
+    display: none;
+}
+
 /* Estilo para os serviços */
 .service {
     text-align: center;
@@ -64,4 +68,11 @@
 
 .navigation-buttons button:hover {
     background-color: #9932cc;
+}
+
+body {
+    font-family: 'VCR OSD Mono', monospace;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
 }
