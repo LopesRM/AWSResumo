@@ -36,45 +36,422 @@
         </div>
 
         <!-- Seções para interação com o script -->
-        <section id="intro" class="hidden">
+        <section id="cloud-computing" class="hidden">
             <div class="service">
-                <h2>Bem-vindo à AWS Adventure</h2>
-                <p>Explore os serviços da AWS e aprenda de forma interativa e divertida!</p>
+                <h2>Cloud Computing</h2>
+                <p>Cloud computing é a entrega de serviços de computação pela internet, incluindo armazenamento, processamento e redes, sem a necessidade de gerenciar infraestrutura física.</p>
             </div>
         </section>
 
-        <section id="ec2" class="hidden">
+        <section id="what-is-aws" class="hidden">
             <div class="service">
-                <h2>EC2 (Elastic Compute Cloud)</h2>
-                <p>O Amazon EC2 fornece capacidade de computação escalável na nuvem. Ele permite criar e gerenciar instâncias de máquinas virtuais para executar suas aplicações.</p>
+                <h2>O que é AWS</h2>
+                <p>A AWS (Amazon Web Services) é uma plataforma de serviços de computação em nuvem que oferece soluções escaláveis e flexíveis para empresas e desenvolvedores.</p>
             </div>
         </section>
 
-        <section id="s3" class="hidden">
+        <section id="aws-pricing" class="hidden">
             <div class="service">
-                <h2>S3 (Simple Storage Service)</h2>
-                <p>O Amazon S3 é um serviço de armazenamento de objetos seguro e escalável. Ideal para backups, arquivamento e análise de big data.</p>
+                <h2>Preços da AWS</h2>
+                <p>A AWS oferece um modelo de preços baseado no uso, permitindo que você pague apenas pelos serviços que utiliza, sem custos iniciais ou compromissos de longo prazo.</p>
             </div>
         </section>
 
-        <section id="rds" class="hidden">
+        <section id="aws-infrastructure-overview" class="hidden">
             <div class="service">
-                <h2>RDS (Relational Database Service)</h2>
-                <p>O Amazon RDS é um serviço gerenciado para bancos de dados relacionais como MySQL, PostgreSQL e SQL Server.</p>
+                <h2>Visão Geral da Infraestrutura AWS</h2>
+                <p>A infraestrutura global da AWS é composta por regiões, zonas de disponibilidade e pontos de presença para garantir alta disponibilidade e baixa latência.</p>
             </div>
         </section>
 
-        <section id="lambda" class="hidden">
+        <section id="shared-responsibility-model" class="hidden">
+            <div class="service">
+                <h2>Modelo de Responsabilidade Compartilhada</h2>
+                <p>O modelo de responsabilidade compartilhada da AWS define as responsabilidades do cliente e da AWS em relação à segurança e conformidade.</p>
+            </div>
+        </section>
+
+        <section id="reliability-high-availability" class="hidden">
+            <div class="service">
+                <h2>Confiabilidade e Alta Disponibilidade</h2>
+                <p>A AWS oferece serviços projetados para garantir alta disponibilidade e confiabilidade, como balanceamento de carga e replicação de dados.</p>
+            </div>
+        </section>
+
+        <section id="data-center-to-cloud" class="hidden">
+            <div class="service">
+                <h2>Transição de um Data Center para a Nuvem</h2>
+                <p>A transição de um data center para a nuvem envolve a migração de aplicativos e dados para aproveitar os benefícios da escalabilidade e flexibilidade da AWS.</p>
+            </div>
+        </section>
+
+        <section id="apis-and-rest" class="hidden">
+            <div class="service">
+                <h2>APIs e REST</h2>
+                <p>APIs REST são interfaces que permitem a comunicação entre sistemas usando métodos HTTP, amplamente utilizadas para integrar serviços na AWS.</p>
+            </div>
+        </section>
+
+        <section id="static-site-s3" class="hidden">
+            <div class="service">
+                <h2>Hospedar um Site Estático no Amazon S3</h2>
+                <p>O Amazon S3 permite hospedar sites estáticos de forma simples e escalável, com suporte para HTML, CSS e JavaScript.</p>
+            </div>
+        </section>
+
+        <section id="cloud-storage-overview" class="hidden">
+            <div class="service">
+                <h2>Visão Geral do Armazenamento na Nuvem</h2>
+                <p>O armazenamento na nuvem oferece soluções flexíveis e escaláveis para armazenar e acessar dados de qualquer lugar.</p>
+            </div>
+        </section>
+
+        <section id="amazon-ebs" class="hidden">
+            <div class="service">
+                <h2>Amazon Elastic Block Store</h2>
+                <p>O Amazon EBS fornece volumes de armazenamento em bloco persistentes para uso com instâncias do Amazon EC2.</p>
+            </div>
+        </section>
+
+        <section id="ec2-instance-storage" class="hidden">
+            <div class="service">
+                <h2>Armazenamento de Instância do EC2</h2>
+                <p>O armazenamento de instância do EC2 oferece armazenamento temporário diretamente conectado à instância, ideal para dados transitórios.</p>
+            </div>
+        </section>
+
+        <section id="amazon-efs" class="hidden">
+            <div class="service">
+                <h2>Amazon Elastic File System</h2>
+                <p>O Amazon EFS é um sistema de arquivos escalável e elástico para uso com instâncias do Amazon EC2.</p>
+            </div>
+        </section>
+
+        <section id="deep-dive-s3-cli" class="hidden">
+            <div class="service">
+                <h2>Aprofundamento Amazon S3 e AWS CLI</h2>
+                <p>Explore os recursos avançados do Amazon S3 e aprenda a usar a AWS CLI para gerenciar seus serviços de forma eficiente.</p>
+            </div>
+        </section>
+
+        <section id="amazon-s3-glacier" class="hidden">
+            <div class="service">
+                <h2>Amazon S3 Glacier</h2>
+                <p>O Amazon S3 Glacier é um serviço de armazenamento de baixo custo para arquivamento de dados e backup de longo prazo.</p>
+            </div>
+        </section>
+
+        <section id="aws-storage-gateway" class="hidden">
+            <div class="service">
+                <h2>AWS Storage Gateway</h2>
+                <p>O AWS Storage Gateway conecta ambientes locais à nuvem, permitindo armazenamento híbrido e backup eficiente.</p>
+            </div>
+        </section>
+
+        <section id="amazon-vpc" class="hidden">
+            <div class="service">
+                <h2>Amazon VPC</h2>
+                <p>O Amazon VPC permite criar redes virtuais isoladas logicamente na nuvem AWS, garantindo segurança e controle.</p>
+            </div>
+        </section>
+
+        <section id="security-groups" class="hidden">
+            <div class="service">
+                <h2>Security Groups</h2>
+                <p>Os Security Groups atuam como firewalls virtuais para controlar o tráfego de entrada e saída de instâncias do EC2.</p>
+            </div>
+        </section>
+
+        <section id="amazon-route-53" class="hidden">
+            <div class="service">
+                <h2>Amazon Route 53</h2>
+                <p>O Amazon Route 53 é um serviço de DNS escalável e altamente disponível para gerenciar nomes de domínio.</p>
+            </div>
+        </section>
+
+        <section id="amazon-cloudfront" class="hidden">
+            <div class="service">
+                <h2>Amazon CloudFront</h2>
+                <p>O Amazon CloudFront é uma rede de distribuição de conteúdo (CDN) que entrega dados com baixa latência e alta velocidade.</p>
+            </div>
+        </section>
+
+        <section id="amazon-ec2" class="hidden">
+            <div class="service">
+                <h2>Amazon EC2</h2>
+                <p>O Amazon EC2 fornece capacidade de computação escalável na nuvem, permitindo criar e gerenciar instâncias de máquinas virtuais.</p>
+            </div>
+        </section>
+
+        <section id="aws-lambda" class="hidden">
             <div class="service">
                 <h2>AWS Lambda</h2>
-                <p>O AWS Lambda permite executar código sem a necessidade de gerenciar servidores. Ideal para aplicações serverless.</p>
+                <p>O AWS Lambda permite executar código sem a necessidade de gerenciar servidores, ideal para aplicações serverless.</p>
             </div>
         </section>
 
-        <section id="cloudfront" class="hidden">
+        <section id="aws-iam" class="hidden">
             <div class="service">
-                <h2>CloudFront</h2>
-                <p>O Amazon CloudFront é uma rede de distribuição de conteúdo (CDN) que entrega dados com baixa latência e alta velocidade.</p>
+                <h2>AWS IAM</h2>
+                <p>O AWS Identity and Access Management (IAM) permite gerenciar o acesso seguro aos recursos da AWS.</p>
+            </div>
+        </section>
+
+        <section id="aws-cloudformation" class="hidden">
+            <div class="service">
+                <h2>AWS CloudFormation</h2>
+                <p>O AWS CloudFormation permite criar e gerenciar recursos da AWS usando modelos de infraestrutura como código.</p>
+            </div>
+        </section>
+
+        <section id="aws-cloudwatch" class="hidden">
+            <div class="service">
+                <h2>Amazon CloudWatch</h2>
+                <p>O Amazon CloudWatch monitora recursos da AWS e aplicações, fornecendo métricas e logs em tempo real.</p>
+            </div>
+        </section>
+
+        <section id="aws-organizations" class="hidden">
+            <div class="service">
+                <h2>AWS Organizations</h2>
+                <p>O AWS Organizations permite gerenciar várias contas da AWS de forma centralizada, com políticas e controle de custos.</p>
+            </div>
+        </section>
+
+        <section id="aws-well-architected-framework" class="hidden">
+            <div class="service">
+                <h2>AWS Well-Architected Framework</h2>
+                <p>O AWS Well-Architected Framework fornece boas práticas para projetar e operar sistemas confiáveis, seguros e eficientes na nuvem.</p>
+            </div>
+        </section>
+
+        <section id="aws-cli" class="hidden">
+            <div class="service">
+                <h2>AWS Command Line Interface</h2>
+                <p>A AWS CLI permite gerenciar serviços da AWS diretamente do terminal, automatizando tarefas administrativas.</p>
+            </div>
+        </section>
+
+        <section id="aws-systems-manager" class="hidden">
+            <div class="service">
+                <h2>AWS Systems Manager</h2>
+                <p>O AWS Systems Manager fornece uma interface unificada para gerenciar recursos da AWS e ambientes locais.</p>
+            </div>
+        </section>
+
+        <section id="aws-step-functions" class="hidden">
+            <div class="service">
+                <h2>AWS Step Functions</h2>
+                <p>O AWS Step Functions permite orquestrar fluxos de trabalho distribuídos usando estados e transições.</p>
+            </div>
+        </section>
+
+        <section id="aws-cloudtrail" class="hidden">
+            <div class="service">
+                <h2>AWS CloudTrail</h2>
+                <p>O AWS CloudTrail registra atividades de API e eventos de gerenciamento para auditoria e conformidade.</p>
+            </div>
+        </section>
+
+        <section id="aws-config" class="hidden">
+            <div class="service">
+                <h2>AWS Config</h2>
+                <p>O AWS Config monitora e registra alterações na configuração de recursos da AWS para auditoria e conformidade.</p>
+            </div>
+        </section>
+
+        <section id="aws-trusted-advisor" class="hidden">
+            <div class="service">
+                <h2>AWS Trusted Advisor</h2>
+                <p>O AWS Trusted Advisor fornece recomendações para otimizar custos, desempenho e segurança na AWS.</p>
+            </div>
+        </section>
+
+        <section id="aws-athena" class="hidden">
+            <div class="service">
+                <h2>Amazon Athena</h2>
+                <p>O Amazon Athena permite consultar dados diretamente no Amazon S3 usando SQL, sem necessidade de infraestrutura.</p>
+            </div>
+        </section>
+
+        <section id="aws-tags" class="hidden">
+            <div class="service">
+                <h2>Tags na AWS</h2>
+                <p>As tags permitem organizar e gerenciar recursos da AWS com metadados personalizados para controle de custos e governança.</p>
+            </div>
+        </section>
+        <section id="vpc-deep-dive" class="hidden">
+            <div class="service">
+                <h2>Aprofundamento em Amazon Virtual Private Cloud</h2>
+                <p>Explore os conceitos avançados do Amazon VPC, incluindo sub-redes, roteamento e segurança.</p>
+            </div>
+        </section>
+        
+        <section id="vpc-connectivity-options" class="hidden">
+            <div class="service">
+                <h2>Opções de Conectividade da Amazon VPC</h2>
+                <p>Descubra as opções de conectividade disponíveis no Amazon VPC, como VPNs e Direct Connect.</p>
+            </div>
+        </section>
+        
+        <section id="network-security-troubleshooting" class="hidden">
+            <div class="service">
+                <h2>Segurança e Solução de Problemas da Rede</h2>
+                <p>Aprenda a implementar segurança de rede e solucionar problemas em ambientes AWS.</p>
+            </div>
+        </section>
+        
+        <section id="aws-computing-overview" class="hidden">
+            <div class="service">
+                <h2>Computação na AWS</h2>
+                <p>Visão geral dos serviços de computação na AWS, incluindo EC2, Lambda e Elastic Beanstalk.</p>
+            </div>
+        </section>
+        
+        <section id="manage-ec2-instances" class="hidden">
+            <div class="service">
+                <h2>Gerenciar Instância da AWS</h2>
+                <p>Aprenda a gerenciar instâncias do EC2, incluindo inicialização, monitoramento e escalabilidade.</p>
+            </div>
+        </section>
+        
+        <section id="elastic-beanstalk" class="hidden">
+            <div class="service">
+                <h2>AWS Elastic Beanstalk</h2>
+                <p>O AWS Elastic Beanstalk facilita a implantação e o gerenciamento de aplicativos na nuvem.</p>
+            </div>
+        </section>
+        
+        <section id="computing-overview" class="hidden">
+            <div class="service">
+                <h2>Visão Geral da Computação</h2>
+                <p>Descubra os conceitos fundamentais de computação na AWS e como eles se aplicam aos serviços.</p>
+            </div>
+        </section>
+        
+        <section id="elastic-load-balancing" class="hidden">
+            <div class="service">
+                <h2>Elastic Load Balancing</h2>
+                <p>O Elastic Load Balancing distribui automaticamente o tráfego de entrada entre várias instâncias.</p>
+            </div>
+        </section>
+        
+        <section id="elb-listeners" class="hidden">
+            <div class="service">
+                <h2>Balanceadores de Carga e Ouvintes do ELB</h2>
+                <p>Entenda como configurar balanceadores de carga e ouvintes no Elastic Load Balancing.</p>
+            </div>
+        </section>
+        
+        <section id="ec2-auto-scaling" class="hidden">
+            <div class="service">
+                <h2>Amazon EC2 Auto Scaling</h2>
+                <p>O Amazon EC2 Auto Scaling ajusta automaticamente a capacidade para manter o desempenho ideal.</p>
+            </div>
+        </section>
+        
+        <section id="containers-on-aws" class="hidden">
+            <div class="service">
+                <h2>Containers na AWS</h2>
+                <p>Descubra como usar containers na AWS com serviços como ECS, EKS e Fargate.</p>
+            </div>
+        </section>
+        
+        <section id="ami-strategy" class="hidden">
+            <div class="service">
+                <h2>Estratégia de Construção da AMI</h2>
+                <p>Aprenda a criar e gerenciar imagens de máquina da Amazon (AMIs) para suas instâncias EC2.</p>
+            </div>
+        </section>
+        
+        <section id="ec2-launch-templates" class="hidden">
+            <div class="service">
+                <h2>Modelos de Inicialização EC2</h2>
+                <p>Os modelos de inicialização EC2 simplificam a configuração e o gerenciamento de instâncias.</p>
+            </div>
+        </section>
+        
+        <section id="security-best-practices" class="hidden">
+            <div class="service">
+                <h2>Práticas Recomendadas de Segurança</h2>
+                <p>Descubra as melhores práticas para proteger seus recursos na AWS.</p>
+            </div>
+        </section>
+        
+        <section id="security-compliance-program" class="hidden">
+            <div class="service">
+                <h2>Programa de Conformidade de Segurança da AWS</h2>
+                <p>Entenda como a AWS ajuda a atender aos requisitos de conformidade e segurança.</p>
+            </div>
+        </section>
+        
+        <section id="security-resources" class="hidden">
+            <div class="service">
+                <h2>Recursos de Segurança da AWS</h2>
+                <p>Explore os recursos de segurança integrados da AWS para proteger seus dados e aplicativos.</p>
+            </div>
+        </section>
+        
+        <section id="iam-analysis" class="hidden">
+            <div class="service">
+                <h2>Análise do AWS Identity and Access Management (IAM)</h2>
+                <p>Aprenda a usar o IAM para gerenciar usuários, permissões e políticas de acesso na AWS.</p>
+            </div>
+        </section>
+        
+        <section id="admin-tools" class="hidden">
+            <div class="service">
+                <h2>Ferramentas de Administração e Desenvolvimento</h2>
+                <p>Descubra as ferramentas disponíveis para gerenciar e desenvolver na AWS, como AWS CLI e SDKs.</p>
+            </div>
+        </section>
+        
+        <section id="api-gateway" class="hidden">
+            <div class="service">
+                <h2>Amazon API Gateway</h2>
+                <p>O Amazon API Gateway permite criar, publicar e gerenciar APIs RESTful e WebSocket.</p>
+            </div>
+        </section>
+        
+        <section id="cloudwatch-logs-events" class="hidden">
+            <div class="service">
+                <h2>Amazon CloudWatch Logs e Eventos</h2>
+                <p>Monitore e analise logs e eventos em tempo real com o Amazon CloudWatch.</p>
+            </div>
+        </section>
+        
+        <section id="cost-management" class="hidden">
+            <div class="service">
+                <h2>Gerenciamento de Custos e Práticas Recomendadas</h2>
+                <p>Aprenda a gerenciar custos na AWS e implementar práticas recomendadas para otimização.</p>
+            </div>
+        </section>
+        
+        <section id="json-yaml-intro" class="hidden">
+            <div class="service">
+                <h2>Introdução ao JSON e ao YAML</h2>
+                <p>Aprenda os fundamentos do JSON e YAML, usados para configurar recursos na AWS.</p>
+            </div>
+        </section>
+        
+        <section id="cloudformation-troubleshooting" class="hidden">
+            <div class="service">
+                <h2>Solução de Problemas do AWS CloudFormation</h2>
+                <p>Descubra como solucionar problemas comuns ao usar o AWS CloudFormation.</p>
+            </div>
+        </section>
+        
+        <section id="aws-caf" class="hidden">
+            <div class="service">
+                <h2>AWS Cloud Adoption Framework (AWS CAF)</h2>
+                <p>O AWS CAF ajuda organizações a planejar e implementar a adoção da nuvem de forma eficiente.</p>
+            </div>
+        </section>
+        
+        <section id="well-architected-design" class="hidden">
+            <div class="service">
+                <h2>Design do Well-Architected</h2>
+                <p>Aprenda a projetar sistemas seguindo os princípios do AWS Well-Architected Framework.</p>
             </div>
         </section>
     </main>
