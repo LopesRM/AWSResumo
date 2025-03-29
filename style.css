@@ -20,16 +20,17 @@ body, footer, header, nav, main {
 
 body::before {
     content: '';
-    position: absolute;
+    position: fixed; /* Garante que a imagem fique fixa enquanto o usuário rola a página */
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     background-image: url('https://images-ext-1.discordapp.net/external/q_4hzgsleyuoft_4FdLZpCa8DelRKff5-r3P-__nf-k/https/i.pinimg.com/originals/e2/85/66/e285661a023fb83c8d7f975980422c22.gif?width=1000&height=420');
-    background-size: cover;
-    background-position: center;
-    opacity: 0.2;
-    z-index: -1;
+    background-size: cover; /* Faz a imagem cobrir toda a área disponível */
+    background-position: center; /* Centraliza a imagem */
+    background-attachment: fixed; /* Faz a imagem permanecer fixa enquanto o conteúdo rola */
+    opacity: 0.2; /* Define a transparência */
+    z-index: -1; /* Garante que a imagem fique atrás de todo o conteúdo */
 }
 
 /* Cabeçalho */
