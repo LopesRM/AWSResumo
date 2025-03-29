@@ -108,4 +108,44 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Exibe a primeira seção ao carregar a página
     showSection(currentIndex);
+
+    const musicBtn = document.getElementById("music-btn");
+    const musicIcon = document.getElementById("music-icon");
+    const backgroundMusic = document.getElementById("background-music");
+
+    if (!musicBtn || !musicIcon || !backgroundMusic) {
+        console.error("Elemento(s) de música não encontrado(s) no DOM.");
+        return;
+    }
+
+    let isPlaying = true; // A música começa tocando
+
+    // Função para tocar a música
+    function playMusic() {
+        backgroundMusic.play().then(() => {
+            isPlaying = true; // Atualizar o estado para "tocando"
+            musicIcon.src = "img/pausebtnmusic.png"; // Alterar o ícone para "pause"
+        }).catch((error) => {
+            console.log("Erro ao tentar reproduzir a música:", error);
+        });
+    }
+
+    // Função para pausar a música
+    function pauseMusic() {
+        backgroundMusic.pause();
+        isPlaying = false; // Atualizar o estado para "pausado"
+        musicIcon.src = "img/playbtnmusic.png"; // Alterar o ícone para "play"
+    }
+
+    // Adicionar evento de clique ao botão
+    musicBtn.addEventListener("click", () => {
+        if (isPlaying) {
+            pauseMusic(); // Pausar a música
+        } else {
+            playMusic(); // Tocar a música
+        }
+    });
+
+    // Tocar a música automaticamente ao carregar a página
+    playMusic();
 });

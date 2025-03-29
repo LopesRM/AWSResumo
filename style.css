@@ -33,22 +33,17 @@ body::before {
     z-index: -1; /* Garante que a imagem fique atrás de todo o conteúdo */
 }
 
-/* Cabeçalho */
+/* Estilo para o header */
 header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    text-align: center;
-    background-image: url('img/background.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 400px;
-    overflow: hidden;
-    position: relative;
-    z-index: 2;
+    position: relative; /* Necessário para posicionar elementos dentro do header */
+    background-image: url('img/background.jpg'); /* Caminho relativo para a imagem */
+    background-size: cover; /* Ajusta a imagem para cobrir todo o header */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Evita repetição da imagem */
+    min-height: 20rem; /* Define uma altura mínima para o header */
+    padding: 2rem; /* Adiciona espaçamento interno */
+    color: white; /* Define a cor do texto no header */
+    text-align: center; /* Centraliza o texto */
 }
 
 header::after {
@@ -78,11 +73,30 @@ header h1 {
     text-align: center;
 }
 
+/* Estilo para o botão de música */
+#music-control {
+    position: absolute;
+    top: 1rem; /* Distância do topo */
+    right: 1rem; /* Distância da direita */
+}
+
+#music-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+#music-btn img {
+    width: 3rem; /* Aumentado para 3rem */
+    height: 3rem; /* Aumentado para 3rem */
+}
+
 /* Navegação */
 nav ul {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    
     list-style: none;
     padding: 0;
     margin: 10px 0;

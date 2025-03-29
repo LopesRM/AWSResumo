@@ -6,11 +6,25 @@
     <title>AWS Adventure Foundation</title>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=VCR+OSD+Mono&display=swap" rel="stylesheet">
     <script src="script.js" defer></script>
+    <script src="localStorage.js" defer></script>
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
     <meta name="author" content="Rafhael Lopes">
     <meta name="description" content="Explore os serviços da AWS e teste seus conhecimentos com nosso simulado. Aprenda de forma divertida e interativa!">
+    <style>
+        header {
+            background-image: url('img/background.jpg'); /* Caminho relativo para a imagem */
+            background-size: cover; /* Ajusta a imagem para cobrir todo o header */
+            background-position: center; /* Centraliza a imagem */
+            background-repeat: no-repeat; /* Evita repetição da imagem */
+            min-height: 20rem; /* Define uma altura mínima para o header */
+            padding: 2rem; /* Adiciona espaçamento interno */
+            color: white; /* Define a cor do texto no header */
+            text-align: center; /* Centraliza o texto */
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -23,6 +37,17 @@
                 <li><a href="gamefyaws.html">Aventura da AWS</a></li>
             </ul>
         </nav>
+
+        <!-- Botão de música -->
+        <div id="music-control">
+            <button id="music-btn">
+                <img id="music-icon" src="img/pausebtnmusic.png" alt="Pause Music">
+            </button>
+            <audio id="background-music" loop autoplay>
+                <source src="snd/PixelatedDreams.mp3" type="audio/mpeg">
+                Seu navegador não suporta o elemento de áudio.
+            </audio>
+        </div>
     </header>
     
     <main>
