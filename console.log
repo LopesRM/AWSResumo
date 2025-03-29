@@ -1,0 +1,17 @@
+function loadSection(index) {
+    const contentContainer = document.getElementById("content-container");
+    const sectionId = sections[index];
+    const section = document.getElementById(sectionId);
+
+    if (section) {
+        console.log(`Carregando seção: ${sectionId}`);
+        console.log(`Conteúdo da seção: ${section.innerHTML}`);
+        contentContainer.innerHTML = `
+            <div class="service">
+                ${section.innerHTML}
+            </div>
+        `;
+    } else {
+        console.error(`Seção com ID "${sectionId}" não encontrada.`);
+    }
+}

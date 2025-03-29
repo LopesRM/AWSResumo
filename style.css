@@ -100,12 +100,14 @@ nav a {
     padding: 10px 20px;
     background-color: #800080; /* Cor roxa */
     border-radius: 5px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
     font-family: 'VCR OSD Mono', monospace; /* Fonte personalizada */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.9); /* Adiciona uma sombra suave */
 }
 
 nav a:hover {
     background-color: #9932cc; /* Roxo mais claro ao passar o mouse */
+    box-shadow: 0 6px 8px rgba(255, 255, 255, 0.9); /* Aumenta a sombra ao passar o mouse */
 }
 
 /* Seções principais */
@@ -457,4 +459,80 @@ video {
     background: transparent;
     z-index: 1; /* Certifique-se que o vídeo está sobre o fundo */
     display: block;
+}
+
+/* Estilo para a seção #subintro */
+#subintro {
+    font-size: 1.2rem; /* Aumenta o tamanho da fonte */
+    font-weight: bold; /* Torna o texto em negrito */
+    color: #000000; /* Define a cor do texto como preto */
+    text-align: center; /* Centraliza o texto */
+    margin: 10px auto; /* Adiciona espaçamento acima e centraliza horizontalmente */
+    padding: 10px 20px; /* Adiciona espaçamento interno na caixa */
+    background-color: #ffffff; /* Define o fundo da caixa como branco */
+    border: 2px solid #000000; /* Adiciona uma borda preta */
+    border-radius: 5px; /* Adiciona bordas arredondadas */
+    display: inline-block; /* Faz a caixa se ajustar ao tamanho do texto */
+}
+
+.navigation-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.navigation-buttons button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #800080;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.navigation-buttons button:hover {
+    background-color: #9932cc;
+}
+
+/* Estilo para o contêiner de conteúdo */
+#content-container {
+    text-align: center;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para ocultar seções */
+.hidden {
+    display: none; /* Oculta as seções que não estão sendo exibidas */
+}
+
+/* Estilo para serviços */
+.service {
+    text-align: center;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.service h2 {
+    font-size: 2rem;
+    color: #800080;
+}
+
+.service p {
+    font-size: 1.2rem;
+    color: #333;
+    line-height: 1.6;
 }
