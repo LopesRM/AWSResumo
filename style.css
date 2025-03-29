@@ -171,13 +171,14 @@ main section#intro img {
 
 .gif-intro {
     position: relative; /* Necessário para que o z-index funcione */
-    z-index: 9999; /* Garante que o vídeo fique acima de tudo */
-    max-width: 200px; /* Define a largura máxima do vídeo */
-    width: 100%; /* Faz o vídeo ocupar toda a largura disponível */
-    height: auto; /* Mantém a proporção do vídeo */
-    border-radius: 10px; /* Bordas arredondadas para o vídeo */
-    display: block; /* Garante que o vídeo seja exibido como um bloco */
+    z-index: 9999; /* Garante que o GIF fique acima de outros elementos */
+    max-width: 80px; /* Reduz ainda mais a largura máxima do GIF */
+    width: 100%; /* Faz o GIF ocupar toda a largura disponível */
+    height: auto; /* Mantém a proporção do GIF */
+    border-radius: 10px; /* Bordas arredondadas para o GIF */
+    display: block; /* Garante que o GIF seja exibido como um bloco */
     margin: 0; /* Remove margens extras */
+    background: transparent; /* Remove qualquer fundo */
 }
 
 /* Seção de Doação */
@@ -394,13 +395,14 @@ footer p {
 
 .gif-intro {
     position: relative; /* Necessário para que o z-index funcione */
-    z-index: 9999; /* Garante que o vídeo fique acima de tudo */
-    max-width: 200px; /* Define a largura máxima do vídeo */
-    width: 100%; /* Faz o vídeo ocupar toda a largura disponível */
-    height: auto; /* Mantém a proporção do vídeo */
-    border-radius: 10px; /* Bordas arredondadas para o vídeo */
-    display: block; /* Garante que o vídeo seja exibido como um bloco */
+    z-index: 9999; /* Garante que o GIF fique acima de outros elementos */
+    max-width: 30px; /* Reduz ainda mais a largura máxima do GIF */
+    width: 9%; /* Faz o GIF ocupar toda a largura disponível */
+    height: auto; /* Mantém a proporção do GIF */
+    border-radius: 10px; /* Bordas arredondadas para o GIF */
+    display: block; /* Garante que o GIF seja exibido como um bloco */
     margin: 0; /* Remove margens extras */
+    background: transparent; /* Remove qualquer fundo */
 }
 
 /* Responsividade */
@@ -449,4 +451,10 @@ footer p {
     .caixa-conteudo {
         font-size: 0.8rem; /* Reduz o tamanho da fonte em telas muito pequenas */
     }
+}
+
+video {
+    background: transparent;
+    z-index: 1; /* Certifique-se que o vídeo está sobre o fundo */
+    display: block;
 }
