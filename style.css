@@ -5,17 +5,17 @@
 }
 
 /* Estilos globais */
-body, footer, header, nav, main {
-    font-family: 'VCR OSD Mono', monospace;
+body {
     margin: 0;
     padding: 0;
-}
-
-body {
-    position: relative; /* Necessário para o pseudo-elemento funcionar */
+    font-family: 'VCR OSD Mono', monospace;
     background-color: #292929;
     color: white;
     line-height: 1.6;
+}
+
+body, footer, header, nav, main {
+    font-family: 'VCR OSD Mono', monospace;
 }
 
 body::before {
@@ -34,18 +34,19 @@ body::before {
 
 /* Cabeçalho */
 header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
     background-image: url('img/background.png'); /* Caminho da imagem do header */
     background-size: cover; /* Faz a imagem cobrir o tamanho do header */
     background-repeat: no-repeat; /* Evita que a imagem se repita */
     background-position: center; /* Centraliza a imagem no header */
     height: 400px; /* Define a altura fixa do header */
-    display: flex; /* Ativa o Flexbox */
-    flex-direction: column; /* Organiza os itens em coluna */
-    align-items: center; /* Centraliza os itens horizontalmente */
-    justify-content: center; /* Centraliza os itens verticalmente */
     overflow: hidden; /* Garante que a imagem não ultrapasse o header */
     position: relative; /* Necessário para o pseudo-elemento funcionar */
-    padding: 20px; /* Adiciona espaçamento interno */
     z-index: 2; /* Garante que o conteúdo do header fique acima do gradiente */
 }
 
@@ -79,12 +80,13 @@ header h1 {
 
 /* Navegação */
 nav ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Permite que os itens quebrem linha em telas menores */
     list-style: none;
-    display: flex; /* Ativa o Flexbox */
-    justify-content: center; /* Centraliza os itens horizontalmente */
-    gap: 20px; /* Espaçamento entre os itens */
-    margin: 0; /* Remove margens extras */
-    padding: 0; /* Remove padding padrão */
+    padding: 0;
+    margin: 10px 0;
+    gap: 15px; /* Espaçamento entre os itens */
 }
 
 nav ul li {
@@ -92,24 +94,22 @@ nav ul li {
 }
 
 nav a {
-    text-decoration: none; /* Remove o sublinhado dos links */
-    font-weight: bold; /* Deixa o texto em negrito */
-    color: #ffffff; /* Define a cor do texto */
-    background-color: #800080; /* Define a cor de fundo */
-    padding: 10px 20px; /* Adiciona espaçamento interno */
-    border-radius: 5px; /* Adiciona bordas arredondadas */
-    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Adiciona transição para hover */
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    background-color: #800080; /* Cor roxa */
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
     font-family: 'VCR OSD Mono', monospace; /* Fonte personalizada */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra individual */
 }
 
 nav a:hover {
-    background-color: #9932cc; /* Altera a cor de fundo ao passar o mouse */
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3); /* Aumenta a sombra ao passar o mouse */
+    background-color: #9932cc; /* Roxo mais claro ao passar o mouse */
 }
 
 /* Seções principais */
 main {
+    padding: 20px;
     position: relative; /* Necessário para o pseudo-elemento funcionar */
     z-index: 1; /* Garante que o conteúdo do main fique acima do gradiente */
 }
@@ -146,25 +146,37 @@ main section#intro img {
 
 /* Estilo para a seção #intro */
 .intro-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px; /* Espaçamento entre o título e a GIF */
-    text-align: center;
-    
+    display: flex; /* Alinha os itens lado a lado */
+    flex-direction: row; /* Garante que os itens fiquem em linha */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+    gap: 20px; /* Espaçamento entre o texto e o vídeo */
+    flex-wrap: wrap; /* Permite que os itens quebrem linha em telas menores */
+    padding: 0; /* Remove padding extra */
+    margin: 0 auto; /* Centraliza o contêiner horizontalmente */
+    max-width: 100%; /* Garante que o contêiner ocupe toda a largura */
+    text-align: center; /* Centraliza o conteúdo dentro do contêiner */
 }
 
 .intro-container h2 {
-    font-size: 36px;
-    color: #ececec;
+    position: relative; /* Necessário para que o z-index funcione */
+    z-index: 9999; /* Garante que o texto fique acima de tudo */
+    font-size: 2rem; /* Tamanho relativo para se ajustar a diferentes telas */
+    color: #ffffff;
+    margin: 0; /* Remove margens extras */
+    max-width: 300px; /* Define uma largura máxima para o texto */
+    text-align: center; /* Centraliza o texto */
 }
 
 .gif-intro {
-    max-width: 80px;
-    z-index: 9999;
-    height: auto;
-    border-radius: 10px;
-    display: block;
+    position: relative; /* Necessário para que o z-index funcione */
+    z-index: 9999; /* Garante que o vídeo fique acima de tudo */
+    max-width: 200px; /* Define a largura máxima do vídeo */
+    width: 100%; /* Faz o vídeo ocupar toda a largura disponível */
+    height: auto; /* Mantém a proporção do vídeo */
+    border-radius: 10px; /* Bordas arredondadas para o vídeo */
+    display: block; /* Garante que o vídeo seja exibido como um bloco */
+    margin: 0; /* Remove margens extras */
 }
 
 /* Seção de Doação */
@@ -231,23 +243,24 @@ footer::before {
 }
 
 footer {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
     position: relative; /* Necessário para o pseudo-elemento funcionar */
-    background-color: #000000; /* Fundo preto para o rodapé */
-    color: #ffffff; /* Cor do texto no rodapé */
-    padding: 20px; /* Espaçamento interno */
-    text-align: center; /* Centraliza o texto */
 }
 
 .footer-container {
-    display: flex; /* Ativa o Flexbox */
-    justify-content: space-around; /* Distribui os itens com espaço uniforme */
+    display: flex;
+    flex-wrap: wrap; /* Permite que os itens quebrem linha em telas menores */
+    justify-content: center;
+    gap: 15px; /* Espaçamento entre os botões */
     align-items: center; /* Centraliza os itens verticalmente */
     background-color: rgba(255, 255, 255, 0.1); /* Fundo branco semitransparente */
     border-top: 2px solid #444; /* Borda superior cinza escura */
     padding: 20px; /* Espaçamento interno */
     width: 100%; /* Faz a caixa ocupar toda a largura do monitor */
     box-sizing: border-box; /* Inclui o padding no tamanho total */
-    text-align: center; /* Centraliza o texto */
     box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2); /* Sombra suave */
 }
 
@@ -260,119 +273,57 @@ footer p {
 
 /* Estilo genérico para os botões do rodapé */
 .footer-btn {
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
     display: inline-block; /* Garante que os botões fiquem alinhados horizontalmente */
-    padding: 12px 20px; /* Espaçamento interno */
-    background-color: #0076b5; /* Cor de fundo padrão (LinkedIn azul) */
-    color: #ffffff; /* Cor do texto */
-    font-weight: bold; /* Texto em negrito */
-    border: none; /* Remove bordas padrão */
-    border-radius: 5px; /* Bordas arredondadas */
-    text-decoration: none; /* Remove sublinhado */
-    font-family: 'VCR OSD Mono', monospace; /* Fonte personalizada */
-    transition: background-color 0.3s ease, transform 0.2s ease; /* Transições suaves */
     margin: 5px; /* Espaçamento entre os botões */
     text-align: center; /* Centraliza o texto */
+    font-family: 'VCR OSD Mono', monospace; /* Fonte personalizada */
 }
 
-.footer-btn:hover {
-    transform: scale(1.05); /* Aumenta levemente o botão ao passar o mouse */
-}
-
-/* Estilos específicos para cada botão */
 .footer-btn.linkedin {
-    background-color: #0076b5; /* Azul do LinkedIn */
+    background-color: #0076b5;
 }
 
 .footer-btn.whatsapp {
-    background-color: #25d366; /* Verde do WhatsApp */
+    background-color: #25d366;
 }
 
 .footer-btn.discord {
-    background-color: #5865F2; /* Azul do Discord */
+    background-color: #5865F2;
 }
 
 .footer-btn.github {
-    background-color: #333333; /* Preto do GitHub */
+    background-color: #333333;
 }
 
 .footer-btn.email {
-    background-color: #d44638; /* Vermelho do Gmail */
+    background-color: #d44638;
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 36px;
-    }
-
-    nav ul {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    nav a {
-        padding: 10px 15px;
-    }
-
-    #doacao {
-        max-width: 90%;
-    }
-
-    footer p {
-        font-size: 12px;
-    }
-}
-
-<link rel="stylesheet" href="reset.css">
-<link rel="stylesheet" href="styles.css">
-<link rel="stylesheet" href="style.css">
-
-#sobre {
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #f0f8ff; /* Azul claro */
-    border-radius: 10px;
-    line-height: 1.8;
-    max-width: 800px;
-    position: relative; /* Garante que ele não interfira no pseudo-elemento do header */
-    z-index: 0; /* Certifique-se de que ele não está acima do header */
-}
-
-#sobre h2 {
-    color: #333;
-    margin-bottom: 10px;
-}
-
-#sobre p, #sobre ul {
-    color: #555;
-}
-
-#sobre ul {
-    margin: 10px 0;
-    padding-left: 20px;
-}
-
-#sobre li {
-    list-style: disc;
+.footer-btn:hover {
+    opacity: 0.8;
 }
 
 /* Estilo para as caixas de conteúdo */
 .caixa-conteudo {
-    background-color: #ffffff; /* Fundo branco */
-    border: 2px solid #000000; /* Borda preta */
-    color: #000000; /* Texto preto */
-    padding: 20px; /* Espaçamento interno */
-    margin: 20px auto; /* Espaçamento externo e centralização */
-    border-radius: 10px; /* Bordas arredondadas */
-    max-width: 800px; /* Largura máxima */
+    background-color: #ffffff;
+    color: #000000;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 10px;
+    max-width: 800px;
+    text-align: left;
+    line-height: 1.8;
     font-family: 'VCR OSD Mono', monospace; /* Fonte personalizada */
-    line-height: 1.8; /* Altura da linha */
-    text-align: left; /* Alinhamento do texto */
 }
 
 .caixa-conteudo p {
-    font-size: 18px; /* Aumenta o tamanho da fonte */
-    line-height: 1.8; /* Mantém uma boa altura de linha para legibilidade */
+    font-size: 1rem; /* Tamanho relativo para se ajustar a diferentes telas */
 }
 
 /* Estilo para o título com animação */
@@ -392,8 +343,8 @@ footer p {
 .titulo-animado::before {
     content: '';
     position: absolute;
-    top: 170%;
-    left: 110%;
+    top: 90%;
+    left: 90%;
     width: 150%;
     height: 150%;
     background-image: url('img/sword-pixel-art.png');
@@ -417,42 +368,84 @@ footer p {
 }
 
 .intro-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    text-align: center;
+    z-index: 9999;
+    display: flex; /* Alinha os itens lado a lado */
+    flex-direction: row; /* Garante que os itens fiquem em linha */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+    gap: 20px; /* Espaçamento entre o texto e o vídeo */
+    flex-wrap: wrap; /* Permite que os itens quebrem linha em telas menores */
+    padding: 0; /* Remove padding extra */
+    margin: 0 auto; /* Centraliza o contêiner horizontalmente */
+    max-width: 100%; /* Garante que o contêiner ocupe toda a largura */
+    text-align: center; /* Centraliza o conteúdo dentro do contêiner */
 }
 
 .intro-container h2 {
-    font-size: 36px;
+    position: relative; /* Necessário para que o z-index funcione */
+    z-index: 9999; /* Garante que o texto fique acima de tudo */
+    font-size: 2rem; /* Tamanho relativo para se ajustar a diferentes telas */
     color: #ffffff;
+    margin: 0; /* Remove margens extras */
+    max-width: 300px; /* Define uma largura máxima para o texto */
+    text-align: center; /* Centraliza o texto */
 }
 
 .gif-intro {
-    max-width: 80px;
-    height: auto;
-    border-radius: 10px;
-    display: block;
-    
+    position: relative; /* Necessário para que o z-index funcione */
+    z-index: 9999; /* Garante que o vídeo fique acima de tudo */
+    max-width: 200px; /* Define a largura máxima do vídeo */
+    width: 100%; /* Faz o vídeo ocupar toda a largura disponível */
+    height: auto; /* Mantém a proporção do vídeo */
+    border-radius: 10px; /* Bordas arredondadas para o vídeo */
+    display: block; /* Garante que o vídeo seja exibido como um bloco */
+    margin: 0; /* Remove margens extras */
 }
 
-/* Gradiente para a seção main */
-main::before {
-    content: '';
-    position: absolute;
-    top: 0; /* Posiciona o gradiente no topo da main */
-    left: 0;
-    width: 100%;
-    height: 200px; /* Define a altura do gradiente */
-    background: linear-gradient(
-        to bottom, /* Gradiente de cima para baixo */
-        rgba(0, 0, 0, 1), /* Preto sólido no topo */
-        rgba(0, 0, 0, 0.9), /* Quase totalmente escuro no meio */
-        rgba(0, 0, 0, 0.5), /* Gradualmente mais claro */
-        rgba(0, 0, 0, 0.1), /* Muito claro próximo ao final */
-        transparent /* Totalmente transparente no final */
-    );
-    z-index: 0; /* Garante que o gradiente fique acima do background, mas abaixo de outros itens */
-    pointer-events: none; /* Garante que o gradiente não interfira na interação com outros elementos */
+/* Responsividade */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8rem; /* Reduz o tamanho do título em telas menores */
+    }
+
+    nav ul {
+        flex-direction: column; /* Alinha os itens em coluna em telas menores */
+        gap: 10px;
+    }
+
+    nav a {
+        padding: 10px 15px;
+        font-size: 0.9rem; /* Reduz o tamanho do texto dos links */
+    }
+
+    .intro-container {
+        flex-direction: column; /* Alinha os itens em coluna em telas menores */
+    }
+
+    .gif-intro {
+        max-width: 200px; /* Reduz o tamanho do vídeo em telas menores */
+    }
+
+    .caixa-conteudo {
+        padding: 15px;
+        font-size: 0.9rem; /* Reduz o tamanho da fonte em telas menores */
+    }
+
+    footer p {
+        font-size: 0.8rem; /* Reduz o tamanho do texto no rodapé */
+    }
+}
+
+@media (max-width: 480px) {
+    .intro-container h2 {
+        font-size: 1.5rem; /* Reduz ainda mais o tamanho do título */
+    }
+
+    .gif-intro {
+        max-width: 150px; /* Reduz o tamanho do vídeo em telas muito pequenas */
+    }
+
+    .caixa-conteudo {
+        font-size: 0.8rem; /* Reduz o tamanho da fonte em telas muito pequenas */
+    }
 }
