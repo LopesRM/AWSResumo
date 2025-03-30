@@ -113,11 +113,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const musicIcon = document.getElementById("music-icon");
     const backgroundMusic = document.getElementById("background-music");
 
-    if (!musicBtn || !musicIcon || !backgroundMusic) {
-        console.error("Elemento(s) de música não encontrado(s) no DOM.");
-        return;
-    }
-
     let isPlaying = true; // A música começa tocando
 
     // Função para tocar a música

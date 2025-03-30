@@ -87,8 +87,8 @@ header h1 {
 }
 
 #music-btn img {
-    width: 3rem; /* Aumentado para 3rem */
-    height: 3rem; /* Aumentado para 3rem */
+    width: 3rem; /* Tamanho do ícone em rem */
+    height: 3rem;
 }
 
 /* Navegação */
