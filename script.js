@@ -143,4 +143,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Tocar a música automaticamente ao carregar a página
     playMusic();
+
+    // Alterar a cor dos itens <li> para branco
+    document.querySelectorAll('li').forEach((item) => {
+        item.style.color = 'black'; // Isso forçaria a cor branca nos itens <li>
+    });
 });

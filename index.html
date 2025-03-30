@@ -13,21 +13,32 @@
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
     <meta name="author" content="Rafhael Lopes">
     <meta name="description" content="Explore os serviços da AWS e teste seus conhecimentos com nosso simulado. Aprenda de forma divertida e interativa!">
+
     <style>
-        header {
-            background-image: url('img/background.jpg'); /* Caminho relativo para a imagem */
-            background-size: cover; /* Ajusta a imagem para cobrir todo o header */
-            background-position: center; /* Centraliza a imagem */
-            background-repeat: no-repeat; /* Evita repetição da imagem */
-            min-height: 20rem; /* Define uma altura mínima para o header */
-            padding: 2rem; /* Adiciona espaçamento interno */
-            color: white; /* Define a cor do texto no header */
-            text-align: center; /* Centraliza o texto */
+        .gif-intro {
+            width: 6.25rem; /* Define o tamanho do GIF como o dobro do valor original */
+            height: auto; /* Mantém a proporção do GIF */
+            border-radius: 10px; /* Opcional: bordas arredondadas */
+            display: inline-block; /* Garante que o GIF fique alinhado corretamente */
+            margin: 0; /* Remove margens extras */
+            vertical-align: middle; /* Alinha o GIF verticalmente ao texto */
+        }
+
+        @media (max-width: 768px) {
+            .gif-intro {
+                width: 5rem; /* Reduz o tamanho do GIF em telas menores */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .gif-intro {
+                width: 3.75rem; /* Reduz ainda mais o tamanho do GIF em telas muito pequenas */
+            }
         }
     </style>
 </head>
 <body>
-    <header>
+    <header style="background-image: url('img/backgroundheader.jpg');">
         <h1>AWS Adventure Foundation</h1>
         <nav>
             <ul>
@@ -54,9 +65,11 @@
         <section id="intro">
             <div class="intro-container">
                 <h2 class="titulo-animado">Bem-vindo à Aventura AWS!</h2>
-                <img src="img/2uxXrP2ErjTmdZLOz6jmo0SIDys.gif" alt="GIF animado" class="gif-intro">
+                <div class="intro-content">
+                    <img src="img/cloudpet.gif" alt="Gif animado" class="gif-intro">
+                    <p id="subintro">Explore os serviços da AWS e teste seus conhecimentos com nosso simulado.</p>
+                </div>
             </div>
-            <p id="subintro">Explore os serviços da AWS e teste seus conhecimentos com nosso simulado.</p>
         </section>
         
         <section id="about">

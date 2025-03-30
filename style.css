@@ -9,7 +9,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'VCR OSD Mono', monospace;
-    background-color: #292929;
+    background-color: #111111;
     color: white;
     line-height: 1.6;
 }
@@ -35,8 +35,7 @@ body::before {
 
 /* Estilo para o header */
 header {
-    position: relative; /* Necessário para posicionar elementos dentro do header */
-    background-image: url('img/background.jpg'); /* Caminho relativo para a imagem */
+    background-image: url('img/backgroundheader.jpg'); /* Caminho atualizado */
     background-size: cover; /* Ajusta a imagem para cobrir todo o header */
     background-position: center; /* Centraliza a imagem */
     background-repeat: no-repeat; /* Evita repetição da imagem */
@@ -127,6 +126,7 @@ main {
     padding: 20px;
     position: relative;
     z-index: 1;
+    color: black; /* Define a cor do texto como preta */
 }
 
 main::before {
@@ -161,38 +161,29 @@ main section#intro img {
 
 /* Estilo para a seção #intro */
 .intro-container {
-    display: flex; /* Alinha os itens lado a lado */
-    flex-direction: row; /* Garante que os itens fiquem em linha */
-    align-items: center; /* Centraliza verticalmente */
-    justify-content: center; /* Centraliza horizontalmente */
-    gap: 20px; /* Espaçamento entre o texto e o vídeo */
-    flex-wrap: wrap; /* Permite que os itens quebrem linha em telas menores */
-    padding: 0; /* Remove padding extra */
-    margin: 0 auto; /* Centraliza o contêiner horizontalmente */
-    max-width: 100%; /* Garante que o contêiner ocupe toda a largura */
-    text-align: center; /* Centraliza o conteúdo dentro do contêiner */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 2rem auto;
+    max-width: 800px;
 }
 
-.intro-container h2 {
-    position: relative; /* Necessário para que o z-index funcione */
-    z-index: 9999; /* Garante que o texto fique acima de tudo */
-    font-size: 2rem; /* Tamanho relativo para se ajustar a diferentes telas */
-    color: #ffffff;
-    margin: 0; /* Remove margens extras */
-    max-width: 300px; /* Define uma largura máxima para o texto */
-    text-align: center; /* Centraliza o texto */
+.intro-content {
+    display: flex; /* Alinha os itens lado a lado */
+    align-items: center; /* Centraliza verticalmente o GIF e o texto */
+    justify-content: center; /* Centraliza horizontalmente o conteúdo */
+    gap: 1rem; /* Espaçamento entre o texto e o GIF */
+    flex-wrap: wrap; /* Permite que os itens quebrem linha em telas menores */
 }
 
 .gif-intro {
-    position: relative; /* Necessário para que o z-index funcione */
-    z-index: 9999; /* Garante que o GIF fique acima de outros elementos */
-    max-width: 80px; /* Reduz ainda mais a largura máxima do GIF */
-    width: 100%; /* Faz o GIF ocupar toda a largura disponível */
+    width: 50px; /* Define o tamanho padrão do GIF */
     height: auto; /* Mantém a proporção do GIF */
-    border-radius: 10px; /* Bordas arredondadas para o GIF */
-    display: block; /* Garante que o GIF seja exibido como um bloco */
+    border-radius: 10px; /* Opcional: bordas arredondadas */
+    display: inline-block; /* Garante que o GIF fique alinhado corretamente */
     margin: 0; /* Remove margens extras */
-    background: transparent; /* Remove qualquer fundo */
+    vertical-align: middle; /* Alinha o GIF verticalmente ao texto */
 }
 
 /* Seção de Doação */
@@ -407,15 +398,12 @@ footer p {
 }
 
 .gif-intro {
-    position: relative; /* Necessário para que o z-index funcione */
-    z-index: 9999; /* Garante que o GIF fique acima de outros elementos */
-    max-width: 30px; /* Reduz ainda mais a largura máxima do GIF */
-    width: 9%; /* Faz o GIF ocupar toda a largura disponível */
+    width: 50px; /* Define o tamanho padrão do GIF */
     height: auto; /* Mantém a proporção do GIF */
-    border-radius: 10px; /* Bordas arredondadas para o GIF */
-    display: block; /* Garante que o GIF seja exibido como um bloco */
+    border-radius: 10px; /* Opcional: bordas arredondadas */
+    display: inline-block; /* Garante que o GIF fique alinhado corretamente */
     margin: 0; /* Remove margens extras */
-    background: transparent; /* Remove qualquer fundo */
+    vertical-align: middle; /* Alinha o GIF verticalmente ao texto */
 }
 
 /* Responsividade */
@@ -439,7 +427,7 @@ footer p {
     }
 
     .gif-intro {
-        max-width: 200px; /* Reduz o tamanho do vídeo em telas menores */
+        width: 40px; /* Reduz o tamanho do GIF em telas menores */
     }
 
     .caixa-conteudo {
@@ -454,11 +442,11 @@ footer p {
 
 @media (max-width: 480px) {
     .intro-container h2 {
-        font-size: 1.5rem; /* Reduz ainda mais o tamanho do título */
+        font-size: 1rem; /* Reduz ainda mais o tamanho do título */
     }
 
     .gif-intro {
-        max-width: 150px; /* Reduz o tamanho do vídeo em telas muito pequenas */
+        width: 30px; /* Reduz ainda mais o tamanho do GIF em telas muito pequenas */
     }
 
     .caixa-conteudo {
@@ -541,4 +529,21 @@ video {
     font-size: 1.2rem;
     color: #333;
     line-height: 1.6;
+}
+
+/* Estilo para as seções específicas */
+#cloud-computing {
+    color: black; /* Define a cor do texto como preta */
+}
+
+/* Estilo para o texto dentro da seção #cloud-computing */
+#cloud-computing,
+#cloud-computing p {
+    color: black !important; /* Define a cor preta para a seção e seus parágrafos */
+}
+
+/* Estilo global para listas */
+li {
+    font-size: larger;
+    color: #222222;
 }
