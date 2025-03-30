@@ -1,15 +1,23 @@
 document.addEventListener("DOMContentLoaded", () => {
     // Array com os IDs das seções
     const sections = [
+        // Fundamentos da Nuvem e AWS
         "cloud-computing",
         "what-is-aws",
         "aws-pricing",
         "aws-infrastructure-overview",
         "shared-responsibility-model",
-        "reliability-high-availability",
         "data-center-to-cloud",
+    
+        // Conceitos Essenciais e Fundamentos de Rede
         "apis-and-rest",
-        "static-site-s3",
+        "amazon-vpc",
+        "vpc-deep-dive",
+        "vpc-connectivity-options",
+        "network-security-troubleshooting",
+        "security-groups",
+    
+        // Armazenamento na AWS
         "cloud-storage-overview",
         "amazon-ebs",
         "ec2-instance-storage",
@@ -17,50 +25,58 @@ document.addEventListener("DOMContentLoaded", () => {
         "deep-dive-s3-cli",
         "amazon-s3-glacier",
         "aws-storage-gateway",
-        "amazon-vpc",
-        "security-groups",
-        "amazon-route-53",
-        "amazon-cloudfront",
-        "amazon-ec2",
-        "aws-lambda",
-        "aws-iam",
-        "aws-cloudformation",
-        "aws-cloudwatch",
-        "aws-organizations",
-        "aws-well-architected-framework",
-        "aws-cli",
-        "aws-systems-manager",
-        "aws-step-functions",
-        "aws-cloudtrail",
-        "aws-config",
-        "aws-trusted-advisor",
-        "aws-athena",
-        "aws-tags",
-        "vpc-deep-dive",
-        "vpc-connectivity-options",
-        "network-security-troubleshooting",
+        "static-site-s3",
+    
+        // Computação e Gerenciamento de Instâncias
         "aws-computing-overview",
-        "manage-ec2-instances",
-        "elastic-beanstalk",
         "computing-overview",
-        "elastic-load-balancing",
-        "elb-listeners",
-        "ec2-auto-scaling",
-        "containers-on-aws",
+        "amazon-ec2",
+        "manage-ec2-instances",
         "ami-strategy",
         "ec2-launch-templates",
+        "ec2-auto-scaling",
+        "elastic-load-balancing",
+        "elb-listeners",
+        "elastic-beanstalk",
+        "containers-on-aws",
+    
+        // Segurança e Conformidade
         "security-best-practices",
         "security-compliance-program",
         "security-resources",
         "iam-analysis",
-        "admin-tools",
-        "api-gateway",
+        "aws-iam",
+    
+        // Monitoramento, Automação e Gestão
+        "aws-cloudwatch",
         "cloudwatch-logs-events",
+        "aws-config",
+        "aws-cloudtrail",
+        "aws-systems-manager",
+        "aws-step-functions",
+        "aws-cli",
+        "admin-tools",
+    
+        // Frameworks de Gestão e Planejamento
+        "aws-organizations",
+        "aws-tags",
+        "aws-trusted-advisor",
         "cost-management",
-        "json-yaml-intro",
-        "cloudformation-troubleshooting",
+        "aws-well-architected-framework",
         "aws-caf",
-        "well-architected-design"
+        "well-architected-design",
+    
+        // Ferramentas e Desenvolvimento Avançado
+        "aws-cloudformation",
+        "cloudformation-troubleshooting",
+        "json-yaml-intro",
+        "aws-athena",
+        "api-gateway",
+    
+        // Rede e Entrega de Conteúdo
+        "amazon-route-53",
+        "amazon-cloudfront",
+        "reliability-high-availability",
     ];
 
     // Variável para rastrear a seção atual
