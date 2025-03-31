@@ -19,6 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
     
         // Armazenamento na AWS
         "cloud-storage-overview",
+        "aws-s3-detailed",
         "amazon-ebs",
         "ec2-instance-storage",
         "amazon-efs",
@@ -26,6 +27,11 @@ document.addEventListener("DOMContentLoaded", () => {
         "amazon-s3-glacier",
         "aws-storage-gateway",
         "static-site-s3",
+        "aws-rds-detailed",
+        "aws-dynamodb-detailed",
+        "aws-elasticache-detailed",
+        "aws-redshift-detailed",
+        "aws-glue-detailed",
     
         // Computação e Gerenciamento de Instâncias
         "aws-computing-overview",
@@ -39,13 +45,24 @@ document.addEventListener("DOMContentLoaded", () => {
         "elb-listeners",
         "elastic-beanstalk",
         "containers-on-aws",
-    
+        "aws-lambda-explanation",
+        
         // Segurança e Conformidade
         "security-best-practices",
         "security-compliance-program",
         "security-resources",
         "iam-analysis",
         "aws-iam",
+        "aws-secrets-manager-explanation",
+        "aws-secrets-manager-detailed",
+        "aws-shield-detailed",
+        "aws-waf-detailed",
+        "aws-fargate-detailed",
+        "aws-guardduty-detailed",
+        "aws-macie-detailed",
+        "aws-kms-detailed",
+        "aws-ssm-detailed",
+       
     
         // Monitoramento, Automação e Gestão
         "aws-cloudwatch",
@@ -242,4 +259,68 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Atualiza a nuvem de navegação ao carregar a página
     updateNavigationCloud();
+});
+document.addEventListener('DOMContentLoaded', function() {
+    const dots = document.querySelectorAll('.category-path .dot');
+    const cloudIcons = document.querySelectorAll('.cloud-icon');
+    const sections = document.querySelectorAll('section');
+    
+    // Mapeamento de categorias para a primeira seção
+    const categoryMap = {
+        'fundamentos': 'cloud-computing',
+        'conceitos': 'apis-and-rest',
+        'armazenamento': 'cloud-storage-overview',
+        // Adicione as outras categorias...
+    };
+    
+    // Clica em uma bolinha
+    dots.forEach(dot => {
+        dot.addEventListener('click', function() {
+            const category = this.getAttribute('data-category');
+            const sectionId = categoryMap[category];
+            
+            // Atualiza nuvens e bolinhas ativas
+            cloudIcons.forEach(icon => icon.style.display = 'none');
+            this.querySelector('.cloud-icon').style.display = 'block';
+            
+            dots.forEach(d => d.classList.remove('active'));
+            this.classList.add('active');
+            
+            // Mostra a seção correspondente
+            sections.forEach(section => {
+                section.classList.remove('active');
+                if(section.id === sectionId) {
+                    section.classList.add('active');
+                    section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    });
+    
+    // Atualiza bolinha ativa ao rolar
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if(entry.isIntersecting) {
+                const activeSection = entry.target;
+                const activeCategory = Object.keys(categoryMap).find(
+                    key => categoryMap[key] === activeSection.id
+                );
+                
+                if(activeCategory) {
+                    dots.forEach(dot => {
+                        dot.classList.remove('active');
+                        dot.querySelector('.cloud-icon').style.display = 'none';
+                    });
+                    
+                    const activeDot = document.querySelector(`.dot[data-category="${activeCategory}"]`);
+                    if(activeDot) {
+                        activeDot.classList.add('active');
+                        activeDot.querySelector('.cloud-icon').style.display = 'block';
+                    }
+                }
+            }
+        });
+    }, { threshold: 0.5 });
+    
+    sections.forEach(section => observer.observe(section));
 });

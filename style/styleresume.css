@@ -170,3 +170,119 @@ main {
     color: red;
     font-weight: bold;
 }
+
+/* Caminho de categorias - Layout Horizontal */
+.category-path {
+    position: relative;
+    margin: 2rem auto 3rem;
+    max-width: 1200px;
+    padding: 0 2rem;
+}
+
+.path-line {
+    position: absolute;
+    top: 25px;
+    left: 2rem;
+    right: 2rem;
+    height: 3px;
+    background: linear-gradient(90deg, #4cc9f0, #7209b7);
+    z-index: 1;
+}
+
+.path-dots-container {
+    overflow-x: auto;
+    padding-bottom: 1rem;
+}
+
+.path-dots {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    z-index: 2;
+    min-width: 1000px; /* Largura mínima para evitar quebra */
+    padding: 0 1rem;
+}
+
+.dot-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 110px;
+    position: relative;
+}
+
+.dot {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #3a0ca3;
+    border: 2px solid #4cc9f0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 3;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dot:hover {
+    transform: scale(1.2);
+    background-color: #7209b7;
+}
+
+.cloud-icon {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: -45px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+}
+
+.dot.active .cloud-icon {
+    display: block;
+    animation: float 2s ease-in-out infinite;
+}
+
+.dot.active {
+    background-color: #f72585;
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(247, 37, 133, 0.7);
+}
+
+.category-name {
+    font-family: 'VCR OSD Mono', monospace;
+    color: #4cc9f0;
+    font-size: 0.8rem;
+    text-align: center;
+    margin-top: 5px;
+    width: 100%;
+    line-height: 1.2;
+}
+
+/* Animações */
+@keyframes float {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(-5px); }
+}
+
+/* Scrollbar personalizada */
+.path-dots-container::-webkit-scrollbar {
+    height: 6px;
+}
+
+.path-dots-container::-webkit-scrollbar-track {
+    background: #1a1a2e;
+}
+
+.path-dots-container::-webkit-scrollbar-thumb {
+    background: #4cc9f0;
+    border-radius: 3px;
+}
+
+.path-dots-container::-webkit-scrollbar-thumb:hover {
+    background: #7209b7;
+}
