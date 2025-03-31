@@ -130,3 +130,43 @@ main {
     z-index: 100; /* Garante que o maguinho fique acima de outros elementos */
     pointer-events: none; /* Impede que o maguinho interfira na interação com outros elementos */
 }
+
+/* Estilo para o contêiner de navegação */
+#navigation-container {
+    position: relative; /* Garante que os elementos dentro possam ser posicionados */
+    z-index: 100; /* Garante que a nuvem fique acima de outros elementos */
+    text-align: center; /* Centraliza o conteúdo dentro do contêiner */
+    margin-bottom: 20px; /* Espaçamento entre a nuvem e os botões */
+}
+
+#navigation-container img {
+    position: absolute; /* Permite posicionar a nuvem sobre os elementos */
+    top: -50px; /* Ajusta a posição vertical da nuvem */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translateX(-50%); /* Ajusta para centralizar perfeitamente */
+    z-index: 101; /* Garante que a nuvem fique acima de outros elementos */
+    width: 150px; /* Define o tamanho da nuvem */
+    height: auto; /* Mantém a proporção da imagem */
+    pointer-events: none; /* Impede que a nuvem interfira na interação com outros elementos */
+}
+
+#navigation-cloud {
+    position: relative; /* Garante que os itens de navegação sejam posicionados corretamente */
+    z-index: 102; /* Garante que os itens de navegação fiquem acima da nuvem */
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 50px; /* Espaçamento entre a nuvem e os itens de navegação */
+}
+
+#navigation-cloud div {
+    cursor: pointer;
+    color: blue;
+    text-decoration: underline;
+    font-size: 1rem;
+}
+
+#navigation-cloud div:hover {
+    color: red;
+    font-weight: bold;
+}
