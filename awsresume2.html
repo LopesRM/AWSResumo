@@ -3,49 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AWS Adventure Foundation</title>
-    <link rel="stylesheet" href="style/reset.css">
-    <link rel="stylesheet" href="style/styleglobal.css">
-    <link rel="stylesheet" href="style/styleresume.css">
+    <title>AWS Resumo de Serviços</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styleq.css">
     <link href="https://fonts.googleapis.com/css2?family=VCR+OSD+Mono&display=swap" rel="stylesheet">
-    <script src="script/script.js" defer></script>
-    <script src="script/localStorage.js" defer></script>
+    <script src="script.js" defer></script>
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
     <meta name="author" content="Rafhael Lopes">
-    <meta name="description" content="Explore os serviços da AWS e teste seus conhecimentos com nosso simulado. Aprenda de forma divertida e interativa!">
-
+    <meta name="description" content="Resumo dos principais serviços da AWS para facilitar o aprendizado e revisão.">
 </head>
-
-
 <body>
     <header>
+        <h1>AWS Adventure Foundation</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="awsresume.html">AWS Resumo de Serviços</a></li>
+                <li><a href="awssimulador.html">Simulado AWS Foundation</a></li>
+                <li><a href="gamefyaws.html">Aventura da AWS</a></li>
+            </ul>
+        </nav>
+
+        <!-- Botão de música -->
         <div id="music-control">
             <button id="music-btn">
                 <img id="music-icon" src="img/pausebtnmusic.png" alt="Pause Music" style="width: 3rem; height: 3rem;">
             </button>
             <audio id="background-music" loop autoplay>
-                <source src="snd\PixelatedDreams.mp3" type="audio/mpeg">
+                <source src="snd/PixelQuestMelody.mp3" type="audio/mpeg">
                 Seu navegador não suporta o elemento de áudio.
             </audio>
         </div>
-        <h1>AWS Adventure</h1>
-        <img id="shield-hero" src="img/shieldheroanimated.gif" alt="Shield Hero">
-
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="awsresume.html">Resumo</a></li>
-                <li><a href="awssimulador.html">Simulado</a></li>
-                <li><a href="gamefyaws.html">Game</a></li>
-            </ul>
-        </nav>
     </header>
-    
-    <div class="header-transition"></div>
 
-    <main>
-
-        <!-- Adicionando o maguinho -->
+    <!-- Adicionando o maguinho -->
     <img src="img/redmage.gif" alt="Maguinho" class="redmage">
 
     <main>
@@ -2372,25 +2364,8 @@
         </p>
     </div>
 </section>
-        
-        <section id="pix-section">
-            <div class="pix-scanlines"></div>
-            <div class="pix-container">
-                <h2>Faça uma Doação via PIX</h2>
-                <p>Apoie este projeto e ajude a mantê-lo gratuitamente para todos</p>
-                
-                <img src="img/qrcode-picpay.png" alt="QR Code PIX" class="pix-image">
-                
-                <div class="pix-details">
-                    <p><strong>Chave PIX:</strong></p>
-                    <p><strong>Seu apoio ajudará a nossa causa</strong></p>
-                </div>
-                
-                <a href="https://app.picpay.com/user/rafhaellopes" class="pix-button" onclick="copyPixKey()">Copiar Chave PIX</a>
-            </div>
-        </section>
+    </main>
 
-    
     <footer>
         <div class="footer-container">
             <a href="https://www.linkedin.com/company/cloud-knitters/posts/?feedView=all" class="footer-btn linkedin" target="_blank">LinkedIn Comunidade</a>
