@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // Array com os IDs das seções
+    // Array com os IDs das seções (mantido igual ao seu original)
     const sections = [
         // Fundamentos da Nuvem e AWS
         "cloud-computing",
@@ -63,7 +63,6 @@ document.addEventListener("DOMContentLoaded", () => {
         "aws-kms-detailed",
         "aws-ssm-detailed",
        
-    
         // Monitoramento, Automação e Gestão
         "aws-cloudwatch",
         "cloudwatch-logs-events",
@@ -96,8 +95,21 @@ document.addEventListener("DOMContentLoaded", () => {
         "reliability-high-availability",
     ];
 
+    // Mapeamento de categorias para índices de seções
+    const categoryMap = {
+        'fundamentos': 0,       // cloud-computing
+        'conceitos': 6,         // apis-and-rest
+        'armazenamento': 12,    // cloud-storage-overview
+        'computacao': 26,       // aws-computing-overview
+        'seguranca': 38,        // security-best-practices
+        'monitoramento': 52,    // aws-cloudwatch
+        'frameworks': 60,       // aws-organizations
+        'ferramentas': 67,      // aws-cloudformation
+        'rede': 72              // amazon-route-53
+    };
+
     // Variável para rastrear a seção atual
-    let currentIndex = 0; // Começa na primeira seção (índice 0)
+    let currentIndex = 0;
 
     // Função para exibir a seção atual e ocultar as outras
     function showSection(index) {
@@ -105,222 +117,153 @@ document.addEventListener("DOMContentLoaded", () => {
             const section = document.getElementById(sectionId);
             if (section) {
                 if (i === index) {
-                    // Exibe a seção correspondente ao índice atual
                     section.classList.remove("hidden");
                     section.classList.add("shown");
                 } else {
-                    // Oculta as outras seções
                     section.classList.remove("shown");
                     section.classList.add("hidden");
                 }
-            } else {
-                console.error(`Seção com ID "${sectionId}" não encontrada.`);
             }
         });
+        
+        // Atualiza os dots e a nuvem de navegação
+        updateActiveDot();
+        updateNavigationCloud();
     }
 
-    // Função para navegar para a próxima seção
+    // Funções de navegação
     function nextSection() {
         if (currentIndex < sections.length - 1) {
             currentIndex++;
             showSection(currentIndex);
-            updateNavigationCloud();
         }
     }
 
-    // Função para navegar para a seção anterior
     function prevSection() {
         if (currentIndex > 0) {
             currentIndex--;
             showSection(currentIndex);
-            updateNavigationCloud();
         }
     }
 
-    // Adiciona eventos aos botões
-    document.getElementById("next-btn").addEventListener("click", nextSection);
-    document.getElementById("prev-btn").addEventListener("click", prevSection);
+    // Função para navegar diretamente para uma categoria
+    function goToCategory(category) {
+        const targetIndex = categoryMap[category];
+        if (targetIndex !== undefined) {
+            currentIndex = targetIndex;
+            showSection(currentIndex);
+        }
+    }
 
-    // Exibe a primeira seção ao carregar a página
-    showSection(currentIndex);
+    // Atualiza o dot ativo com base na seção atual
+    function updateActiveDot() {
+        const dots = document.querySelectorAll('.dot');
+        const cloudIcons = document.querySelectorAll('.cloud-icon');
+        
+        // Encontra a categoria atual
+        let currentCategory = null;
+        for (const [category, index] of Object.entries(categoryMap)) {
+            if (currentIndex >= index) {
+                currentCategory = category;
+            }
+        }
+        
+        // Atualiza todos os dots
+        dots.forEach(dot => {
+            const dotCategory = dot.getAttribute('data-category');
+            dot.classList.remove('active', 'visited');
+            
+            if (dotCategory === currentCategory) {
+                dot.classList.add('active');
+                dot.querySelector('.cloud-icon').style.display = 'block';
+            } else if (categoryMap[dotCategory] < currentIndex) {
+                dot.classList.add('visited');
+            }
+        });
+    }
+    function updateNavigationCloud() {
+        const navItems = document.querySelectorAll('#navigation-cloud div');
+        let currentCategory = null;
+        
+        // Remove a classe ativa de todos os itens primeiro
+        navItems.forEach(navItem => {
+            navItem.classList.remove('nav-cloud-active');
+            navItem.style.fontWeight = "normal";
+            navItem.style.color = "blue";
+        });
+        
+        // Determina a categoria atual
+        for (const [category, index] of Object.entries(categoryMap)) {
+            if (currentIndex >= index) {
+                currentCategory = category;
+            }
+        }
+        
+        // Atualiza o item ativo
+        navItems.forEach(navItem => {
+            if (navItem.textContent === currentCategory) {
+                navItem.classList.add('nav-cloud-active');
+                navItem.style.fontWeight = "bold";
+            }
+        });
+    }
 
+    // Configura eventos para os dots
+    document.querySelectorAll('.dot').forEach(dot => {
+        dot.addEventListener('click', () => {
+            const category = dot.getAttribute('data-category');
+            goToCategory(category);
+        });
+    });
+
+    // Configura eventos para os botões de navegação
+    document.getElementById("next-btn")?.addEventListener("click", nextSection);
+    document.getElementById("prev-btn")?.addEventListener("click", prevSection);
+
+    // Configura eventos para a nuvem de navegação
+    document.querySelectorAll('#navigation-cloud div').forEach(navItem => {
+        navItem.addEventListener('click', () => {
+            goToCategory(navItem.textContent);
+        });
+    });
+
+    // Configuração do player de música (mantido igual)
     const musicBtn = document.getElementById("music-btn");
     const musicIcon = document.getElementById("music-icon");
     const backgroundMusic = document.getElementById("background-music");
+    let isPlaying = true;
 
-    let isPlaying = true; // A música começa tocando
-
-    // Função para tocar a música
     function playMusic() {
         backgroundMusic.play().then(() => {
-            isPlaying = true; // Atualizar o estado para "tocando"
-            musicIcon.src = "img/pausebtnmusic.png"; // Alterar o ícone para "pause"
+            isPlaying = true;
+            musicIcon.src = "img/pausebtnmusic.png";
         }).catch((error) => {
             console.log("Erro ao tentar reproduzir a música:", error);
         });
     }
 
-    // Função para pausar a música
     function pauseMusic() {
         backgroundMusic.pause();
-        isPlaying = false; // Atualizar o estado para "pausado"
-        musicIcon.src = "img/playbtnmusic.png"; // Alterar o ícone para "play"
+        isPlaying = false;
+        musicIcon.src = "img/playbtnmusic.png";
     }
 
-    // Adicionar evento de clique ao botão
-    musicBtn.addEventListener("click", () => {
-        if (isPlaying) {
-            pauseMusic(); // Pausar a música
-        } else {
-            playMusic(); // Tocar a música
-        }
-    });
+    if (musicBtn) {
+        musicBtn.addEventListener("click", () => {
+            if (isPlaying) {
+                pauseMusic();
+            } else {
+                playMusic();
+            }
+        });
+    }
 
-    // Tocar a música automaticamente ao carregar a página
+    // Inicialização
+    showSection(currentIndex);
     playMusic();
 
-    // Alterar a cor dos itens <li> para branco
+    // Garante que os itens de lista tenham cor preta
     document.querySelectorAll('li').forEach((item) => {
-        item.style.color = 'black'; // Isso forçaria a cor branca nos itens <li>
+        item.style.color = 'black';
     });
-
-    // Mapeamento das categorias para os índices das seções
-    const sectionCategories = {
-        "cloud-computing": 0,
-        "apis-and-rest": 6,
-        "cloud-storage-overview": 12,
-        "aws-computing-overview": 20,
-        "security-best-practices": 30,
-        "aws-cloudwatch": 35,
-        "aws-organizations": 42,
-        "aws-cloudformation": 49,
-        "amazon-route-53": 54,
-    };
-
-    // Criação da nuvem de navegação
-    const navigationCloud = document.createElement("div");
-    navigationCloud.id = "navigation-cloud";
-    navigationCloud.style.display = "flex";
-    navigationCloud.style.justifyContent = "center";
-    navigationCloud.style.marginBottom = "20px";
-
-    Object.keys(sectionCategories).forEach((category) => {
-        const navItem = document.createElement("div");
-        navItem.textContent = category;
-        navItem.style.margin = "0 10px";
-        navItem.style.cursor = "pointer";
-        navItem.style.color = "blue";
-        navItem.style.textDecoration = "underline";
-
-        // Adiciona evento de clique para navegar diretamente à seção
-        navItem.addEventListener("click", () => {
-            currentIndex = sectionCategories[category];
-            showSection(currentIndex);
-            updateNavigationCloud();
-        });
-
-        navigationCloud.appendChild(navItem);
-    });
-
-    // Insere a nuvem de navegação e a imagem da nuvem
-    const navigationContainer = document.getElementById("navigation-container");
-
-    if (navigationContainer) {
-        // Adiciona a imagem da nuvem
-        const cloudImage = document.createElement("img");
-        cloudImage.src = "img/cutecloud.gif";
-        cloudImage.alt = "Cute Cloud";
-
-        // Adiciona a nuvem de navegação
-        navigationContainer.appendChild(cloudImage);
-        navigationContainer.appendChild(navigationCloud);
-    } else {
-        console.error("O contêiner de navegação (navigation-container) não foi encontrado no HTML.");
-    }
-
-    // Função para atualizar a aparência da nuvem de navegação
-    function updateNavigationCloud() {
-        const currentCategory = Object.keys(sectionCategories).find(
-            (category) =>
-                sectionCategories[category] <= currentIndex &&
-                currentIndex < sectionCategories[category] + 6
-        );
-
-        Array.from(navigationCloud.children).forEach((navItem) => {
-            if (navItem.textContent === currentCategory) {
-                navItem.style.fontWeight = "bold";
-                navItem.style.color = "red";
-            } else {
-                navItem.style.fontWeight = "normal";
-                navItem.style.color = "blue";
-            }
-        });
-    }
-
-    // Atualiza a nuvem de navegação ao carregar a página
-    updateNavigationCloud();
-});
-document.addEventListener('DOMContentLoaded', function() {
-    const dots = document.querySelectorAll('.category-path .dot');
-    const cloudIcons = document.querySelectorAll('.cloud-icon');
-    const sections = document.querySelectorAll('section');
-    
-    // Mapeamento de categorias para a primeira seção
-    const categoryMap = {
-        'fundamentos': 'cloud-computing',
-        'conceitos': 'apis-and-rest',
-        'armazenamento': 'cloud-storage-overview',
-        // Adicione as outras categorias...
-    };
-    
-    // Clica em uma bolinha
-    dots.forEach(dot => {
-        dot.addEventListener('click', function() {
-            const category = this.getAttribute('data-category');
-            const sectionId = categoryMap[category];
-            
-            // Atualiza nuvens e bolinhas ativas
-            cloudIcons.forEach(icon => icon.style.display = 'none');
-            this.querySelector('.cloud-icon').style.display = 'block';
-            
-            dots.forEach(d => d.classList.remove('active'));
-            this.classList.add('active');
-            
-            // Mostra a seção correspondente
-            sections.forEach(section => {
-                section.classList.remove('active');
-                if(section.id === sectionId) {
-                    section.classList.add('active');
-                    section.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
-            });
-        });
-    });
-    
-    // Atualiza bolinha ativa ao rolar
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if(entry.isIntersecting) {
-                const activeSection = entry.target;
-                const activeCategory = Object.keys(categoryMap).find(
-                    key => categoryMap[key] === activeSection.id
-                );
-                
-                if(activeCategory) {
-                    dots.forEach(dot => {
-                        dot.classList.remove('active');
-                        dot.querySelector('.cloud-icon').style.display = 'none';
-                    });
-                    
-                    const activeDot = document.querySelector(`.dot[data-category="${activeCategory}"]`);
-                    if(activeDot) {
-                        activeDot.classList.add('active');
-                        activeDot.querySelector('.cloud-icon').style.display = 'block';
-                    }
-                }
-            }
-        });
-    }, { threshold: 0.5 });
-    
-    sections.forEach(section => observer.observe(section));
 });

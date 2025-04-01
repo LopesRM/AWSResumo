@@ -150,27 +150,98 @@ main {
     pointer-events: none; /* Impede que a nuvem interfira na interação com outros elementos */
 }
 
+/* ADICIONE ESTES ESTILOS AO FINAL DO SEU CSS EXISTENTE */
+
+/* Nuvem de navegação ativa - Versão melhorada */
+.navigation-cloud-item {
+    position: relative;
+    padding: 12px 20px;
+    margin: 0 8px;
+    color: #4cc9f0;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 105;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    border: 1px solid #4cc9f0;
+}
+
+.navigation-cloud-item:hover {
+    background-color: rgba(76, 201, 240, 0.2);
+    transform: translateY(-3px);
+}
+
+.navigation-cloud-item.active {
+    font-weight: bold;
+    color: #f72585;
+    border-color: #f72585;
+    animation: pulse 2s infinite;
+}
+
+/* Nuvem animada sobre o item ativo */
+.active-cloud-indicator {
+    position: absolute;
+    top: -70px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 90px;
+    background: url('img/cutecloud.gif') no-repeat center center;
+    background-size: contain;
+    z-index: 110;
+    pointer-events: none;
+    filter: drop-shadow(0 4px 8px rgba(76, 201, 240, 0.6));
+    animation: 
+        float 3s ease-in-out infinite,
+        cloudPulse 4s ease-in-out infinite;
+}
+
+/* Animações adicionais */
+@keyframes pulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(247, 37, 133, 0.4); }
+    50% { box-shadow: 0 0 0 10px rgba(247, 37, 133, 0); }
+}
+
+@keyframes cloudPulse {
+    0%, 100% { transform: translateX(-50%) scale(1); }
+    50% { transform: translateX(-50%) scale(1.05); }
+}
+
+/* Ajustes para a nuvem de navegação */
 #navigation-cloud {
-    position: relative; /* Garante que os itens de navegação sejam posicionados corretamente */
-    z-index: 102; /* Garante que os itens de navegação fiquem acima da nuvem */
+    position: relative;
+    z-index: 102;
     display: flex;
     justify-content: center;
-    gap: 10px;
-    margin-top: 50px; /* Espaçamento entre a nuvem e os itens de navegação */
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 100px; /* Espaço extra para a nuvem */
+    padding: 20px;
+    background-color: rgba(17, 17, 17, 0.8);
+    border-radius: 16px;
+    border: 1px solid #4cc9f0;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
-#navigation-cloud div {
-    cursor: pointer;
-    color: blue;
-    text-decoration: underline;
-    font-size: 1rem;
+/* Ajuste responsivo */
+@media (max-width: 768px) {
+    #navigation-cloud {
+        margin-top: 80px;
+        gap: 10px;
+    }
+    
+    .navigation-cloud-item {
+        padding: 8px 12px;
+        font-size: 0.9rem;
+    }
+    
+    .active-cloud-indicator {
+        width: 80px;
+        height: 60px;
+        top: -50px;
+    }
 }
-
-#navigation-cloud div:hover {
-    color: red;
-    font-weight: bold;
-}
-
 /* Caminho de categorias - Layout Horizontal */
 .category-path {
     position: relative;
@@ -285,4 +356,71 @@ main {
 
 .path-dots-container::-webkit-scrollbar-thumb:hover {
     background: #7209b7;
+}
+
+/* Substitua o estilo do tooltip por este */
+.tooltip {
+    position: relative;
+    cursor: pointer;
+    color: #4cc9f0;
+    border-bottom: 1px dashed #4cc9f0;
+    transition: all 0.3s ease;
+}
+
+.tooltip:hover {
+    color: #f72585;
+    border-bottom-color: #f72585;
+}
+
+.tooltip::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(58, 12, 163, 0.9);
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    /* Espaço para a imagem */
+    margin-bottom: 50px;
+}
+
+/* Estilo para a imagem no final do tooltip */
+.tooltip::before {
+    content: "";
+    position: absolute;
+    bottom: -40px; /* Posiciona abaixo do texto */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 60px;
+    background: url('img/cutecloud.gif') no-repeat center center;
+    background-size: contain;
+    opacity: 0;
+    transition: all 0.3s ease;
+    z-index: 1001;
+}
+
+.tooltip:hover::after,
+.tooltip:hover::before {
+    opacity: 1;
+    transform: translateX(-50%) translateY(-5px);
+}
+
+/* Animação para a nuvem */
+@keyframes cloudBounce {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(-5px); }
+}
+
+.tooltip:hover::before {
+    animation: cloudBounce 2s ease-in-out infinite;
 }
