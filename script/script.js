@@ -186,15 +186,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Mapeamento das categorias para os índices das seções
     const sectionCategories = {
-        "Fundamentos da Nuvem e AWS": 0,
-        "Conceitos Essenciais e Fundamentos de Rede": 6,
-        "Armazenamento na AWS": 12,
-        "Computação e Gerenciamento de Instâncias": 20,
-        "Segurança e Conformidade": 30,
-        "Monitoramento, Automação e Gestão": 35,
-        "Frameworks de Gestão e Planejamento": 42,
-        "Ferramentas e Desenvolvimento Avançado": 49,
-        "Rede e Entrega de Conteúdo": 54,
+        "cloud-computing": 0,
+        "apis-and-rest": 6,
+        "cloud-storage-overview": 12,
+        "aws-computing-overview": 20,
+        "security-best-practices": 30,
+        "aws-cloudwatch": 35,
+        "aws-organizations": 42,
+        "aws-cloudformation": 49,
+        "amazon-route-53": 54,
     };
 
     // Criação da nuvem de navegação
