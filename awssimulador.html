@@ -3,97 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AWS Adventure Foundation</title>
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=VCR+OSD+Mono&display=swap" rel="stylesheet">
-    <script src="script.js" defer></script>
-    <link rel="icon" href="img/favicon.ico" type="image/x-ico">
+    <title>AWS Adventure Foundation - Simulado</title>
+    <link rel="stylesheet" href="style/reset.css">
+    <link rel="stylesheet" href="style/styleglobal.css">
+    <link rel="stylesheet" href="style/simulado.css">
+    <link href="https://fonts.googleapis.com/css2?family=VCR+OSD+Mono&display=swap" rel="stylesheet">   
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <script src="script/simulado.js" defer></script>
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
     <meta name="author" content="Rafhael Lopes">
-    <meta name="description" content="Explore os serviços da AWS e teste seus conhecimentos com nosso simulado. Aprenda de forma divertida e interativa!">
+    <meta name="description" content="Teste seus conhecimentos AWS em um simulado com boss battle!">
 </head>
 <body>
-    <header>
-        <h1>AWS Adventure Foundation</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="awsresume.html">AWS Resumo de Serviços</a></li>
-                <li><a href="awssimulador.html">Simulado AWS Foundation</a></li>
-                <li><a href="gamefyaws.html">Aventura da AWS</a></li>
-            </ul>
-        </nav>
-    </header>
+    <header class="header">
+        <div id="music-control">
+            <button id="music-btn">
+                <img id="music-icon" src="img/pausebtnmusic.png" alt="Pause Music" style="width: 3rem; height: 3rem;">
+            </button>
+            <audio id="background-music" loop autoplay>
+                <source src="snd\TheHerosPulse.mp3" type="audio/mpeg">
+                Seu navegador não suporta o elemento de áudio.
+            </audio>
+        </div>
+        <div class="container">
+            <h1>AWS Adventure</h1>
+            <img id="shield-hero" src="img/shieldheroanimated.gif" alt="Shield Hero">
     
-    <main>
-        <section id="intro">
-            <div class="intro-container">
-                <h2 class="titulo-animado">Bem-vindo à Aventura AWS!</h2>
-                <img src="img/2uxXrP2ErjTmdZLOz6jmo0SIDys.gif" alt="GIF animado" class="gif-intro">
-            </div>
-            <p id="subintro">Explore os serviços da AWS e teste seus conhecimentos com nosso simulado.</p>
-        </section>
-        
-        <section id="about">
-            <section id="sobre">
-                <div class="caixa-conteudo">
-                    <h2>Sobre o Projeto</h2>
-                    <p>
-                        O <strong>AWS Adventure Foundation</strong> nasceu da ideia de facilitar o aprendizado de alunos nos fundamentos dos serviços AWS. Este projeto foi criado com o propósito educacional, não comercial, para ajudar na compreensão de conceitos essenciais de forma acessível e interativa.
-                    </p>
-                    <p>
-                        Nosso objetivo é oferecer recursos que tornam os estudos mais dinâmicos e interessantes, incluindo resumos didáticos, simulados práticos e um jogo simples, promovendo o aprendizado de maneira divertida e envolvente.
-                    </p>
-                </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="awsresume.html">Resumo</a></li>
+                    <li><a href="awssimulador.html">Simulado</a></li>
+                    <li><a href="gamefyaws.html">Game</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-                <div class="caixa-conteudo">
-                    <h2>Motivação</h2>
-                    <p>
-                        A motivação por trás deste projeto é a de compartilhar conhecimento de forma gratuita, garantindo que estudantes tenham uma base sólida para explorar o universo de computação em nuvem. Acreditamos que a educação é o caminho para abrir portas e criar oportunidades, e este projeto é a nossa contribuição.
-                    </p>
-                </div>
+    <div class="header-transition"></div>
 
-                <div class="caixa-conteudo">
-                    <h2>Sobre o Autor</h2>
-                    <p>
-                        Meu nome é <strong>Rafhael Lopes</strong>, apaixonado por tecnologia e aprendizado contínuo. Dedico este projeto para apoiar outros alunos que, assim como eu, estão buscando expandir seus horizontes no universo AWS. Este site é uma demonstração de como a curiosidade e o esforço podem criar algo incrível.
-                    </p>
-                </div>
+    <section class="start-screen" id="startScreen">
+        <div class="container">
+            <h2>Insira seu nome para começar</h2>
+            <input type="text" id="playerName" placeholder="Seu nome" maxlength="70">
+            <button id="startButton" class="start-button">Iniciar Desafio</button>
+        </div>
+    </section>
 
-                <div class="caixa-conteudo">
-                    <h2>Como Apoiar</h2>
-                    <p>
-                        Você pode apoiar este projeto compartilhando-o com seus amigos, colegas e comunidades de aprendizado. Toda ajuda é bem-vinda para alcançar mais pessoas e promover o aprendizado de forma acessível.
-                    </p>
+    <main class="main-content">
+        <section class="game-intro">
+            <div class="container">
+                <h2 class="game-title">Simulado AWS - Boss Battle</h2>
+                <p class="game-subtitle">Derrote o boss respondendo corretamente!</p>
+                
+                <div class="boss-area">
+                    <div class="boss-health-container">
+                        <div class="boss-health-bar" id="bossHealth"></div>
+                    </div>
+                    <div class="game-stats">
+                        <div class="timer" id="timer">60:00</div>
+                        <div class="streak-counter" id="streak">Multiplicador: 1x</div>
+                    </div>
+                    <div class="boss-visual">
+                        <video id="bossVideo" autoplay loop muted>
+                            <source src="img/vidu-video-2712053851300437.mp4" type="video/mp4">
+                        </video>
+                    </div>
                 </div>
-
-                <div class="caixa-conteudo">
-                    <h2>O que vai encontrar</h2>
-                    <p>
-                        Neste site, você encontrará resumos didáticos sobre os principais serviços da AWS, simulados práticos para testar seus conhecimentos e um jogo interativo para tornar o aprendizado mais divertido.
-                    </p>
-                </div>
-            </section>
-        </section>
-        
-        <section id="doacao">
-            <h2>Doação</h2>
-            <div class="doacao-container">
-                <p>Se você gostou do projeto e deseja apoiar o desenvolvimento, considere fazer uma doação.</p>
-                <img src="img/qrcode-picpay.png" alt="QR Code PicPay" width="150">
-                <a class="btn-doacao" href="https://app.picpay.com/user/rafhaellopes" target="_blank">Doar via PicPay</a>
             </div>
         </section>
 
-        <section id="s3" class="hidden">
-            <div class="service">
-                <h2>S3 (Simple Storage Service)</h2>
-                <p>O Amazon S3 é um serviço de armazenamento de objetos seguro e escalável. Ideal para backups, arquivamento e análise de big data.</p>
+        <section class="quiz-area" id="quizSection">
+            <div class="container">
+                <div class="question-container">
+                    <p class="question-text" id="question"></p>
+                    <div class="options-grid" id="options"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="results-area" id="resultSection">
+            <div class="container">
+                <h2 class="results-title" id="resultsTitle"></h2>
+                <div class="results-stats" id="resultStats"></div>
+                <button class="restart-button" id="restartBtn">Jogar Novamente</button>
             </div>
         </section>
     </main>
-    
+
+    <section id="pix-section">
+        <div class="pix-scanlines"></div>
+        <div class="pix-container">
+            <h2>Faça uma Doação via PIX</h2>
+            <p>Apoie este projeto e ajude a mantê-lo gratuitamente para todos</p>
+            
+            <img src="img/qrcode-picpay.png" alt="QR Code PIX" class="pix-image">
+            
+            <div class="pix-details">
+                <p><strong>Chave PIX:</strong></p>
+                <p><strong>Seu apoio ajudará a nossa causa</strong></p>
+            </div>
+            
+            <a href="https://app.picpay.com/user/rafhaellopes" class="pix-button" onclick="copyPixKey()">Copiar Chave PIX</a>
+        </div>
+    </section>
+
     <footer>
         <div class="footer-container">
             <a href="https://www.linkedin.com/company/cloud-knitters/posts/?feedView=all" class="footer-btn linkedin" target="_blank">LinkedIn Comunidade</a>
