@@ -1,0 +1,406 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Controle de Música Responsivo */
+#music-control {
+    position: absolute;
+    top: 1.5rem; /* Usando rem para escalar com o tamanho da fonte */
+    right: 1.5rem; /* Usando rem para escalar com o tamanho da fonte */
+    z-index: 1000; /* Garante que fique acima de tudo */
+}
+
+#startButton {
+    background: #7209b7;
+    border: none;
+    padding: 0.5rem;
+}
+
+#startButton:hover {
+    background: #7209b7;
+    transform: scale(1.1);
+    transition: all 0.3s ease;
+    color: #fff;
+}
+
+#music-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    width: 3.5rem; /* Tamanho base em rem */
+    height: 3.5rem; /* Tamanho base em rem */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#music-btn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
+}
+
+#music-icon {
+    width: 100%; /* O ícone preenche o botão */
+    height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
+}
+/* Estrutura principal do jogo */
+#startScreen {
+        background: rgba(0, 0, 0, 0.7);
+        border: 2px solid white;
+        padding: 2rem;
+        margin-bottom: 2rem;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+        position: relative;
+        overflow: hidden;
+    }
+#container .playerName #startButton {
+    font-size: 1.5rem;
+    color: #e94560;
+    margin-bottom: 1rem;
+    font-family: 'VCR OSD Mono', monospace;
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+}
+
+
+.game-intro {
+    text-align: center;
+    padding: 2rem 0;
+    background-color: rgba(2, 0, 0, 0);
+    color: #7209b7;
+}
+
+.game-title {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: #7209b7;
+    font-family: 'VCR OSD Mono', monospace;
+    background: #000;
+    border: white 2px solid;
+    padding: 2rem;
+box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    animation: glitch 9s linear infinite;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.game-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #ff002b;
+    font-family: 'VCR OSD Mono', monospace;
+    animation: glitch 9s linear infinite;
+}
+.continue-button pulse {/*continue-button pulse"*/
+    font-size: 1.5rem;
+    color: #e94560;
+    margin-bottom: 1rem;
+    font-family: 'VCR OSD Mono', monospace;
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+}
+
+/* Área do boss */
+.boss-area {
+        background: rgba(0, 0, 0, 0.7);
+        border: 2px solid white;
+        padding: 2rem;
+        margin-bottom: 2rem;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+        position: relative;
+        overflow: hidden;
+        animation: glitch 9s linear infinite;
+        
+}
+
+.boss-health-container {
+    height: 30px;
+    background-color: #333;
+    border-radius: 15px;
+    margin-bottom: 1rem;
+    overflow: hidden;
+}
+
+.boss-health-bar {
+    height: 100%;
+    background: linear-gradient(90deg, #ff002b, #f3722194);
+    width: 100%;
+    transition: width 0.5s ease;
+}
+
+.game-stats {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+    font-family: 'VCR OSD Mono', monospace;
+}
+
+.timer {
+    color: #e94560;
+    font-size: 1.5rem;
+}
+
+.streak-counter {
+    color: #7209b7;
+    font-size: 1.2rem;
+}
+
+.boss-visual video {
+    max-width: 100%;
+    max-height: 300px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    display: flex;
+    margin: 0 auto;
+}
+
+/* Área do quiz */
+.quiz-area {
+    padding: 2rem 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 2px solid white;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    position: relative;
+    overflow: hidden;
+    z-index: 10;
+}
+
+.question-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1.5rem;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+}
+
+.question-text {
+    font-size: 1.3rem;
+    color: white;
+    margin-bottom: 2rem;
+    line-height: 1.5;
+    font-family: 'VCR OSD Mono', monospace;
+}
+
+.options-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.option-button {
+    padding: 1rem;
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    color: black;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'VCR OSD Mono', monospace;
+}
+
+.option-button:hover {
+    background-color: #7209b7;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.option-button.correct {
+    background-color: #4CAF50;
+}
+
+.option-button.incorrect {
+    background-color: #f44336;
+}
+
+/* Área de resultados */
+.results-area {
+    background: rgba(0, 0, 0, 0.7);
+    border: 2px solid white;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    position: relative;
+    overflow: hidden;
+}
+
+.results-title {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: white;
+    animation: borderRun 9s linear infinite;
+
+}
+
+.results-stats {
+    background-color: #7209b7;
+    padding: 1.5rem;
+    border-radius: 8px;
+    max-width: 600px;
+    margin: 0 auto 2rem;
+    font-family: 'VCR OSD Mono', monospace;
+    animation: glitch 9s linear infinite ;
+}
+
+.results-stats p {
+    font-size: 1.1rem;
+    margin-bottom: 0.8rem;
+    color: white;
+}
+
+.restart-button {
+    padding: 1rem 2rem;
+    background-color: white;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'VCR OSD Mono', monospace;
+    width:10rem;
+    margin:auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+}
+
+.restart-button:hover {
+    background-color: #7209b7;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    align-self: center;
+}
+.continue-button {
+    padding: 1rem;
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    color: black;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'VCR OSD Mono', monospace;
+}
+
+.continue-button:hover {
+    background-color: #7209b7;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Adicione isso no final do seu arquivo CSS */
+#quizSection {
+    display: blocl !important; /* Começa escondido */
+}
+
+#quizSection.active {
+    display: block; /* Quando ativo, mostra */
+}
+
+/* Garanta que o game-intro não sobreponha */
+.game-intro {
+    display: block; /* Ou none, dependendo do fluxho desejado */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .options-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .game-title {
+        font-size: 2rem;
+    }
+    
+    .question-text {
+        font-size: 1.1rem;
+    }
+}
+
+/* Ranking styles */
+.ranking-container {
+    margin: 2rem 0;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 8px;
+}
+
+.ranking-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.8rem;
+    margin: 0.5rem 0;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    font-family: 'VCR OSD Mono', monospace;
+}
+
+.ranking-item.highlight {
+    background: rgba(114, 9, 183, 0.5);
+    font-weight: bold;
+}
+
+.rank {
+    width: 3rem;
+    color: #e94560;
+}
+
+.name {
+    flex-grow: 1;
+    padding: 0 1rem;
+    color: white;
+}
+
+.damage {
+    width: 6rem;
+    text-align: right;
+    color: #ff002b;
+}
+
+.share-button {
+    background: #7209b7;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    margin: 1rem 0;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'VCR OSD Mono', monospace;
+    transition: all 0.3s ease;
+}
+
+.share-button:hover {
+    background: #5e07a3;
+    transform: translateY(-2px);
+}
+
+.player-position {
+    margin-top: 1rem;
+    color: #ff002b;
+    font-style: italic;
+}
