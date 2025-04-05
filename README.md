@@ -18,11 +18,12 @@ Comprehensive toolkit for documenting AWS services with standardized templates a
 ## AWS Services Documentation Toolkit
 
 1. Include the CSS:
-```html
-<link rel="stylesheet" href="https://example.com/aws-docs.css">```
+``` Html
+<link rel="stylesheet" href="https://example.com/aws-docs.css">
+```
 
 2. 📝 Add Structure HTML
-
+```Html
 <div class="aws-service-container">
   <div class="aws-service" data-service="lambda" data-category="compute">
     <!-- Content will be injected here -->
@@ -31,9 +32,10 @@ Comprehensive toolkit for documenting AWS services with standardized templates a
     <!-- Tooltip content will be injected here -->
   </div>
 </div>
+```
 
 ##Load service data:
-
+``` Html
 // Example for Lambda service
 fetch('services/compute/lambda.json')
   .then(response => response.json())
@@ -41,6 +43,7 @@ fetch('services/compute/lambda.json')
     document.querySelector('[data-service="lambda"]').innerHTML = data.content;
     document.querySelector('.aws-tooltip').innerHTML = data.tooltip;
   });
+```
 
   🎨 Theming System
 Services are color-coded by category:
@@ -54,7 +57,7 @@ Analytics	#FF4F8B	Athena, EMR
 Security	#d32f2f	IAM, KMS
 
 📂 File Structure
-
+``` Html
 aws-docs/
 ├── css/
 │   └── aws-docs.css
@@ -68,15 +71,18 @@ aws-docs/
 │   └── ...other categories
 └── examples/
     └── implementation.html
-
+``` 
 
 📚 JSON Template Structure
 
+``` Html
 {
   "title": "Service Name",
   "content": "<div class='aws-service'>...</div>",
   "tooltip": "<div class='aws-tooltip'>...</div>"
 }
+
+```
 
 🧩 Tooltip Components
 All tooltips include these sections:
@@ -98,11 +104,13 @@ Mobile: 480px
 
 💡 Example Service Template
 
+``` Html
 {
   "title": "Amazon S3",
   "content": "<div class='aws-service storage'>...S3 description...</div>",
   "tooltip": "<div class='aws-tooltip storage'>...tooltip content...</div>"
 }
+```
 
 🔧 Customization Guide
 Add new services:
@@ -114,17 +122,23 @@ Follow existing template structure
 Modify styles:
 
 /* Change base colors */
+
+``` Html
 :root {
   --compute-color: #FF9900;
   --storage-color: #2E27AD;
 }
+```
 
 Extend functionality:
 
 // Add interactive elements
+
+``` Html
 document.querySelectorAll('.aws-service').forEach(el => {
   el.addEventListener('click', showTooltip);
 });
+```
 
 📜 License
 MIT License - Free for commercial and personal use
