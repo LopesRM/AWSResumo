@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWS Adventure Foundation</title>
+    
+    <!-- Meta Tags -->
+    <meta name="author" content="Rafhael Lopes">
+    <meta name="description" content="Aprenda AWS de forma divertida com resumos, simulados e um jogo interativo. Projeto educativo gratuito para iniciantes em cloud computing.">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="AWS Adventure Foundation">
+    <meta property="og:description" content="Aprenda AWS de forma interativa com resumos, simulados e jogos educativos.">
+    <meta property="og:image" content="assets/img/icons/cloudpet.gif">
+    <meta property="og:url" content="https://lopesrm.github.io/AWSResumo/">
+    <meta name="keywords" content="AWS, Cloud Computing, Simulado AWS, Jogo Educativo">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <link rel="canonical" href="https://lopesrm.github.io/AWSResumo/">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../assets/css/reset.css">
+    <link rel="stylesheet" href="../../assets/css/global.css">
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+15&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="../../assets/img/icons/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <header class="main-header">
+        <!-- Controle de Música -->
+        <div class="music-control">
+            <button id="music-btn" class="music-btn" aria-label="Play/Pause música de fundo">
+                <img id="music-icon" class="music-icon" src="../../assets/img/ui/pausebtnmusic.png" alt="Controle de música">
+            </button>
+            <audio id="background-music" loop autoplay preload="auto">
+                <source src="../../assets/snd/SimuladoAventure.mp3" type="audio/mpeg">
+                <source src="../../assets/snd/SimuladoAventure.ogg" type="audio/ogg">
+                Seu navegador não suporta áudio HTML5.
+            </audio>
+        </div>
+        
+        <div class="header-title">
+            <h1 class="main-title">TESTASS</h1>
+        </div>
+            <img id="shield-hero" class="shield-hero" src="../../assets/img/game/shieldheroanimated.gif" alt="Escudo animado">
+        
+
+        <!-- Navegação Principal -->
+        <nav class="main-nav">
+            <ul class="nav-list">
+                <li class="nav-item"><a href="../../../index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="../aws/awsresume.html" class="nav-link">Resumo</a></li>
+                <li class="nav-item"><a href="../aws/awssimulador.html" class="nav-link">Simulado</a></li>
+                <li class="nav-item"><a href="../games/game-fyaws.html" class="nav-link">Game</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="header-transition" role="separator"></div>
+
+    <!-- Conteúdo Principal -->
+    <main class="main-content">
+        <!-- Navegação rápida com nuvem -->
+        <div class="simulator-container">
+            <!-- Navegação Rápida -->
+            <div class="quick-nav">
+                <div class="cloud-indicator">
+                    <img src="assets/img/icons/cutecloud.gif" alt="Posição atual">
+                </div>
+                <ul class="nav-sections">
+                    <!-- Gerado dinamicamente -->
+                </ul>
+            </div>
+        
+            <!-- Área de Conteúdo -->
+            <div class="content-area">
+                <div class="content-card" id="dynamic-content">
+                    <!-- Conteúdo será injetado aqui -->
+                </div>
+                
+                <div class="teacher-tooltip">
+                    <img src="assets/img/icons/teacher.png" class="teacher-img">
+                    <div class="tooltip-text"></div>
+                </div>
+            </div>
+        
+            <!-- Controles -->
+            <div class="simulator-controls">
+                <button class="nav-btn" id="prev-btn">Anterior</button>
+                <button class="nav-btn" id="next-btn">Próximo</button>
+            </div>
+        </div>
+
+        <!-- Botões de navegação -->
+        <div class="navigation-buttons">
+            <button id="prev-btn" class="nav-button prev-button" aria-label="Categoria anterior">Anterior</button>
+            <button id="next-btn" class="nav-button next-button" aria-label="Próxima categoria">Próximo</button>
+        </div>
+
+        <!-- Seções de conteúdo dinâmico -->
+        <div id="content-sections" role="main" aria-live="polite"></div>
+        
+        <!-- Seção PIX -->
+        <section class="pix-section" aria-label="Doação via PIX">
+            <div class="pix-scanlines" role="presentation"></div>
+            <div class="pix-container">
+                <h2 class="pix-title">Faça uma Doação via PIX</h2>
+                <p class="pix-description">Apoie este projeto e ajude a mantê-lo gratuitamente para todos</p>
+                
+                <img src="../../assets/img/ui/qrcode-picpay.png" alt="QR Code para doação via PicPay" class="pix-image" loading="lazy">
+                
+                <div class="pix-details">
+                    <p class="pix-key"><strong>Chave PIX:</strong> @RafhaelLopes</p>
+                    <p class="pix-note">Seu apoio ajudará a manter o projeto</p>
+                </div>
+                
+                <button class="pix-button" onclick="copyPixKey()" aria-label="Copiar chave PIX">Copiar Chave PIX</button>
+            </div>
+        </section>
+    </main>
+    
+    
+    <footer class="main-footer">
+        <div class="footer-container">
+            <a href="https://www.linkedin.com/company/cloud-knitters/posts/?feedView=all" class="footer-link linkedin" target="_blank" rel="noopener noreferrer">LinkedIn Comunidade</a>
+            <a href="https://www.linkedin.com/in/rafhael-lopes/" class="footer-link linkedin" target="_blank" rel="noopener noreferrer">Meu LinkedIn</a>
+            <a href="https://wa.me/1234567890" class="footer-link whatsapp" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+            <a href="https://discord.gg/qbzHhJGf" class="footer-link discord" target="_blank" rel="noopener noreferrer">Discord</a>
+            <a href="https://github.com/LopesRM" class="footer-link github" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="mailto:contact.rafhaell@gmail.com" class="footer-link email" target="_blank" rel="noopener noreferrer">Email</a>
+        </div>
+        
+        <div class="footer-copyright">
+            <p>&copy; <span id="current-year">2025</span> AWS Adventure Foundation. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../../assets/js/main/script.js" defer></script>
+    <script src="../../assets/js/modules/localStorage.js" defer></script>
+    <script src="../../assets/js/main/controlmusic.js" defer></script>
+</body>
+</html>

@@ -19,12 +19,14 @@
     <link rel="canonical" href="https://lopesrm.github.io/AWSResumo/">
     
     <!-- CSS -->
-    <link rel="stylesheet" href="assets/css/reset.css">
-    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="../../assets/css/reset.css">
+    <link rel="stylesheet" href="../../assets/css/global.css">
+    <link rel="stylesheet" href="../../assets/css/content-styles.css">
+    <link rel="stylesheet" href="../../assets/css/resume.css">
     <link href="https://fonts.googleapis.com/css2?family=Jersey+15&display=swap" rel="stylesheet">
     
     <!-- Favicon -->
-    <link rel="icon" href="assets/img/icons/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../../assets/img/icons/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
@@ -32,11 +34,11 @@
         <!-- Controle de Música -->
         <div class="music-control">
             <button id="music-btn" class="music-btn" aria-label="Play/Pause música de fundo">
-                <img id="music-icon" class="music-icon" src="assets/img/ui/pausebtnmusic.png" alt="Controle de música">
+                <img id="music-icon" class="music-icon" src="../../assets/img/ui/pausebtnmusic.png" alt="Controle de música">
             </button>
             <audio id="background-music" loop autoplay preload="auto">
-                <source src="assets/snd/PixelatedDreams.mp3" type="audio/mpeg">
-                <source src="assets/snd/PixelatedDreams.ogg" type="audio/ogg">
+                <source src="../../assets/snd/PixelQuestMelody.mp3" type="audio/mpeg">
+                <source src="../../assets/snd/PixelQuestMelody.ogg" type="audio/ogg">
                 Seu navegador não suporta áudio HTML5.
             </audio>
         </div>
@@ -44,16 +46,15 @@
         <div class="header-title">
             <h1 class="main-title">AWS Adventure</h1>
         </div>
-            <img id="shield-hero" class="shield-hero" src="assets/img/game/shieldheroanimated.gif" alt="Escudo animado">
+        <img id="shield-hero" class="shield-hero" src="../../assets/img/game/shieldheroanimated.gif" alt="Escudo animado">
         
-
         <!-- Navegação Principal -->
         <nav class="main-nav">
             <ul class="nav-list">
-                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-                <li class="nav-item"><a href="pages/aws/awsresume.html" class="nav-link">Resumo</a></li>
-                <li class="nav-item"><a href="pages/aws/awssimulador.html" class="nav-link">Simulado</a></li>
-                <li class="nav-item"><a href="pages/games/game-fyaws.html" class="nav-link">Game</a></li>
+                <li class="nav-item"><a href="../../index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="../../pages/aws/awsresume.html" class="nav-link">Resumo</a></li>
+                <li class="nav-item"><a href="../../pages/aws/awssimulador.html" class="nav-link">Simulado</a></li>
+                <li class="nav-item"><a href="../../pages/games/game-fyaws.html" class="nav-link">Game</a></li>
             </ul>
         </nav>
     </header>
@@ -61,51 +62,38 @@
     <div class="header-transition" role="separator"></div>
 
     <main class="main-content">
-        <!-- Seção de Introdução -->
-        <section id="intro" class="intro-section">
-            <div class="intro-container">
-                <h2 class="titulo-animado">Bem-vindo à Aventura AWS!</h2>
-                <div class="intro-content">
-                    <img src="assets/img/icons/cloudpet.gif" alt="Nuvem animada com rosto" class="gif-intro">
-                    <p id="subintro" class="intro-text">Explore os serviços da AWS e teste seus conhecimentos com nosso simulado.</p>
-                </div>
+         <!-- Controles de navegação -->
+         <div class="nav-controls">
+            <button id="prev-btn" class="nav-button" aria-label="Seção anterior">
+                <img src="../../assets/img/ui/arrow-left.png" alt="Anterior">
+            </button>
+            
+            <div class="nav-dots" id="nav-dots">
+                <!-- Os pontos de navegação serão gerados pelo JS -->
             </div>
-        </section>
-        
-        <!-- Seção Sobre -->
-        <section id="about" class="about-section">
-            <article class="caixa-conteudo">
-                <h2 class="content-title">Sobre o Projeto</h2>
-                <p class="content-text">
-                    O <strong>AWS Adventure Foundation</strong> nasceu da ideia de facilitar o aprendizado de alunos nos fundamentos da AWS. 
-                    <strong>100% educativo e gratuito</strong>, combina resumos, simulados e um jogo para tornar o estudo de cloud computing acessível e interativo.
-                </p>
-            </article>
+            
+            <button id="next-btn" class="nav-button" aria-label="Próxima seção">
+                <img src="../../assets/img/ui/arrow-right.png" alt="Próximo">
+            </button>
+        </div>
 
-            <article class="caixa-conteudo">
-                <h2 class="content-title">Motivação</h2>
-                <p class="content-text">
-                    Compartilhar conhecimento gratuitamente, garantindo que estudantes tenham uma base sólida para explorar a computação em nuvem. 
-                    Acreditamos que a educação é o caminho para criar oportunidades.
-                </p>
-            </article>
+        <div class="progress-container">
+            <div class="progress-bar" id="progress-bar"></div>
+        </div>
 
-            <article class="caixa-conteudo">
-                <h2 class="content-title">Sobre o Autor</h2>
-                <p class="content-text">
-                    Meu nome é <strong>Rafhael Lopes</strong>, apaixonado por tecnologia e aprendizado contínuo. 
-                    Dedico este projeto para apoiar outros alunos que buscam expandir seus horizontes na AWS.
-                </p>
-            </article>
-
-            <article class="caixa-conteudo">
-                <h2 class="content-title">Como Apoiar</h2>
-                <p class="content-text">
-                    Compartilhe com amigos, colegas e comunidades de aprendizado. 
-                    Toda ajuda é bem-vinda para promover educação acessível.
-                </p>
-            </article>
-        </section>
+        <!-- Seção Principal -->
+         
+        <div class="container">
+            <!-- Navegação rápida -->
+            <div class="quick-nav" id="quick-nav">
+                <!-- Será preenchido pelo JavaScript -->
+            </div>
+    
+            <!-- Área de conteúdo -->
+            <div class="content-area" id="content-area">
+                <!-- Será preenchido pelo JavaScript -->
+            </div>
+            
         
         <!-- Seção de Doação -->
         <section id="pix-section" class="pix-section">
@@ -114,7 +102,7 @@
                 <h2 class="pix-title">Faça uma Doação via PIX</h2>
                 <p class="pix-description">Apoie este projeto e ajude a mantê-lo gratuitamente para todos</p>
                 
-                <img src="assets/img/ui/qrcode-picpay.png" alt="QR Code para doação via PicPay" class="pix-image">
+                <img src="../../assets/img/ui/qrcode-picpay.png" alt="QR Code para doação via PicPay" class="pix-image">
                 
                 <div class="pix-details">
                     <p class="pix-key"><strong>Chave PIX:</strong> @RafhaelLopes</p>
@@ -142,9 +130,9 @@
     </footer>
 
     <!-- Scripts -->
-    <script src="assets/js/main/script.js" defer></script>
-    <script src="assets/js/modules/localStorage.js" defer></script>
-    <script src="assets/js/main/musicControl.js" defer></script>
-    <script src="assets/js/main/controlmusic.js" defer></script>
+    
+    <script src="../../assets/js/main/controlmusic.js" defer></script>
+    <script src="../../assets/js/modules/resume-content.js" defer></script>
+
 </body>
 </html>

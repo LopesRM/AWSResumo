@@ -1,0 +1,152 @@
+### COMPUTAÇÃO ###
+EC2 (Elastic Compute Cloud) - Máquinas virtuais sob demanda
+EC2 Auto Scaling - Escalabilidade automática de instâncias
+Lambda - Serverless (funções sem servidor)
+ECS (Elastic Container Service) - Orquestração de containers Docker
+EKS (Elastic Kubernetes Service) - Kubernetes gerenciado
+Fargate - Serverless para containers (sem gerenciar servidores)
+Lightsail - VPS simplificado para pequenas aplicações
+Batch - Processamento de jobs em lote
+Elastic Beanstalk - Plataforma como serviço (PaaS) para deploy de apps
+App Runner - Serviço para deploy automático de aplicações containerizadas
+
+### ARMAZENAMENTO ###
+S3 (Simple Storage Service) - Armazenamento de objetos escalável
+S3 Glacier - Armazenamento de baixo custo para archives
+EBS (Elastic Block Store) - Discos persistentes para EC2
+EFS (Elastic File System) - Sistema de arquivos compartilhados
+FSx for Windows File Server - Sistema de arquivos compatível com Windows
+FSx for Lustre - Sistema de arquivos de alta performance (HPC/ML)
+Storage Gateway - Integração híbrida (local + nuvem)
+Backup - Backup centralizado e gerenciado
+DataSync - Transferência rápida de dados entre on-premises e AWS
+Snow Family (Snowcone, Snowball, Snowmobile) - Transferência física de grandes volumes de dados
+
+### BANCOS DE DADOS ###
+RDS (Relational Database Service) - Bancos relacionais (MySQL, PostgreSQL, Oracle, etc.)
+Aurora - Banco otimizado para cloud (MySQL/PostgreSQL compatível)
+DynamoDB - NoSQL gerenciado e serverless
+Redshift - Data warehouse para análises em larga escala
+ElastiCache - Cache em memória (Redis/Memcached)
+Neptune - Banco de dados de grafos
+DocumentDB - MongoDB compatível
+Keyspaces - Banco Apache Cassandra gerenciado
+Timestream - Banco para séries temporais (IoT)
+Quantum Ledger Database (QLDB) - Banco ledger imutável
+
+### REDES E CONTEÚDO ###
+VPC (Virtual Private Cloud) - Rede isolada na AWS
+CloudFront - CDN (Rede de Distribuição de Conteúdo)
+Route 53 - DNS escalável e registro de domínios
+API Gateway - Gerenciamento de APIs REST/WebSocket
+Direct Connect - Conexão dedicada entre AWS e datacenters locais
+Elastic Load Balancing (ALB, NLB, GLB) - Balanceadores de carga
+Global Accelerator - Otimização de rota para aplicações globais
+PrivateLink - Acesso privado a serviços AWS sem internet
+Transit Gateway - Hub centralizado para conexões VPC
+VPN CloudHub - VPN hub-and-spoke para múltiplos sites
+
+### SEGURANÇA E IDENTIDADE ###
+IAM (Identity and Access Management) - Controle de acesso granular
+KMS (Key Management Service) - Gerenciamento de chaves de criptografia
+Secrets Manager - Armazenamento de credenciais (senhas, tokens)
+GuardDuty - Detecção de ameaças baseada em ML
+WAF (Web Application Firewall) - Proteção contra ataques web
+Shield - Proteção contra DDoS (Standard e Advanced)
+Cognito - Autenticação para usuários (OAuth, OpenID)
+Artifact - Relatórios de compliance (SOC, ISO, PCI DSS)
+Macie - Proteção de dados sensíveis (PII, dados classificados)
+Security Hub - Visão unificada de segurança
+Detective - Análise de root cause de ameaças
+Audit Manager - Auditoria contínua de compliance
+
+### BIG DATA E ANALYTICS ###
+EMR (Elastic MapReduce) - Processamento de big data (Hadoop, Spark)
+Athena - Consulta SQL em dados no S3 (serverless)
+QuickSight - Business Intelligence (BI) escalável
+Kinesis - Processamento de streams em tempo real (Data Streams, Firehose, Analytics)
+Glue - ETL gerenciado para preparação de dados
+Lake Formation - Criação de data lakes gerenciados
+Redshift Spectrum - Consulta dados no S3 diretamente do Redshift
+MSK (Managed Streaming for Kafka) - Kafka gerenciado
+Data Pipeline - Orquestração de workflows de dados
+OpenSearch Service (ex-Elasticsearch) - Busca e análise de logs
+
+### MACHINE LEARNING & IA ###
+SageMaker - Plataforma end-to-end para ML (treinamento, deploy)
+Rekognition - Análise de imagens/vídeos (detecção facial, objetos)
+Lex - Framework para chatbots (usado no Alexa)
+Polly - Conversão de texto em voz (TTS)
+Transcribe - Transcrição automática de áudio
+Translate - Tradução automática de textos
+Forecast - Previsões de séries temporais
+Personalize - Recomendações personalizadas (ML)
+Textract - Extração de texto de documentos (OCR)
+Comprehend - NLP (Processamento de Linguagem Natural)
+DeepRacer - Carro autônomo para aprendizado de RL
+
+### IOT (INTERNET OF THINGS) ###
+IoT Core - Conexão e gerenciamento de dispositivos IoT
+Greengrass - Computação local para IoT (edge computing)
+FreeRTOS - Sistema operacional para microcontroladores IoT
+IoT Analytics - Análise de dados de dispositivos IoT
+IoT Device Defender - Segurança para dispositivos IoT
+IoT Events - Detecção de eventos/anomalias em tempo real
+
+### FERRAMENTAS DE DESENVOLVIMENTO ###
+CodeCommit - Repositórios Git gerenciados
+CodeBuild - Compilação e teste de código (CI)
+CodeDeploy - Automação de deploy em instâncias
+CodePipeline - Pipeline de CI/CD
+CodeStar - Gerenciamento unificado de projetos DevOps
+Cloud9 - IDE baseado em nuvem
+X-Ray - Rastreamento de chamadas em aplicações distribuídas
+CloudShell - Terminal baseado em navegador para AWS
+
+### MONITORAMENTO E GOVERNANÇA ###
+CloudWatch - Monitoramento de métricas e logs
+CloudTrail - Auditoria de chamadas de API
+Config - Avaliação de conformidade de recursos
+Systems Manager - Gerenciamento de instâncias EC2 em escala
+Trusted Advisor - Recomendações de otimização de custos/segurança
+Service Catalog - Catálogo de produtos de TI padronizados
+Control Tower - Governança multi-conta AWS
+Organizations - Gerenciamento centralizado de múltiplas contas AWS
+Cost Explorer - Análise de custos e gastos
+Budget - Alertas de orçamento
+
+### APLICAÇÕES CORPORATIVAS ###
+WorkSpaces - Desktops virtuais (VDI)
+AppStream 2.0 - Streaming de aplicações desktop
+WorkDocs - Armazenamento e colaboração de arquivos
+WorkMail - E-mail corporativo gerenciado
+Chime - Comunicação por voz/vídeo (similar a Zoom)
+Pinpoint - Engajamento de usuários via SMS/e-mail/push
+Connect - Central de atendimento (call center) na nuvem
+
+### SERVIÇOS HÍBRIDOS E MIGRAÇÃO ###
+Outposts - Execução de serviços AWS no datacenter local
+VMware Cloud on AWS - Integração com VMware
+Application Discovery Service - Descoberta de apps para migração
+Database Migration Service (DMS) - Migração de bancos de dados
+Server Migration Service (SMS) - Migração de servidores locais
+DataSync - Transferência rápida de dados para AWS
+
+### BLOCKCHAIN ###
+Managed Blockchain - Redes blockchain gerenciadas (Hyperledger Fabric, Ethereum)
+Quantum Ledger Database (QLDB) - Banco ledger imutável
+
+### SERVIÇOS PARA GAMES ###
+GameLift - Hospedagem gerenciada para servidores de jogos
+Lumberyard - Motor de jogos da AWS (com integração em nuvem)
+
+### SERVIÇOS ESPECÍFICOS ###
+Ground Station - Controle de satélites via AWS
+RoboMaker - Desenvolvimento de aplicações de robótica
+Honeycode - Plataforma low-code para criar apps sem programação
+Panorama - Dispositivo de visão computacional para edge computing
+
+### SERVIÇOS REGIONAIS ###
+AWS Local Zones - Extensão de regiões para baixa latência
+Wavelength Zones - AWS em redes 5G (edge computing)
+Support API - Gerenciamento programático de tickets de suporte
