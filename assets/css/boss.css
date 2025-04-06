@@ -1,0 +1,308 @@
+/* Estilos para o jogo de boss */
+.difficulty-screen {
+    text-align: center;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    max-width: 600px;
+}
+
+.difficulty-btn {
+    background: rgba(0, 0, 0, 0.7);
+    border: 2px solid var(--light-text);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    position: relative;
+    overflow: hidden;
+}
+
+.difficulty-btn:hover {
+    background-color: #ae00ff;
+    transform: scale(1.05);
+    animation: glitch 1s linear infinite;
+}
+
+.battle-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.boss-container {
+    position: relative;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.7);
+    border: 2px solid var(--light-text);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+.boss-image {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    margin-bottom: 1rem;
+}
+
+.health-container {
+    width: 100%;
+    background-color: #333;
+    border-radius: 5px;
+    padding: 3px;
+    margin-top: 1rem;
+}
+
+.health-bar {
+    height: 20px;
+    background-color: green;
+    border-radius: 3px;
+    transition: width 0.5s;
+}
+
+.health-text {
+    position: absolute;
+    top: -25px;
+    left: 0;
+    right: 0;
+    color: white;
+    font-weight: bold;
+}
+
+.question-box {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 1.5rem;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+    border: white 2px solid;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.options-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.option-btn {
+    background-color: #232f3e;
+    color: white;
+    border: 1px solid white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    padding: 1rem;
+    padding: 0.8rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: "Jersey 15", sans-serif;
+    font-size: 1rem;
+}
+
+.option-btn:hover {
+    background-color: #ae00ff;
+    color: black;
+}
+
+.feedback-box {
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    min-height: 20px;
+    font-size: 2rem;
+    color: white;
+}
+
+.timer {
+    text-align: center;
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+    color: white;
+}
+
+.game-stats {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin: 1rem 0;
+    font-size: 1.2rem;
+}
+
+.results {
+    text-align: center;
+    color: white;
+    margin-top: 1rem;
+}
+
+.results h3 {
+    color: #ae00ff;
+    margin-bottom: 1rem;
+}
+
+.results p {
+    margin: 0.5rem 0;
+}
+
+.share-btn, .restart-btn {
+    background-color: #ae00ff;
+    color: #000;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    margin: 1rem 0.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-family: "Jersey 15", sans-serif;
+}
+
+.share-btn:hover, .restart-btn:hover {
+    background-color: #ae00ff;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .options-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .boss-image {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+/* Estilo para o overlay e background */
+.game-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: -1;
+}
+
+/* Estilo para o input do nome */
+.player-info {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#player-name {
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 2px solid #ae00ff;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 30px;
+    font-family: "Jersey 15", sans-serif;
+    font-size: 1.2rem;
+    width: 250px;
+    text-align: center;
+    transition: all 0.3s;
+    box-shadow: 0 0 15px rgba(174, 0, 255, 0.5);
+}
+
+#player-name:focus{
+    outline: none;
+    border-color: #ffffff;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
+}
+
+/* Efeitos visuais para respostas */
+@keyframes correctAnswer {
+    0% { background-color: rgba(0, 255, 0, 0.1); }
+    50% { background-color: rgba(0, 255, 0, 0.3); }
+    100% { background-color: rgba(0, 255, 0, 0.1); }
+}
+
+@keyframes wrongAnswer {
+    0% { background-color: rgba(255, 0, 0, 0.1); }
+    50% { background-color: rgba(255, 0, 0, 0.3); }
+    100% { background-color: rgba(255, 0, 0, 0.1); }
+}
+
+.correct-feedback {
+    animation: correctAnswer 1s ease-in-out;
+}
+
+.wrong-feedback {
+    animation: wrongAnswer 1s ease-in-out;
+}
+
+/* Container do nome do jogador */
+.player-name-container {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#player-name {
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 2px solid #ae00ff;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 30px;
+    font-family: "Jersey 15", sans-serif;
+    font-size: 1.2rem;
+    width: 250px;
+    text-align: center;
+    transition: all 0.3s;
+    box-shadow: 0 0 15px rgba(174, 0, 255, 0.5);
+}
+
+#player-name:focus {
+    outline: none;
+    border-color: #ffffff;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
+}
+
+.name-edit-icon {
+    color: #ae00ff;
+    font-size: 1.2rem;
+    cursor: pointer;
+    text-shadow: 0 0 5px rgba(174, 0, 255, 0.7);
+    transition: all 0.3s;
+}
+
+.name-edit-icon:hover {
+    transform: scale(1.2);
+    color: #ffffff;
+}
+
+/* Ajuste para mobile */
+@media (max-width: 768px) {
+    .player-name-container {
+        top: 10px;
+        width: 90%;
+    }
+    
+    #player-name {
+        width: 100%;
+        font-size: 1rem;
+        padding: 8px 12px;
+    }
+}

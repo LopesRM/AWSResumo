@@ -1,0 +1,20 @@
+[{
+  "question": "Qual serviço AWS é melhor para armazenamento de arquivos estáticos de um website?",
+  "correct_answer": "Amazon S3",
+  "incorrect_answers": ["Amazon EFS", "Amazon EBS", "AWS Storage Gateway"],
+  "difficulty": "easy",
+  "category": "Storage",
+  "explanation": "O Amazon S3 é otimizado para armazenamento de objetos estáticos como imagens, vídeos e arquivos de sites, oferecendo alta disponibilidade e baixa latência."
+},
+  {
+    "question": "O que é uma região AWS?",
+    "correct_answer": "Um conjunto de data centers em uma área geográfica específica",
+    "incorrect_answers": [
+      "Um único data center da AWS",
+      "Um serviço de CDN da AWS",
+      "Um tipo de instância EC2"
+    ],
+    "difficulty": "easy",
+    "category": "Global Infrastructure"
+  }
+]

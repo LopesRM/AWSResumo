@@ -16,19 +16,24 @@
     <meta property="og:url" content="https://lopesrm.github.io/AWSResumo/">
     <meta name="keywords" content="AWS, Cloud Computing, Simulado AWS, Jogo Educativo">
     <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta name="theme-color" content="#232F3E">
     <link rel="canonical" href="https://lopesrm.github.io/AWSResumo/">
     <!-- CSS -->
     <link rel="stylesheet" href="../../assets/css/reset.css">
     <link rel="stylesheet" href="../../assets/css/global.css">
+    <link rel="stylesheet" href="../../assets/css/boss.css">
     <link href="https://fonts.googleapis.com/css2?family=Jersey+15&display=swap" rel="stylesheet">
     
     <!-- Favicon -->
     <link rel="icon" href="../../assets/img/icons/favicon.ico" type="image/x-icon">
 </head>
 
-<body>
+<body style="background-image: url('../../assets/img/game/castle-bg.png'); background-size: cover; background-attachment: fixed;">
+    <div class="game-overlay"></div>
     <header class="main-header">
-        <!-- Controle de Música -->
+        <div class="player-info">
+            <input type="text" id="player-name" placeholder="Seu Nome" value="Cloud Adventurer" maxlength="20">
+        </div><span class="name-edit-icon">✏️</span>
         <div class="music-control">
             <button id="music-btn" class="music-btn" aria-label="Play/Pause música de fundo">
                 <img id="music-icon" class="music-icon" src="../../assets/img/ui/pausebtnmusic.png" alt="Controle de música">
@@ -59,48 +64,46 @@
     
     <div class="header-transition" role="separator"></div>
 
-    <!-- Conteúdo Principal -->
-    <main class="main-content">
-        <!-- Navegação rápida com nuvem -->
-        <div class="simulator-container">
-            <!-- Navegação Rápida -->
-            <div class="quick-nav">
-                <div class="cloud-indicator">
-                    <img src="assets/img/icons/cutecloud.gif" alt="Posição atual">
+    <main class="boss-content">
+        <div class="game-container">
+            <div class="game-header">
+                <h1 class="game-title">AWS BOSS BATTLE</h1>
+                <div class="game-stats">
+                    <span id="score">Score: 0</span>
+                    <span id="combo">Combo: x1</span>
+                    <span id="questions">Perguntas: 0/10</span>
                 </div>
-                <ul class="nav-sections">
-                    <!-- Gerado dinamicamente -->
-                </ul>
+           
+         
+            <div id="difficulty-screen" class="difficulty-screen">
+                <h2>Selecione a Dificuldade</h2>
+                <div id="difficulty-screen">
+                    <button class="difficulty-btn" data-difficulty="associate">Associate</button>
+                    <button class="difficulty-btn" data-difficulty="foundation">Foundation</button>
+                    <button class="difficulty-btn" data-difficulty="professional">Professional</button>
+                </div>
             </div>
-        
-            <!-- Área de Conteúdo -->
-            <div class="content-area">
-                <div class="content-card" id="dynamic-content">
-                    <!-- Conteúdo será injetado aqui -->
+            <div class="battle-area">
+                <!-- Área do Boss -->
+                <div class="boss-container">
+                    <img id="boss-image" src="../../assets/img/game/vampirelord.gif" alt="Boss AWS" class="boss-image">
+                    <div class="health-container">
+                        <div id="boss-health" class="health-bar"></div>
+                        <span id="health-text" class="health-text">100%</span>
+                    </div>
                 </div>
                 
-                <div class="teacher-tooltip">
-                    <img src="assets/img/icons/teacher.png" class="teacher-img">
-                    <div class="tooltip-text"></div>
+                <!-- Área da Pergunta -->
+                <div id="question-container" class="question-box">
+                    <h3 id="question-text">Carregando perguntas...</h3>
+                    <div id="options-container" class="options-grid"></div>
                 </div>
-            </div>
-        
-            <!-- Controles -->
-            <div class="simulator-controls">
-                <button class="nav-btn" id="prev-btn">Anterior</button>
-                <button class="nav-btn" id="next-btn">Próximo</button>
+                
+                <!-- Feedback -->
+                <div id="feedback" class="feedback-box"></div>
             </div>
         </div>
-
-        <!-- Botões de navegação -->
-        <div class="navigation-buttons">
-            <button id="prev-btn" class="nav-button prev-button" aria-label="Categoria anterior">Anterior</button>
-            <button id="next-btn" class="nav-button next-button" aria-label="Próxima categoria">Próximo</button>
-        </div>
-
-        <!-- Seções de conteúdo dinâmico -->
-        <div id="content-sections" role="main" aria-live="polite"></div>
-        
+    
         <!-- Seção PIX -->
         <section class="pix-section" aria-label="Doação via PIX">
             <div class="pix-scanlines" role="presentation"></div>
@@ -137,8 +140,12 @@
     </footer>
 
     <!-- Scripts -->
+    <script src="../../assets/js/game/aws-boss-game.js" defer></script>
+    <script src="../../gameassets/bosscontent.js" defer></script>
     <script src="../../assets/js/main/script.js" defer></script>
     <script src="../../assets/js/modules/localStorage.js" defer></script>
     <script src="../../assets/js/main/controlmusic.js" defer></script>
+    <script src="../../gameassets/boss.js" defer></script>
+    
 </body>
 </html>

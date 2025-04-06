@@ -1,0 +1,24 @@
+[
+  {
+    "question": "Como você implementaria um padrão de backoff exponencial em chamadas à API da AWS?",
+    "correct_answer": "Usando retries com intervalos crescentes entre as tentativas",
+    "incorrect_answers": [
+      "Configurando um limite fixo de requisições por segundo",
+      "Usando Amazon SQS para todas as chamadas de API",
+      "Implementando um circuito breaker com AWS Lambda"
+    ],
+    "difficulty": "hard",
+    "category": "Best Practices"
+  },
+  {
+    "question": "Qual estratégia de implantação permite rollback mais rápido em caso de falha?",
+    "correct_answer": "Blue/Green Deployment",
+    "incorrect_answers": [
+      "Canary Deployment",
+      "Rolling Deployment",
+      "A/B Testing Deployment"
+    ],
+    "difficulty": "hard",
+    "category": "DevOps"
+  }
+]
