@@ -1,0 +1,1424 @@
+[{
+  "question": "Qual serviço AWS é melhor para armazenamento de arquivos estáticos de um website?",
+  "correct_answer": "Amazon S3",
+  "incorrect_answers": ["Amazon EFS", "Amazon EBS", "AWS Storage Gateway"],
+  "difficulty": "easy",
+  "category": "Storage",
+  "explanation": "O Amazon S3 é otimizado para armazenamento de objetos estáticos como imagens, vídeos e arquivos de sites, oferecendo alta disponibilidade e baixa latência."
+},
+  {
+    "question": "O que é uma região AWS?",
+    "correct_answer": "Um conjunto de data centers em uma área geográfica específica",
+    "incorrect_answers": [
+      "Um único data center da AWS",
+      "Um serviço de CDN da AWS",
+      "Um tipo de instância EC2"
+    ],
+    "difficulty": "easy",
+    "category": "Global Infrastructure"
+  },
+{
+  "question": "Qual é o benefício principal da computação em nuvem segundo o modelo de responsabilidade compartilhada da AWS?",
+  "correct_answer": "A AWS é responsável pela segurança da nuvem, enquanto o cliente é responsável pela segurança na nuvem",
+  "incorrect_answers": [
+    "A AWS assume toda a responsabilidade de segurança",
+    "O cliente é responsável por toda a infraestrutura física",
+    "Não há divisão de responsabilidades na nuvem"
+  ],
+  "difficulty": "easy",
+  "category": "Cloud Concepts",
+  "explanation": "O modelo de responsabilidade compartilhada define que a AWS gerencia a segurança da infraestrutura subjacente, enquanto os clientes são responsáveis por configurar corretamente seus serviços e aplicações."
+},
+{
+  "question": "Qual serviço AWS permite escalar automaticamente recursos computacionais conforme a demanda?",
+  "correct_answer": "AWS Auto Scaling",
+  "incorrect_answers": [
+    "AWS Config",
+    "AWS Direct Connect",
+    "AWS Organizations"
+  ],
+  "difficulty": "easy",
+  "category": "Compute",
+  "explanation": "O AWS Auto Scaling ajuda a manter a disponibilidade de aplicações e permite adicionar ou remover instâncias EC2 automaticamente conforme as condições definidas."
+},
+{
+  "question": "Qual é o propósito principal do Amazon CloudFront?",
+  "correct_answer": "Servir como uma Rede de Distribuição de Conteúdo (CDN)",
+  "incorrect_answers": [
+    "Fornecer armazenamento de banco de dados relacional",
+    "Hospedar aplicações serverless",
+    "Gerenciar identidade e acesso"
+  ],
+  "difficulty": "medium",
+  "category": "Networking",
+  "explanation": "O CloudFront acelera a distribuição de conteúdo estático e dinâmico para usuários finais através de uma rede global de edge locations."
+},
+{
+  "question": "Qual serviço AWS é um banco de dados NoSQL totalmente gerenciado?",
+  "correct_answer": "Amazon DynamoDB",
+  "incorrect_answers": [
+    "Amazon RDS",
+    "Amazon Redshift",
+    "Amazon Aurora"
+  ],
+  "difficulty": "medium",
+  "category": "Databases",
+  "explanation": "O DynamoDB é um serviço de banco de dados NoSQL rápido e flexível que oferece desempenho consistente de milissegundos em qualquer escala."
+},
+{
+  "question": "O que o AWS Trusted Advisor fornece?",
+  "correct_answer": "Recomendações para otimizar custos, melhorar desempenho e segurança",
+  "incorrect_answers": [
+    "Monitoramento em tempo real de instâncias EC2",
+    "Serviço de migração de bancos de dados",
+    "Ferramentas de desenvolvimento de aplicações"
+  ],
+  "difficulty": "hard",
+  "category": "Management Tools",
+  "explanation": "O Trusted Advisor analisa seu ambiente AWS e faz recomendações práticas seguindo as melhores práticas da AWS."
+},
+{
+  "question": "Qual é a vantagem do modelo de preço pay-as-you-go na AWS?",
+  "correct_answer": "Você paga apenas pelos serviços que usar, sem custos iniciais",
+  "incorrect_answers": [
+    "Todos os serviços são gratuitos após o primeiro ano",
+    "Preços fixos mensais independente do uso",
+    "Descontos exclusivos para pagamentos anuais antecipados"
+  ],
+  "difficulty": "easy",
+  "category": "Billing",
+  "explanation": "O modelo pay-as-you-go elimina a necessidade de grandes investimentos iniciais e permite ajustar os gastos conforme o uso real."
+},
+{
+  "question": "Qual serviço AWS você usaria para criar um ambiente de rede virtual isolado?",
+  "correct_answer": "Amazon VPC (Virtual Private Cloud)",
+  "incorrect_answers": [
+    "Amazon Route 53",
+    "AWS Lambda",
+    "Amazon S3"
+  ],
+  "difficulty": "medium",
+  "category": "Networking",
+  "explanation": "A Amazon VPC permite provisionar uma seção isolada da nuvem AWS onde você pode lançar recursos em uma rede virtual que você define."
+},
+{
+  "question": "O que o AWS Identity and Access Management (IAM) permite fazer?",
+  "correct_answer": "Gerenciar acesso seguro aos serviços e recursos da AWS",
+  "incorrect_answers": [
+    "Monitorar o desempenho de instâncias EC2",
+    "Armazenar objetos e arquivos na nuvem",
+    "Conectar data centers locais à AWS"
+  ],
+  "difficulty": "easy",
+  "category": "Security",
+  "explanation": "O IAM permite controlar quem pode usar quais serviços e recursos na AWS, através de usuários, grupos, funções e políticas."
+},
+{
+  "question": "Qual serviço AWS é mais adequado para executar código sem provisionar servidores?",
+  "correct_answer": "AWS Lambda",
+  "incorrect_answers": [
+    "Amazon EC2",
+    "AWS Fargate",
+    "Amazon Lightsail"
+  ],
+  "difficulty": "medium",
+  "category": "Compute",
+  "explanation": "O AWS Lambda executa seu código apenas quando necessário e escala automaticamente, cobrando apenas pelo tempo de computação consumido."
+},
+{
+  "question": "O que o AWS Shield protege?",
+  "correct_answer": "Aplicações contra ataques DDoS",
+  "incorrect_answers": [
+    "Dados em trânsito contra interceptação",
+    "Credenciais de acesso contra vazamentos",
+    "Instâncias EC2 contra acesso não autorizado"
+  ],
+  "difficulty": "hard",
+  "category": "Security",
+  "explanation": "O AWS Shield é um serviço gerenciado de proteção contra Distributed Denial of Service (DDoS) que protege aplicações executadas na AWS."
+},
+{
+  "question": "Qual serviço AWS fornece um repositório gerenciado para imagens de contêineres Docker?",
+  "correct_answer": "Amazon Elastic Container Registry (ECR)",
+  "incorrect_answers": [
+    "Amazon Elastic Container Service (ECS)",
+    "AWS Fargate",
+    "Amazon Elastic Kubernetes Service (EKS)"
+  ],
+  "difficulty": "hard",
+  "category": "Containers",
+  "explanation": "O Amazon ECR é um registro de contêineres Docker totalmente gerenciado que facilita o armazenamento, gerenciamento e implantação de imagens de contêineres."
+},
+{
+  "question": "Qual é o propósito do AWS Organizations?",
+  "correct_answer": "Centralizar o gerenciamento de múltiplas contas AWS",
+  "incorrect_answers": [
+    "Monitorar o desempenho de aplicações",
+    "Fornecer armazenamento compartilhado entre contas",
+    "Automatizar implantações de infraestrutura"
+  ],
+  "difficulty": "medium",
+  "category": "Management Tools",
+  "explanation": "O AWS Organizations ajuda a gerenciar e governar ambientes com múltiplas contas AWS, permitindo consolidar billing e aplicar políticas centralizadas."
+},
+{
+  "question": "Qual serviço AWS é usado para monitorar e coletar logs de aplicações?",
+  "correct_answer": "Amazon CloudWatch",
+  "incorrect_answers": [
+    "AWS Config",
+    "AWS CloudTrail",
+    "Amazon Inspector"
+  ],
+  "difficulty": "easy",
+  "category": "Monitoring",
+  "explanation": "O Amazon CloudWatch fornece dados e insights acionáveis para monitorar aplicações, otimizar desempenho e garantir a saúde operacional."
+},
+{
+  "question": "Qual é o propósito do Amazon RDS?",
+  "correct_answer": "Gerenciar bancos de dados relacionais na nuvem",
+  "incorrect_answers": [
+    "Armazenar dados não estruturados",
+    "Executar funções serverless",
+    "Criar redes virtuais isoladas"
+  ],
+  "difficulty": "medium",
+  "category": "Databases",
+  "explanation": "O Amazon RDS facilita a configuração, operação e escalabilidade de bancos de dados relacionais na nuvem, suportando vários mecanismos como MySQL, PostgreSQL e Oracle."
+},
+  {
+    "question": "Qual serviço AWS permite criar e gerenciar usuários com acesso programático ao console?",
+    "correct_answer": "IAM (Identity and Access Management)",
+    "incorrect_answers": [
+      "Amazon Cognito",
+      "AWS Directory Service",
+      "AWS Organizations"
+    ],
+    "difficulty": "easy",
+    "category": "Security",
+    "explanation": "O IAM permite criar e gerenciar usuários AWS e seus acessos através de políticas detalhadas."
+  },
+  {
+    "question": "Qual modelo de computação em nuvem a AWS utiliza?",
+    "correct_answer": "Modelo de responsabilidade compartilhada",
+    "incorrect_answers": [
+      "Modelo de responsabilidade exclusiva do cliente",
+      "Modelo de responsabilidade total da AWS",
+      "Modelo de responsabilidade terceirizada"
+    ],
+    "difficulty": "easy",
+    "category": "Cloud Concepts",
+    "explanation": "A AWS é responsável pela segurança 'da' nuvem (infraestrutura), enquanto o cliente é responsável pela segurança 'na' nuvem (seus dados e aplicações)."
+  },
+  {
+    "question": "Qual serviço AWS é usado para migrar bancos de dados para a nuvem com tempo de inatividade mínimo?",
+    "correct_answer": "AWS Database Migration Service (DMS)",
+    "incorrect_answers": [
+      "AWS Snowmobile",
+      "AWS Storage Gateway",
+      "Amazon RDS Proxy"
+    ],
+    "difficulty": "medium",
+    "category": "Migration",
+    "explanation": "O AWS DMS ajuda na migração de bancos de dados heterogêneos com replicação contínua durante a migração."
+  },
+  {
+    "question": "O que o Amazon CloudWatch monitora?",
+    "correct_answer": "Recursos e aplicações AWS",
+    "incorrect_answers": [
+      "Apenas instâncias EC2",
+      "Apenas bancos de dados RDS",
+      "Apenas arquivos no S3"
+    ],
+    "difficulty": "easy",
+    "category": "Management Tools",
+    "explanation": "O CloudWatch coleta dados de monitoramento e operacional na forma de logs, métricas e eventos para toda a infraestrutura AWS."
+  },
+  {
+    "question": "Qual é o principal benefício do Amazon S3?",
+    "correct_answer": "Armazenamento de objetos altamente durável e escalável",
+    "incorrect_answers": [
+      "Banco de dados relacional gerenciado",
+      "Computação serverless",
+      "Rede de entrega de conteúdo"
+    ],
+    "difficulty": "easy",
+    "category": "Storage",
+    "explanation": "O Amazon S3 oferece armazenamento de objetos com 99.999999999% (11 noves) de durabilidade e escalabilidade ilimitada."
+  },
+  {
+    "question": "Qual serviço AWS reduz custos permitindo que você reserve capacidade com antecedência?",
+    "correct_answer": "AWS Savings Plans",
+    "incorrect_answers": [
+      "AWS Budgets",
+      "AWS Cost Explorer",
+      "AWS Pricing Calculator"
+    ],
+    "difficulty": "medium",
+    "category": "Billing",
+    "explanation": "Os Savings Plans oferecem descontos significativos em troca de um compromisso de uso consistente de recursos computacionais."
+  },
+  {
+    "question": "O que o AWS Well-Architected Framework ajuda a fazer?",
+    "correct_answer": "Projetar sistemas seguros, eficientes e resilientes na nuvem",
+    "incorrect_answers": [
+      "Monitorar o desempenho de aplicações",
+      "Migrar dados para a AWS",
+      "Treinar equipes em serviços AWS"
+    ],
+    "difficulty": "hard",
+    "category": "Best Practices",
+    "explanation": "O Framework fornece um conjunto de melhores práticas organizadas em cinco pilares: excelência operacional, segurança, confiabilidade, eficiência de desempenho e otimização de custos."
+  },
+  {
+    "question": "Qual serviço AWS é usado para balanceamento de carga de tráfego de aplicações?",
+    "correct_answer": "Elastic Load Balancing (ELB)",
+    "incorrect_answers": [
+      "Amazon Route 53",
+      "AWS Direct Connect",
+      "Amazon API Gateway"
+    ],
+    "difficulty": "medium",
+    "category": "Networking",
+    "explanation": "O ELB distribui automaticamente o tráfego de entrada entre múltiplos alvos, como instâncias EC2, em uma ou mais zonas de disponibilidade."
+  },
+  {
+    "question": "O que o AWS Artifact fornece?",
+    "correct_answer": "Documentos de conformidade e acordos de segurança",
+    "incorrect_answers": [
+      "Ferramentas de desenvolvimento de aplicações",
+      "Modelos de arquitetura de nuvem",
+      "Serviço de backup e recuperação"
+    ],
+    "difficulty": "hard",
+    "category": "Security",
+    "explanation": "O AWS Artifact é o portal central para acessar relatórios de conformidade e documentos de segurança da AWS sob demanda."
+  },
+  {
+    "question": "Qual serviço AWS permite executar consultas em dados diretamente no S3?",
+    "correct_answer": "Amazon Athena",
+    "incorrect_answers": [
+      "Amazon Redshift",
+      "Amazon QuickSight",
+      "AWS Glue"
+    ],
+    "difficulty": "medium",
+    "category": "Analytics",
+    "explanation": "O Amazon Athena é um serviço de consulta interativa que permite analisar dados no S3 usando SQL padrão, sem necessidade de infraestrutura."
+  },
+  {
+    "question": "Qual é o propósito do AWS CloudTrail?",
+    "correct_answer": "Registrar atividade de API e ações de usuários",
+    "incorrect_answers": [
+      "Monitorar desempenho de instâncias EC2",
+      "Armazenar logs de aplicações",
+      "Gerenciar certificados SSL"
+    ],
+    "difficulty": "medium",
+    "category": "Management Tools",
+    "explanation": "O CloudTrail registra chamadas de API na conta AWS, fornecendo histórico de atividades para auditoria e segurança."
+  },
+  {
+    "question": "Qual serviço AWS é um data warehouse totalmente gerenciado?",
+    "correct_answer": "Amazon Redshift",
+    "incorrect_answers": [
+      "Amazon DynamoDB",
+      "Amazon ElastiCache",
+      "Amazon Neptune"
+    ],
+    "difficulty": "hard",
+    "category": "Analytics",
+    "explanation": "O Redshift é um serviço de data warehouse em nuvem rápido e escalável para análise de dados usando SQL."
+  },
+  {
+    "question": "O que o AWS Budgets permite fazer?",
+    "correct_answer": "Definir orçamentos e alertas de custo",
+    "incorrect_answers": [
+      "Reservar instâncias EC2",
+      "Migrar dados para a nuvem",
+      "Monitorar desempenho de aplicações"
+    ],
+    "difficulty": "easy",
+    "category": "Billing",
+    "explanation": "O AWS Budgets permite definir orçamentos personalizados e receber alertas quando os custos ou uso excedem os valores definidos."
+  },
+  {
+    "question": "Qual serviço AWS é usado para criar e gerenciar VPNs?",
+    "correct_answer": "AWS Site-to-Site VPN",
+    "incorrect_answers": [
+      "AWS Direct Connect",
+      "Amazon VPC Peering",
+      "AWS Transit Gateway"
+    ],
+    "difficulty": "hard",
+    "category": "Networking",
+    "explanation": "O serviço VPN da AWS permite estabelecer conexões seguras entre sua rede local e sua VPC na nuvem AWS."
+  },
+  {
+    "question": "O que o AWS Fargate oferece?",
+    "correct_answer": "Computação serverless para contêineres",
+    "incorrect_answers": [
+      "Armazenamento para contêineres",
+      "Orquestração de contêineres",
+      "Monitoramento de contêineres"
+    ],
+    "difficulty": "hard",
+    "category": "Containers",
+    "explanation": "O AWS Fargate é um mecanismo de computação para contêineres que permite executar contêineres sem gerenciar servidores ou clusters."
+  },
+  {
+    "question": "Qual serviço AWS é usado para registrar nomes de domínio?",
+    "correct_answer": "Amazon Route 53",
+    "incorrect_answers": [
+      "AWS Certificate Manager",
+      "Amazon CloudFront",
+      "AWS Direct Connect"
+    ],
+    "difficulty": "easy",
+    "category": "Networking",
+    "explanation": "O Route 53 é um serviço de DNS escalável e altamente disponível que também permite registrar e gerenciar domínios."
+  },
+  {
+    "question": "O que o AWS Snowball Edge oferece?",
+    "correct_answer": "Dispositivo físico para transferência de grandes volumes de dados",
+    "incorrect_answers": [
+      "Serviço de streaming de vídeo",
+      "Banco de dados edge computing",
+      "Serviço de mensageria"
+    ],
+    "difficulty": "hard",
+    "category": "Migration",
+    "explanation": "O Snowball Edge é um dispositivo de transferência de dados que oferece computação e armazenamento em locais com conectividade limitada."
+  },
+  {
+    "question": "Qual serviço AWS permite criar aplicações serverless?",
+    "correct_answer": "AWS Lambda",
+    "incorrect_answers": [
+      "Amazon EC2",
+      "AWS Fargate",
+      "Amazon Lightsail"
+    ],
+    "difficulty": "medium",
+    "category": "Compute",
+    "explanation": "O AWS Lambda executa código em resposta a eventos sem exigir provisionamento ou gerenciamento de servidores."
+  },
+  {
+    "question": "O que o AWS Cost Explorer ajuda a fazer?",
+    "correct_answer": "Visualizar e analisar custos e uso da AWS",
+    "incorrect_answers": [
+      "Monitorar desempenho de aplicações",
+      "Gerenciar certificados SSL",
+      "Configurar balanceamento de carga"
+    ],
+    "difficulty": "easy",
+    "category": "Billing",
+    "explanation": "O Cost Explorer fornece visualizações e ferramentas para analisar seus custos e uso da AWS ao longo do tempo."
+  },
+  {
+    "question": "Qual serviço AWS é usado para deploy contínuo e integração contínua (CI/CD)?",
+    "correct_answer": "AWS CodePipeline",
+    "incorrect_answers": [
+      "AWS CodeCommit",
+      "AWS CodeBuild",
+      "AWS CodeDeploy"
+    ],
+    "difficulty": "hard",
+    "category": "Developer Tools",
+    "explanation": "O CodePipeline é um serviço de entrega contínua que modela, visualiza e automatiza as etapas necessárias para liberar seu código."
+  },
+  {
+    "question": "O que o Amazon RDS oferece?",
+    "correct_answer": "Banco de dados relacional gerenciado",
+    "incorrect_answers": [
+      "Armazenamento de objetos",
+      "Computação serverless",
+      "Rede de entrega de conteúdo"
+    ],
+    "difficulty": "easy",
+    "category": "Databases",
+    "explanation": "O Amazon RDS simplifica a configuração, operação e escalonamento de bancos de dados relacionais na nuvem."
+  },
+  {
+    "question": "Qual serviço AWS é usado para processamento de big data?",
+    "correct_answer": "Amazon EMR",
+    "incorrect_answers": [
+      "Amazon SQS",
+      "Amazon SNS",
+      "Amazon MQ"
+    ],
+    "difficulty": "hard",
+    "category": "Analytics",
+    "explanation": "O Amazon EMR (Elastic MapReduce) é uma plataforma gerenciada para processamento de grandes volumes de dados usando frameworks como Hadoop e Spark."
+  },
+  {
+    "question": "O que o AWS Shield Standard protege?",
+    "correct_answer": "Todos os clientes AWS contra ataques DDoS comuns",
+    "incorrect_answers": [
+      "Apenas instâncias EC2",
+      "Apenas aplicações hospedadas no CloudFront",
+      "Apenas bancos de dados RDS"
+    ],
+    "difficulty": "medium",
+    "category": "Security",
+    "explanation": "O AWS Shield Standard oferece proteção automática contra ataques DDoS mais comuns e está disponível para todos os clientes AWS sem custo adicional."
+  },
+  {
+    "question": "Qual serviço AWS permite criar ambientes de desenvolvimento gerenciados?",
+    "correct_answer": "AWS Cloud9",
+    "incorrect_answers": [
+      "AWS CodeStar",
+      "AWS X-Ray",
+      "AWS Step Functions"
+    ],
+    "difficulty": "hard",
+    "category": "Developer Tools",
+    "explanation": "O AWS Cloud9 é um IDE (Integrated Development Environment) baseado em nuvem que permite escrever, executar e depurar código."
+  },
+  {
+    "question": "O que o Amazon Polly oferece?",
+    "correct_answer": "Conversão de texto em fala realista",
+    "incorrect_answers": [
+      "Reconhecimento de fala",
+      "Tradução de idiomas",
+      "Processamento de linguagem natural"
+    ],
+    "difficulty": "hard",
+    "category": "AI/ML",
+    "explanation": "O Amazon Polly é um serviço que transforma texto em fala realista, permitindo criar aplicações que falam."
+  },
+  {
+    "question": "Qual serviço AWS é usado para mensageria entre componentes de aplicações?",
+    "correct_answer": "Amazon SQS (Simple Queue Service)",
+    "incorrect_answers": [
+      "Amazon SNS (Simple Notification Service)",
+      "Amazon MQ",
+      "Amazon Kinesis"
+    ],
+    "difficulty": "medium",
+    "category": "Application Integration",
+    "explanation": "O Amazon SQS é um serviço de fila de mensagens totalmente gerenciado que permite desacoplar e escalar microsserviços."
+  },
+  {
+    "question": "O que o AWS Global Accelerator melhora?",
+    "correct_answer": "Disponibilidade e desempenho de aplicações globais",
+    "incorrect_answers": [
+      "Velocidade de upload para o S3",
+      "Latência entre instâncias EC2",
+      "Transferência de dados entre regiões"
+    ],
+    "difficulty": "hard",
+    "category": "Networking",
+    "explanation": "O Global Accelerator usa a rede global da AWS para direcionar o tráfego através de endpoints ótimos, melhorando desempenho para usuários finais."
+  },
+  {
+    "question": "Qual serviço AWS permite criar aplicações com estado durável?",
+    "correct_answer": "AWS Step Functions",
+    "incorrect_answers": [
+      "AWS Lambda",
+      "Amazon API Gateway",
+      "Amazon EventBridge"
+    ],
+    "difficulty": "hard",
+    "category": "Application Integration",
+    "explanation": "O Step Functions coordena componentes distribuídos mantendo o estado da aplicação durante fluxos de trabalho de longa duração."
+  },
+  {
+    "question": "O que o Amazon QuickSight oferece?",
+    "correct_answer": "Business Intelligence e visualização de dados",
+    "incorrect_answers": [
+      "Monitoramento de infraestrutura",
+      "Processamento de big data",
+      "Gerenciamento de bancos de dados"
+    ],
+    "difficulty": "medium",
+    "category": "Analytics",
+    "explanation": "O QuickSight é um serviço de BI rápido, baseado em nuvem, que permite criar visualizações interativas e painéis."
+  },
+  {
+    "question": "Qual serviço AWS é usado para monitorar chamadas distribuídas em microsserviços?",
+    "correct_answer": "AWS X-Ray",
+    "incorrect_answers": [
+      "AWS CloudTrail",
+      "Amazon CloudWatch",
+      "AWS Config"
+    ],
+    "difficulty": "hard",
+    "category": "Developer Tools",
+    "explanation": "O X-Ray ajuda desenvolvedores a analisar e depurar aplicações distribuídas, como aquelas construídas com arquitetura de microsserviços."
+  },
+  {
+    "question": "O que o AWS Outposts oferece?",
+    "correct_answer": "Infraestrutura AWS para data centers locais",
+    "incorrect_answers": [
+      "Migração de dados para a nuvem",
+      "Serviços de edge computing",
+      "Monitoramento de desempenho"
+    ],
+    "difficulty": "hard",
+    "category": "Hybrid Cloud",
+    "explanation": "O AWS Outposts permite executar serviços AWS em suas instalações, fornecendo uma experiência híbrida consistente."
+  },
+  {
+    "question": "Qual serviço AWS é usado para detecção de ameaças em tempo real?",
+    "correct_answer": "Amazon GuardDuty",
+    "incorrect_answers": [
+      "AWS Shield",
+      "AWS WAF",
+      "Amazon Inspector"
+    ],
+    "difficulty": "medium",
+    "category": "Security",
+    "explanation": "O GuardDuty é um serviço de detecção de ameaças que monitora continuamente atividades maliciosas e comportamentos não autorizados."
+  },
+  {
+    "question": "O que o AWS AppSync permite construir?",
+    "correct_answer": "Aplicações com dados em tempo real e offline",
+    "incorrect_answers": [
+      "Aplicações serverless",
+      "Aplicações de machine learning",
+      "Aplicações de processamento de big data"
+    ],
+    "difficulty": "hard",
+    "category": "Application Integration",
+    "explanation": "O AppSync simplifica o desenvolvimento de aplicações GraphQL com sincronização de dados em tempo real e suporte offline."
+  },
+  {
+    "question": "Qual serviço AWS é usado para proteger aplicações web?",
+    "correct_answer": "AWS WAF (Web Application Firewall)",
+    "incorrect_answers": [
+      "AWS Shield",
+      "Amazon GuardDuty",
+      "AWS IAM"
+    ],
+    "difficulty": "medium",
+    "category": "Security",
+    "explanation": "O WAF protege aplicações web contra explorações comuns que podem afetar disponibilidade, comprometer segurança ou consumir recursos excessivos."
+  },
+  {
+    "question": "O que o Amazon Kinesis oferece?",
+    "correct_answer": "Processamento de streams de dados em tempo real",
+    "incorrect_answers": [
+      "Armazenamento de objetos",
+      "Banco de dados relacional",
+      "Serviço de mensageria"
+    ],
+    "difficulty": "hard",
+    "category": "Analytics",
+    "explanation": "O Kinesis permite coletar, processar e analisar streams de dados em tempo real para obter insights rapidamente."
+  },
+  {
+    "question": "Qual serviço AWS é usado para gerenciar certificados SSL/TLS?",
+    "correct_answer": "AWS Certificate Manager (ACM)",
+    "incorrect_answers": [
+      "AWS IAM",
+      "AWS KMS",
+      "AWS Secrets Manager"
+    ],
+    "difficulty": "medium",
+    "category": "Security",
+    "explanation": "O ACM facilita o provisionamento, gerenciamento e implantação de certificados SSL/TLS para uso com serviços AWS."
+  },
+  {
+    "question": "O que o AWS Backup oferece?",
+    "correct_answer": "Serviço centralizado para gerenciar backups",
+    "incorrect_answers": [
+      "Armazenamento de objetos durável",
+      "Recuperação de desastres automatizada",
+      "Migração de dados para a nuvem"
+    ],
+    "difficulty": "medium",
+    "category": "Storage",
+    "explanation": "O AWS Backup permite automatizar e gerenciar backups de dados entre vários serviços AWS em um único lugar."
+  },
+  {
+    "question": "Qual serviço AWS é usado para orquestrar contêineres Docker?",
+    "correct_answer": "Amazon ECS (Elastic Container Service)",
+    "incorrect_answers": [
+      "AWS Fargate",
+      "Amazon EKS",
+      "AWS Lambda"
+    ],
+    "difficulty": "hard",
+    "category": "Containers",
+    "explanation": "O Amazon ECS é um serviço de orquestração de contêineres altamente escalável que suporta contêineres Docker."
+  },
+  {
+    "question": "O que o Amazon SageMaker oferece?",
+    "correct_answer": "Plataforma para construir, treinar e implantar modelos de machine learning",
+    "incorrect_answers": [
+      "Serviço de business intelligence",
+      "Processamento de big data",
+      "Banco de dados de séries temporais"
+    ],
+    "difficulty": "hard",
+    "category": "AI/ML",
+    "explanation": "O SageMaker remove as barreiras complexas do machine learning, permitindo que desenvolvedores e cientistas de dados preparem, construam, treinem e implantem modelos ML rapidamente."
+  },
+  {
+    "question": "Qual serviço AWS é usado para armazenar e gerenciar segredos?",
+    "correct_answer": "AWS Secrets Manager",
+    "incorrect_answers": [
+      "AWS KMS",
+      "AWS IAM",
+      "AWS Certificate Manager"
+    ],
+    "difficulty": "medium",
+    "category": "Security",
+    "explanation": "O Secrets Manager ajuda a proteger segredos como credenciais de banco de dados, chaves API e outros dados sensíveis."
+  },
+  {
+    "question": "O que o AWS DataSync facilita?",
+    "correct_answer": "Transferência de dados entre armazenamentos locais e AWS",
+    "incorrect_answers": [
+      "Migração de bancos de dados",
+      "Processamento de streams de dados",
+      "Backup automatizado"
+    ],
+    "difficulty": "hard",
+    "category": "Migration",
+    "explanation": "O DataSync simplifica e acelera a transferência de grandes quantidades de dados entre ambientes locais e serviços de armazenamento AWS."
+  },
+  {
+    "question": "Qual serviço AWS é usado para criar gateways de API?",
+    "correct_answer": "Amazon API Gateway",
+    "incorrect_answers": [
+      "AWS AppSync",
+      "Amazon CloudFront",
+      "AWS Direct Connect"
+    ],
+    "difficulty": "medium",
+    "category": "Application Integration",
+    "explanation": "O API Gateway permite criar, publicar, manter, monitorar e proteger APIs em qualquer escala."
+  },
+  {
+    "question": "O que o AWS Control Tower oferece?",
+    "correct_answer": "Configuração e governança de múltiplas contas AWS",
+    "incorrect_answers": [
+      "Monitoramento de desempenho",
+      "Gerenciamento de certificados",
+      "Balanceamento de carga"
+    ],
+    "difficulty": "hard",
+    "category": "Management Tools",
+    "explanation": "O Control Tower facilita a configuração e governança de um ambiente multi-conta AWS seguindo melhores práticas."
+  },
+  {
+    "question": "Qual serviço AWS é usado para monitorar a conformidade de recursos?",
+    "correct_answer": "AWS Config",
+    "incorrect_answers": [
+      "AWS CloudTrail",
+      "Amazon CloudWatch",
+      "AWS Trusted Advisor"
+    ],
+    "difficulty": "medium",
+    "category": "Management Tools",
+    "explanation": "O AWS Config avalia, audita e avalia as configurações de seus recursos AWS, ajudando na governança e conformidade."
+  },
+  {
+    "question": "O que o Amazon Neptune oferece?",
+    "correct_answer": "Banco de dados de grafos gerenciado",
+    "incorrect_answers": [
+      "Banco de dados relacional",
+      "Data warehouse",
+      "Banco de dados chave-valor"
+    ],
+    "difficulty": "hard",
+    "category": "Databases",
+    "explanation": "O Neptune é um serviço de banco de dados de grafos rápido e confiável, perfeito para aplicações com dados altamente conectados."
+  },
+  {
+    "question": "Qual serviço AWS é usado para processamento de pagamentos online?",
+    "correct_answer": "Amazon Pay",
+    "incorrect_answers": [
+      "AWS Billing",
+      "AWS Cost Explorer",
+      "AWS Marketplace"
+    ],
+    "difficulty": "medium",
+    "category": "Payment",
+    "explanation": "O Amazon Pay permite que clientes paguem por bens e serviços usando suas contas Amazon em sites e aplicações de terceiros."
+  },
+  {
+    "question": "O que o AWS IQ oferece?",
+    "correct_answer": "Acesso sob demanda a especialistas AWS certificados",
+    "incorrect_answers": [
+      "Treinamento em serviços AWS",
+      "Certificação em nuvem",
+      "Monitoramento de desempenho"
+    ],
+    "difficulty": "hard",
+    "category": "Professional Services",
+    "explanation": "O AWS IQ conecta clientes a especialistas AWS certificados para ajudar a resolver problemas técnicos e arquiteturais."
+  },
+  {
+    "question": "Qual serviço AWS é usado para criar ambientes de desenvolvimento isolados?",
+    "correct_answer": "AWS Cloud9",
+    "incorrect_answers": [
+      "AWS CodeStar",
+      "AWS CodeCommit",
+      "AWS CodeBuild"
+    ],
+    "difficulty": "hard",
+    "category": "Developer Tools",
+    "explanation": "O Cloud9 é um IDE baseado em nuvem que permite escrever, executar e depurar código em ambientes de desenvolvimento pré-configurados."
+  },
+  {
+    "question": "O que o AWS Compute Optimizer recomenda?",
+    "correct_answer": "Configurações ideais para recursos de computação",
+    "incorrect_answers": [
+      "Preços mais baixos para serviços AWS",
+      "Melhores práticas de segurança",
+      "Configurações de rede otimizadas"
+    ],
+    "difficulty": "hard",
+    "category": "Management Tools",
+    "explanation": "O Compute Optimizer analisa padrões de uso e recomenda configurações ideais para instâncias EC2 e serviços como o Auto Scaling."
+  },
+  {
+    "question": "Qual serviço AWS é usado para criar aplicações de realidade aumentada?",
+    "correct_answer": "Amazon Sumerian",
+    "incorrect_answers": [
+      "Amazon Rekognition",
+      "Amazon Polly",
+      "Amazon Lex"
+    ],
+    "difficulty": "hard",
+    "category": "AR/VR",
+    "explanation": "O Amazon Sumerian permite criar e executar aplicações de realidade virtual (VR), realidade aumentada (AR) e 3D sem exigir experiência em programação especializada."
+  },
+  {
+    "question": "O que o AWS DeepRacer oferece?",
+    "correct_answer": "Veículo autônomo em escala 1/18 para aprender reinforcement learning",
+    "incorrect_answers": [
+      "Serviço de reconhecimento de imagens",
+      "Plataforma de processamento de linguagem natural",
+      "Serviço de tradução automática"
+    ],
+    "difficulty": "hard",
+    "category": "AI/ML",
+    "explanation": "O AWS DeepRacer é uma maneira divertida de começar com machine learning através de competições de carros autônomos em escala usando reinforcement learning."
+  },
+    {
+      "question": "Qual princípio da nuvem AWS permite adicionar recursos computacionais sob demanda?",
+      "correct_answer": "Elasticidade",
+      "incorrect_answers": [
+        "Escalabilidade vertical",
+        "Tolerância a falhas",
+        "Latência reduzida"
+      ],
+      "difficulty": "easy",
+      "category": "Cloud Concepts",
+      "explanation": "A elasticidade permite dimensionar recursos para cima ou para baixo conforme a demanda, pagando apenas pelo que usar."
+    },
+    {
+      "question": "Qual serviço AWS oferece infraestrutura como código?",
+      "correct_answer": "AWS CloudFormation",
+      "incorrect_answers": [
+        "AWS Config",
+        "AWS OpsWorks",
+        "AWS Systems Manager"
+      ],
+      "difficulty": "medium",
+      "category": "Management Tools",
+      "explanation": "O CloudFormation permite modelar e provisionar recursos AWS usando templates JSON ou YAML."
+    },
+    {
+      "question": "O que o AWS Free Tier oferece?",
+      "correct_answer": "Acesso gratuito limitado a serviços AWS por 12 meses",
+      "incorrect_answers": [
+        "Todos os serviços AWS gratuitos permanentemente",
+        "Descontos para startups",
+        "Acesso premium por 30 dias"
+      ],
+      "difficulty": "easy",
+      "category": "Billing",
+      "explanation": "O Free Tier permite experimentar serviços AWS dentro de limites específicos gratuitamente durante o primeiro ano."
+    },
+    {
+      "question": "Qual serviço é usado para conectar data centers locais à AWS de forma dedicada?",
+      "correct_answer": "AWS Direct Connect",
+      "incorrect_answers": [
+        "AWS VPN",
+        "Amazon VPC",
+        "AWS Transit Gateway"
+      ],
+      "difficulty": "medium",
+      "category": "Networking",
+      "explanation": "O Direct Connect estabelece conexão de rede dedicada entre sua infraestrutura local e a AWS, reduzindo custos de banda larga."
+    },
+    {
+      "question": "O que o Amazon EC2 Auto Scaling faz?",
+      "correct_answer": "Ajusta automaticamente o número de instâncias EC2",
+      "incorrect_answers": [
+        "Redimensiona automaticamente instâncias EC2",
+        "Otimiza custos de instâncias EC2",
+        "Migra automaticamente instâncias EC2 entre regiões"
+      ],
+      "difficulty": "medium",
+      "category": "Compute",
+      "explanation": "O Auto Scaling mantém a disponibilidade da aplicação adicionando ou removendo instâncias EC2 conforme políticas definidas."
+    },
+    {
+      "question": "Qual serviço AWS é ideal para hospedar um website estático?",
+      "correct_answer": "Amazon S3",
+      "incorrect_answers": [
+        "Amazon EC2",
+        "AWS Lambda",
+        "Amazon RDS"
+      ],
+      "difficulty": "easy",
+      "category": "Storage",
+      "explanation": "O S3 oferece hospedagem econômica para sites estáticos com alta disponibilidade e baixa latência."
+    },
+    {
+      "question": "O que o AWS Organizations centraliza?",
+      "correct_answer": "Gerenciamento de múltiplas contas AWS",
+      "incorrect_answers": [
+        "Monitoramento de desempenho",
+        "Faturamento de serviços terceirizados",
+        "Configurações de segurança regionais"
+      ],
+      "difficulty": "medium",
+      "category": "Management Tools",
+      "explanation": "O Organizations permite gerenciar várias contas AWS com políticas centralizadas e consolidated billing."
+    },
+    {
+      "question": "Qual serviço AWS protege contra ataques DDoS?",
+      "correct_answer": "AWS Shield",
+      "incorrect_answers": [
+        "AWS WAF",
+        "Amazon GuardDuty",
+        "AWS Firewall Manager"
+      ],
+      "difficulty": "medium",
+      "category": "Security",
+      "explanation": "O AWS Shield oferece proteção contra ataques DDoS em aplicações executadas na AWS, com versões Standard e Advanced."
+    },
+    {
+      "question": "O que o AWS Marketplace oferece?",
+      "correct_answer": "Software de terceiros pré-configurado para executar na AWS",
+      "incorrect_answers": [
+        "Treinamentos certificados pela AWS",
+        "Hardware para data centers locais",
+        "Consultores especializados em migração"
+      ],
+      "difficulty": "easy",
+      "category": "Cloud Ecosystem",
+      "explanation": "O Marketplace é um catálogo digital com milhares de soluções de software pré-configuradas de fornecedores independentes."
+    },
+    {
+      "question": "Qual serviço AWS permite executar código sem gerenciar servidores?",
+      "correct_answer": "AWS Lambda",
+      "incorrect_answers": [
+        "Amazon EC2",
+        "AWS Fargate",
+        "Amazon Lightsail"
+      ],
+      "difficulty": "easy",
+      "category": "Compute",
+      "explanation": "O Lambda executa código em resposta a eventos e automaticamente gerencia os recursos computacionais necessários."
+    },
+    {
+      "question": "O que o Amazon CloudFront melhora?",
+      "correct_answer": "Performance de entrega de conteúdo global",
+      "incorrect_answers": [
+        "Segurança de bancos de dados",
+        "Velocidade de processamento EC2",
+        "Latência entre zonas de disponibilidade"
+      ],
+      "difficulty": "medium",
+      "category": "Networking",
+      "explanation": "O CloudFront é uma CDN que armazena cópias do conteúdo em edge locations próximas aos usuários finais."
+    },
+    {
+      "question": "Qual serviço AWS é um data warehouse gerenciado?",
+      "correct_answer": "Amazon Redshift",
+      "incorrect_answers": [
+        "Amazon DynamoDB",
+        "Amazon Athena",
+        "Amazon ElastiCache"
+      ],
+      "difficulty": "medium",
+      "category": "Analytics",
+      "explanation": "O Redshift é um serviço de data warehouse em nuvem rápido e escalável para análise de dados com SQL."
+    },
+    {
+      "question": "O que o AWS Well-Architected Framework avalia?",
+      "correct_answer": "Projetos de arquitetura na nuvem contra melhores práticas",
+      "incorrect_answers": [
+        "Custos operacionais mensais",
+        "Qualidade do código-fonte",
+        "Desempenho de equipes de desenvolvimento"
+      ],
+      "difficulty": "hard",
+      "category": "Best Practices",
+      "explanation": "O Framework avalia sistemas baseados em cinco pilares: excelência operacional, segurança, confiabilidade, eficiência de desempenho e otimização de custos."
+    },
+    {
+      "question": "Qual serviço AWS é usado para monitorar recursos?",
+      "correct_answer": "Amazon CloudWatch",
+      "incorrect_answers": [
+        "AWS CloudTrail",
+        "AWS Config",
+        "AWS X-Ray"
+      ],
+      "difficulty": "easy",
+      "category": "Management Tools",
+      "explanation": "O CloudWatch coleta métricas, logs e eventos para monitorar aplicações, responder a mudanças e otimizar recursos."
+    },
+    {
+      "question": "O que o AWS Trusted Advisor recomenda?",
+      "correct_answer": "Otimizações de custo, desempenho e segurança",
+      "incorrect_answers": [
+        "Preços de concorrentes",
+        "Equipamentos para data centers",
+        "Estratégias de marketing digital"
+      ],
+      "difficulty": "medium",
+      "category": "Management Tools",
+      "explanation": "O Trusted Advisor analisa seu ambiente AWS e faz recomendações baseadas em melhores práticas da AWS."
+    },
+    {
+      "question": "Qual serviço AWS é usado para migração de servidores?",
+      "correct_answer": "AWS Application Migration Service",
+      "incorrect_answers": [
+        "AWS Database Migration Service",
+        "AWS Serverless Application Repository",
+        "AWS Transfer Family"
+      ],
+      "difficulty": "hard",
+      "category": "Migration",
+      "explanation": "O Application Migration Service ajuda a migrar servidores físicos, virtuais ou em nuvem para a AWS com mínimo downtime."
+    },
+    {
+      "question": "O que o Amazon S3 Glacier oferece?",
+      "correct_answer": "Armazenamento de arquivamento de baixo custo",
+      "incorrect_answers": [
+        "Banco de dados relacional",
+        "Computação de alto desempenho",
+        "Rede de entrega de conteúdo"
+      ],
+      "difficulty": "easy",
+      "category": "Storage",
+      "explanation": "O S3 Glacier é uma solução econômica para armazenamento de dados raramente acessados, com tempos de recuperação variáveis."
+    },
+    {
+      "question": "Qual serviço AWS gerencia segredos como senhas e chaves API?",
+      "correct_answer": "AWS Secrets Manager",
+      "incorrect_answers": [
+        "AWS KMS",
+        "AWS IAM",
+        "AWS Certificate Manager"
+      ],
+      "difficulty": "medium",
+      "category": "Security",
+      "explanation": "O Secrets Manager protege segredos necessários para acessar aplicações, serviços e recursos de TI."
+    },
+    {
+      "question": "O que o AWS Cost Explorer visualiza?",
+      "correct_answer": "Custos e uso da AWS ao longo do tempo",
+      "incorrect_answers": [
+        "Desempenho de instâncias EC2",
+        "Tráfego de rede entre regiões",
+        "Acesso a recursos por usuários IAM"
+      ],
+      "difficulty": "easy",
+      "category": "Billing",
+      "explanation": "O Cost Explorer fornece gráficos e tabelas personalizáveis para analisar custos e padrões de uso."
+    },
+    {
+      "question": "Qual serviço AWS é usado para CI/CD?",
+      "correct_answer": "AWS CodePipeline",
+      "incorrect_answers": [
+        "AWS CodeCommit",
+        "AWS CodeBuild",
+        "AWS CodeDeploy"
+      ],
+      "difficulty": "hard",
+      "category": "Developer Tools",
+      "explanation": "O CodePipeline automatiza o processo de build, teste e deploy do código seguindo fluxos de trabalho configuráveis."
+    },
+    {
+      "question": "O que o AWS Snowball facilita?",
+      "correct_answer": "Transferência de grandes volumes de dados para a nuvem",
+      "incorrect_answers": [
+        "Migração de bancos de dados relacionais",
+        "Backup automatizado de instâncias EC2",
+        "Distribuição global de conteúdo"
+      ],
+      "difficulty": "hard",
+      "category": "Migration",
+      "explanation": "O Snowball é um dispositivo físico para transferência segura de petabytes de dados quando a conexão de internet é limitada."
+    },
+    {
+      "question": "Qual serviço AWS é um banco de dados NoSQL gerenciado?",
+      "correct_answer": "Amazon DynamoDB",
+      "incorrect_answers": [
+        "Amazon RDS",
+        "Amazon Redshift",
+        "Amazon Aurora"
+      ],
+      "difficulty": "medium",
+      "category": "Databases",
+      "explanation": "O DynamoDB oferece banco de dados NoSQL com desempenho de milissegundos em qualquer escala, totalmente gerenciado."
+    },
+    {
+      "question": "O que o AWS Elastic Beanstalk automatiza?",
+      "correct_answer": "Deploy e scaling de aplicações web",
+      "incorrect_answers": [
+        "Migração de data centers",
+        "Gerenciamento de certificados SSL",
+        "Monitoramento de desempenho"
+      ],
+      "difficulty": "medium",
+      "category": "Compute",
+      "explanation": "O Elastic Beanstalk é um serviço PaaS que gerencia automaticamente a infraestrutura para aplicações web."
+    },
+    {
+      "question": "Qual serviço AWS é usado para balanceamento de carga?",
+      "correct_answer": "Elastic Load Balancing",
+      "incorrect_answers": [
+        "Amazon Route 53",
+        "AWS Direct Connect",
+        "Amazon API Gateway"
+      ],
+      "difficulty": "medium",
+      "category": "Networking",
+      "explanation": "O ELB distribui automaticamente o tráfego de entrada entre múltiplos alvos como instâncias EC2 e contêineres."
+    },
+    {
+      "question": "O que o AWS Fargate oferece?",
+      "correct_answer": "Computação serverless para contêineres",
+      "incorrect_answers": [
+        "Armazenamento para contêineres",
+        "Orquestração de contêineres",
+        "Monitoramento de contêineres"
+      ],
+      "difficulty": "hard",
+      "category": "Containers",
+      "explanation": "O Fargate permite executar contêineres sem gerenciar servidores ou clusters, pagando apenas pelos recursos usados."
+    },
+    {
+      "question": "Qual serviço AWS é usado para DNS?",
+      "correct_answer": "Amazon Route 53",
+      "incorrect_answers": [
+        "AWS Cloud Map",
+        "Amazon VPC",
+        "AWS Global Accelerator"
+      ],
+      "difficulty": "easy",
+      "category": "Networking",
+      "explanation": "O Route 53 é um serviço de DNS altamente disponível e escalável que também permite registrar domínios."
+    },
+    {
+      "question": "O que o AWS Artifact fornece?",
+      "correct_answer": "Relatórios de conformidade e documentos de segurança",
+      "incorrect_answers": [
+        "Modelos de arquitetura de nuvem",
+        "Certificados SSL/TLS",
+        "Políticas de segurança pré-configuradas"
+      ],
+      "difficulty": "hard",
+      "category": "Security",
+      "explanation": "O AWS Artifact é o portal central para acessar relatórios de auditoria e documentos de segurança sob demanda."
+    },
+    {
+      "question": "Qual serviço AWS é usado para processamento de big data?",
+      "correct_answer": "Amazon EMR",
+      "incorrect_answers": [
+        "Amazon SQS",
+        "Amazon SNS",
+        "Amazon MQ"
+      ],
+      "difficulty": "hard",
+      "category": "Analytics",
+      "explanation": "O Amazon EMR (Elastic MapReduce) facilita o processamento de grandes volumes de dados usando frameworks como Hadoop e Spark."
+    },
+    {
+      "question": "O que o AWS Control Tower implementa?",
+      "correct_answer": "Governança para ambientes multi-conta AWS",
+      "incorrect_answers": [
+        "Monitoramento de desempenho de aplicações",
+        "Balanceamento de carga global",
+        "Migração automatizada de dados"
+      ],
+      "difficulty": "hard",
+      "category": "Management Tools",
+      "explanation": "O Control Tower automatiza a configuração de um ambiente multi-conta seguindo melhores práticas de governança da AWS."
+    },
+    {
+      "question": "Qual serviço AWS é usado para mensageria entre microsserviços?",
+      "correct_answer": "Amazon SQS",
+      "incorrect_answers": [
+        "Amazon SNS",
+        "Amazon MQ",
+        "Amazon EventBridge"
+      ],
+      "difficulty": "medium",
+      "category": "Application Integration",
+      "explanation": "O Amazon Simple Queue Service (SQS) é um serviço de filas de mensagens totalmente gerenciado para desacoplar microsserviços."
+    },
+    {
+      "question": "O que o AWS Config monitora?",
+      "correct_answer": "Configurações de recursos AWS ao longo do tempo",
+      "incorrect_answers": [
+        "Desempenho de instâncias EC2",
+        "Tráfego de rede entre regiões",
+        "Acesso a buckets S3"
+      ],
+      "difficulty": "medium",
+      "category": "Management Tools",
+      "explanation": "O AWS Config avalia, audita e avalia as configurações de seus recursos AWS para governança e conformidade."
+    },
+    {
+      "question": "Qual serviço AWS é usado para tradução de texto?",
+      "correct_answer": "Amazon Translate",
+      "incorrect_answers": [
+        "Amazon Polly",
+        "Amazon Comprehend",
+        "Amazon Lex"
+      ],
+      "difficulty": "hard",
+      "category": "AI/ML",
+      "explanation": "O Amazon Translate é um serviço de tradução automática neural que fornece traduções de texto rápidas, de alta qualidade e acessíveis."
+    },
+    {
+      "question": "O que o AWS Outposts permite?",
+      "correct_answer": "Executar serviços AWS em data centers locais",
+      "incorrect_answers": [
+        "Migrar dados para a nuvem",
+        "Monitorar desempenho de aplicações",
+        "Gerenciar múltiplas contas AWS"
+      ],
+      "difficulty": "hard",
+      "category": "Hybrid Cloud",
+      "explanation": "O AWS Outposts estende a infraestrutura AWS para instalações do cliente, fornecendo uma experiência híbrida consistente."
+    },
+    {
+      "question": "Qual serviço AWS é usado para reconhecimento de imagens?",
+      "correct_answer": "Amazon Rekognition",
+      "incorrect_answers": [
+        "Amazon Textract",
+        "Amazon Polly",
+        "Amazon Lex"
+      ],
+      "difficulty": "hard",
+      "category": "AI/ML",
+      "explanation": "O Amazon Rekognition permite adicionar análise de imagens e vídeos a aplicações usando machine learning pré-treinado."
+    },
+    {
+      "question": "O que o AWS Backup centraliza?",
+      "correct_answer": "Gerenciamento de backups entre serviços AWS",
+      "incorrect_answers": [
+        "Monitoramento de desempenho",
+        "Gerenciamento de identidade",
+        "Configuração de rede"
+      ],
+      "difficulty": "medium",
+      "category": "Storage",
+      "explanation": "O AWS Backup oferece um serviço totalmente gerenciado para centralizar e automatizar backups em vários serviços AWS."
+    },
+    {
+      "question": "Qual serviço AWS é usado para processamento de linguagem natural?",
+      "correct_answer": "Amazon Comprehend",
+      "incorrect_answers": [
+        "Amazon Transcribe",
+        "Amazon Polly",
+        "Amazon Lex"
+      ],
+      "difficulty": "hard",
+      "category": "AI/ML",
+      "explanation": "O Amazon Comprehend usa ML para descobrir insights e relações em texto, como análise de sentimentos e tópicos."
+    },
+    {
+      "question": "O que o AWS IQ conecta?",
+      "correct_answer": "Clientes a especialistas AWS certificados",
+      "incorrect_answers": [
+        "Data centers locais à AWS",
+        "Aplicações a bancos de dados",
+        "Contêineres a serviços gerenciados"
+      ],
+      "difficulty": "hard",
+      "category": "Professional Services",
+      "explanation": "O AWS IQ é um mercado que conecta clientes a especialistas AWS certificados para ajudar com projetos técnicos."
+    },
+    {
+      "question": "Qual serviço AWS é usado para extrair texto de documentos?",
+      "correct_answer": "Amazon Textract",
+      "incorrect_answers": [
+        "Amazon Kendra",
+        "Amazon Comprehend",
+        "Amazon Rekognition"
+      ],
+      "difficulty": "hard",
+      "category": "AI/ML",
+      "explanation": "O Amazon Textract extrai texto e dados estruturados de documentos digitalizados usando machine learning."
+    },
+    {
+      "question": "O que o AWS Compute Optimizer analisa?",
+      "correct_answer": "Padrões de uso de recursos computacionais",
+      "incorrect_answers": [
+        "Custos de serviços AWS",
+        "Desempenho de aplicações web",
+        "Latência de rede global"
+      ],
+      "difficulty": "hard",
+      "category": "Management Tools",
+      "explanation": "O Compute Optimizer recomenda configurações ideais para recursos AWS analisando padrões de uso históricos."
+    },
+    {
+      "question": "Qual serviço AWS é usado para chatbots?",
+      "correct_answer": "Amazon Lex",
+      "incorrect_answers": [
+        "Amazon Polly",
+        "Amazon Connect",
+        "Amazon Transcribe"
+      ],
+      "difficulty": "hard",
+      "category": "AI/ML",
+      "explanation": "O Amazon Lex permite criar interfaces conversacionais usando voz e texto com a mesma tecnologia da Alexa."
+    },
+    {
+      "question": "O que o AWS DeepComposer oferece?",
+      "correct_answer": "Teclado musical para aprender generative AI",
+      "incorrect_answers": [
+        "Serviço de transcrição de áudio",
+        "Plataforma de streaming musical",
+        "Reconhecimento de padrões musicais"
+      ],
+      "difficulty": "hard",
+      "category": "AI/ML",
+      "explanation": "O AWS DeepComposer é uma ferramenta educacional que combina um teclado musical com generative AI para criar música."
+    },
+    {
+      "question": "Qual serviço AWS é usado para call centers na nuvem?",
+      "correct_answer": "Amazon Connect",
+      "incorrect_answers": [
+        "Amazon Chime",
+        "Amazon Polly",
+        "Amazon Transcribe"
+      ],
+      "difficulty": "hard",
+      "category": "Business Applications",
+      "explanation": "O Amazon Connect é um serviço de call center na nuvem fácil de usar e escalável, com pagamento conforme o uso."
+    },
+    {
+      "question": "O que o AWS Honeycode permite criar?",
+      "correct_answer": "Aplicações web e móveis sem código",
+      "incorrect_answers": [
+        "Dashboards de business intelligence",
+        "Redes virtuais privadas",
+        "Pipelines de CI/CD"
+      ],
+      "difficulty": "hard",
+      "category": "Developer Tools",
+      "explanation": "O AWS Honeycode é uma ferramenta que permite criar aplicações sem escrever código, usando uma interface visual."
+    },
+    {
+      "question": "Qual serviço AWS é usado para monitorar chamadas distribuídas?",
+      "correct_answer": "AWS X-Ray",
+      "incorrect_answers": [
+        "AWS CloudTrail",
+        "Amazon CloudWatch",
+        "AWS Config"
+      ],
+      "difficulty": "hard",
+      "category": "Developer Tools",
+      "explanation": "O AWS X-Ray ajuda desenvolvedores a analisar e depurar aplicações distribuídas em produção."
+    },
+    {
+      "question": "O que o AWS AppSync simplifica?",
+      "correct_answer": "Desenvolvimento de aplicações GraphQL",
+      "incorrect_answers": [
+        "Migração de bancos de dados",
+        "Configuração de balanceadores de carga",
+        "Gerenciamento de certificados SSL"
+      ],
+      "difficulty": "hard",
+      "category": "Application Integration",
+      "explanation": "O AWS AppSync simplifica o desenvolvimento de aplicações GraphQL com sincronização de dados em tempo real e suporte offline."
+    },
+    {
+      "question": "Qual serviço AWS é usado para transferência segura de arquivos?",
+      "correct_answer": "AWS Transfer Family",
+      "incorrect_answers": [
+        "AWS DataSync",
+        "Amazon S3 Transfer Acceleration",
+        "AWS Snowball"
+      ],
+      "difficulty": "hard",
+      "category": "Migration",
+      "explanation": "O AWS Transfer Family oferece transferência segura e escalável de arquivos para e do Amazon S3 usando protocolos SFTP, FTPS e FTP."
+    },
+    {
+      "question": "O que o AWS Ground Station oferece?",
+      "correct_answer": "Controle de satélites e download de dados via estações terrestres AWS",
+      "incorrect_answers": [
+        "Monitoramento de redes terrestres",
+        "Gerenciamento de data centers locais",
+        "Rastreamento de dispositivos IoT"
+      ],
+      "difficulty": "hard",
+      "category": "Satellite",
+      "explanation": "O AWS Ground Station é um serviço totalmente gerenciado que permite controlar satélites e ingerir dados de satélite em escala global."
+    },
+    {
+      "question": "Qual serviço AWS é usado para modelagem 3D e realidade aumentada?",
+      "correct_answer": "Amazon Sumerian",
+      "incorrect_answers": [
+        "Amazon Rekognition",
+        "Amazon Polly",
+        "Amazon Lex"
+      ],
+      "difficulty": "hard",
+      "category": "AR/VR",
+      "explanation": "O Amazon Sumerian permite criar e executar aplicações de realidade virtual (VR), realidade aumentada (AR) e 3D sem exigir experiência especializada."
+    },
+    {
+      "question": "O que o AWS DeepRacer ensina?",
+      "correct_answer": "Reinforcement learning através de corridas de carros autônomos",
+      "incorrect_answers": [
+        "Deep learning para reconhecimento de imagens",
+        "Processamento de linguagem natural",
+        "Análise de dados em tempo real"
+      ],
+      "difficulty": "hard",
+      "category": "AI/ML",
+      "explanation": "O AWS DeepRacer é uma maneira divertida de aprender reinforcement learning competindo em uma liga global de corridas de carros autônomos."
+    },
+    {
+      "question": "Qual serviço AWS é usado para gerenciar dispositivos IoT?",
+      "correct_answer": "AWS IoT Core",
+      "incorrect_answers": [
+        "AWS IoT Greengrass",
+        "Amazon Kinesis",
+        "AWS Lambda"
+      ],
+      "difficulty": "hard",
+      "category": "IoT",
+      "explanation": "O AWS IoT Core permite que dispositivos IoT se conectem de forma segura à nuvem AWS e interajam com aplicações na nuvem."
+    },
+    {
+      "question": "O que o AWS RoboMaker oferece?",
+      "correct_answer": "Ambiente de desenvolvimento para aplicações de robótica",
+      "incorrect_answers": [
+        "Serviço de automação de processos",
+        "Plataforma de machine learning para visão computacional",
+        "Ferramentas para desenvolvimento de chatbots"
+      ],
+      "difficulty": "hard",
+      "category": "Robotics",
+      "explanation": "O AWS RoboMaker é um serviço de nuvem para desenvolvimento, teste e implantação de aplicações de robótica inteligente."
+    },
+    {
+      "question": "Qual serviço AWS é usado para processamento de fluxo de dados?",
+      "correct_answer": "Amazon Kinesis",
+      "incorrect_answers": [
+        "Amazon SQS",
+        "Amazon SNS",
+        "Amazon MQ"
+      ],
+      "difficulty": "hard",
+      "category": "Analytics",
+      "explanation": "O Amazon Kinesis facilita a coleta, processamento e análise de dados de streaming em tempo real e em grande escala."
+    }
+  ]

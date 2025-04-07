@@ -1,0 +1,20 @@
+[
+  {
+    "question": "Qual serviço você usaria para criar uma rede privada virtual na AWS?",
+    "correct_answer": "Amazon VPC",
+    "incorrect_answers": ["Amazon Direct Connect", "AWS VPN", "Amazon Route 53"],
+    "difficulty": "medium",
+    "category": "Networking"
+  },
+  {
+    "question": "Qual é o propósito de um Security Group na AWS?",
+    "correct_answer": "Atuar como firewall virtual para instâncias EC2",
+    "incorrect_answers": [
+      "Gerenciar identidades de usuários",
+      "Criptografar volumes EBS",
+      "Monitorar tráfego de rede"
+    ],
+    "difficulty": "medium",
+    "category": "Security"
+  }
+]
