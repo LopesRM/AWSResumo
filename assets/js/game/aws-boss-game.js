@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let timeLeft = timeLimit;
     let timerInterval;
     let gameStarted = false;
-    let bossMaxHealth = 100;
+    let bossMaxHealth = 500;
     let bossCurrentHealth = bossMaxHealth;
     let questionWeights = {
         'easy': 10,
@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!response.ok) throw new Error('Falha ao carregar perguntas');
             
             questions = await response.json();
-            questions = shuffleArray(questions).slice(0, 10); // Pegar 10 perguntas aleatórias
+            questions = shuffleArray(questions).slice(0, 80); // Pegar 10 perguntas aleatórias
             
             // Atualizar contador de perguntas
             questionsCount.textContent = `Perguntas: 0/${questions.length}`;
