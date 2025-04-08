@@ -140,6 +140,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     
     // Verificar resposta
+<<<<<<< HEAD
  // Verificar resposta
 function checkAnswer(selectedAnswer, correctAnswer, explanation) {
     // Bloquear todos os botões imediatamente
@@ -209,6 +210,69 @@ function checkAnswer(selectedAnswer, correctAnswer, explanation) {
         showQuestion();
     }, 2000);
 }
+=======
+    function checkAnswer(selectedAnswer, correctAnswer, explanation) {
+        clearInterval(timerInterval);
+        
+        const isCorrect = selectedAnswer === correctAnswer;
+        const question = questions[currentQuestionIndex];
+        const weight = questionWeights[question.difficulty] || 10;
+        
+        // Adiciona efeito visual
+        document.body.classList.add(isCorrect ? 'correct-feedback' : 'wrong-feedback');
+        setTimeout(() => {
+            document.body.classList.remove('correct-feedback', 'wrong-feedback');
+        }, 1000);
+    
+        // Mostra explicação se existir
+        if (explanation) {
+            feedback.innerHTML = isCorrect 
+                ? `<span style="color:lime">✔ Correto!</span><br>${explanation}`
+                : `<span style="color:red">✖ Errado! Resposta correta: ${correctAnswer}</span><br>${explanation}`;
+        } else {
+            feedback.innerHTML = isCorrect
+                ? `<span style="color:lime">✔ Correto!</span>`
+                : `<span style="color:red">✖ Errado! Resposta correta: ${correctAnswer}</span>`;
+        }
+        
+        // Calcular pontos baseado em tempo restante, combo e dificuldade
+        const timeBonus = Math.floor((timeLeft / timeLimit) * 10);
+        let pointsEarned = weight + timeBonus;
+        
+        if (isCorrect) {
+            // Resposta correta
+            correctAnswersInRow++;
+            combo = Math.min(10, Math.floor(correctAnswersInRow / 3) + 1);
+            
+            // Aplicar multiplicador de combo
+            pointsEarned *= combo;
+            score += pointsEarned;
+            
+            // Causar dano ao boss
+            const damage = calculateDamage(pointsEarned);
+            bossCurrentHealth = Math.max(0, bossCurrentHealth - damage);
+            updateBossHealth();
+            
+            // Verificar se mudou de fase
+            checkBossPhase();
+        } else {
+            // Resposta incorreta
+            correctAnswersInRow = 0;
+            combo = 1;
+            score = Math.max(0, score - (weight / 2));
+        }
+        
+        // Atualizar UI
+        updateScore();
+        currentQuestionIndex++;
+        
+        // Próxima pergunta após delay
+        setTimeout(() => {
+            feedback.textContent = '';
+            showQuestion();
+        }, 2000);
+    }
+>>>>>>> 172829e60a6726708f2eee632b4a8c49efc4cb83
     
     // Calcular dano ao boss
     function calculateDamage(points) {
