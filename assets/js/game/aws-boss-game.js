@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let timeLeft = timeLimit;
     let timerInterval;
     let gameStarted = false;
-    let bossMaxHealth = 500;
+    let bossMaxHealth = 550;
     let bossCurrentHealth = bossMaxHealth;
     let questionWeights = {
         'easy': 10,
