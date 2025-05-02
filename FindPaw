@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36 OPR/118.0.0.0 (Edition std-2)" version="26.2.14">
   <diagram id="Ht1M8jgEwFfnCIfOTk4-" name="Page-1">
-    <mxGraphModel dx="1489" dy="838" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="1820" dy="1024" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -22,74 +22,44 @@
         <mxCell id="k1J5Uft5zTIaOylSxwT3-2" value="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#007CBD;strokeColor=none;fontColor=#FFFFFF;fontStyle=1;fontSize=22;labelBackgroundColor=none;" parent="1" vertex="1">
           <mxGeometry x="1438.5" y="52.5" width="40" height="38" as="geometry" />
         </mxCell>
-        <mxCell id="k1J5Uft5zTIaOylSxwT3-3" value="2" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#007CBD;strokeColor=none;fontColor=#FFFFFF;fontStyle=1;fontSize=22;labelBackgroundColor=none;" parent="1" vertex="1">
-          <mxGeometry x="1437" y="174.5" width="40" height="38" as="geometry" />
+        <mxCell id="k1J5Uft5zTIaOylSxwT3-4" value="2" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#007CBD;strokeColor=none;fontColor=#FFFFFF;fontStyle=1;fontSize=22;labelBackgroundColor=none;" parent="1" vertex="1">
+          <mxGeometry x="1439" y="230" width="40" height="38" as="geometry" />
         </mxCell>
-        <mxCell id="k1J5Uft5zTIaOylSxwT3-4" value="3" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#007CBD;strokeColor=none;fontColor=#FFFFFF;fontStyle=1;fontSize=22;labelBackgroundColor=none;" parent="1" vertex="1">
-          <mxGeometry x="1437" y="294.5" width="40" height="38" as="geometry" />
+        <mxCell id="k1J5Uft5zTIaOylSxwT3-5" value="3" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#007CBD;strokeColor=none;fontColor=#FFFFFF;fontStyle=1;fontSize=22;labelBackgroundColor=none;" parent="1" vertex="1">
+          <mxGeometry x="1437" y="375.5" width="40" height="38" as="geometry" />
         </mxCell>
-        <mxCell id="k1J5Uft5zTIaOylSxwT3-5" value="4" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#007CBD;strokeColor=none;fontColor=#FFFFFF;fontStyle=1;fontSize=22;labelBackgroundColor=none;" parent="1" vertex="1">
-          <mxGeometry x="1437" y="408.5" width="40" height="38" as="geometry" />
+        <mxCell id="k1J5Uft5zTIaOylSxwT3-7" value="4" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#007CBD;strokeColor=none;fontColor=#FFFFFF;fontStyle=1;fontSize=22;labelBackgroundColor=none;" parent="1" vertex="1">
+          <mxGeometry x="1439.5" y="552" width="40" height="38" as="geometry" />
         </mxCell>
-        <mxCell id="k1J5Uft5zTIaOylSxwT3-6" value="5" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#007CBD;strokeColor=none;fontColor=#FFFFFF;fontStyle=1;fontSize=22;labelBackgroundColor=none;" parent="1" vertex="1">
-          <mxGeometry x="1438.5" y="525.5" width="40" height="38" as="geometry" />
+        <mxCell id="k1J5Uft5zTIaOylSxwT3-8" value="5" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#007CBD;strokeColor=none;fontColor=#FFFFFF;fontStyle=1;fontSize=22;labelBackgroundColor=none;" parent="1" vertex="1">
+          <mxGeometry x="1437" y="668" width="40" height="38" as="geometry" />
         </mxCell>
-        <mxCell id="k1J5Uft5zTIaOylSxwT3-7" value="6" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#007CBD;strokeColor=none;fontColor=#FFFFFF;fontStyle=1;fontSize=22;labelBackgroundColor=none;" parent="1" vertex="1">
-          <mxGeometry x="1439.5" y="640.5" width="40" height="38" as="geometry" />
+        <mxCell id="k1J5Uft5zTIaOylSxwT3-9" value="6" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#007CBD;strokeColor=none;fontColor=#FFFFFF;fontStyle=1;fontSize=22;labelBackgroundColor=none;" parent="1" vertex="1">
+          <mxGeometry x="1437" y="810" width="40" height="38" as="geometry" />
         </mxCell>
-        <mxCell id="k1J5Uft5zTIaOylSxwT3-8" value="7" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#007CBD;strokeColor=none;fontColor=#FFFFFF;fontStyle=1;fontSize=22;labelBackgroundColor=none;" parent="1" vertex="1">
-          <mxGeometry x="1439" y="756.5" width="40" height="38" as="geometry" />
-        </mxCell>
-        <mxCell id="k1J5Uft5zTIaOylSxwT3-9" value="8" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#007CBD;strokeColor=none;fontColor=#FFFFFF;fontStyle=1;fontSize=22;labelBackgroundColor=none;" parent="1" vertex="1">
-          <mxGeometry x="1439.5" y="874.5" width="40" height="38" as="geometry" />
-        </mxCell>
-        <mxCell id="k1J5Uft5zTIaOylSxwT3-10" value="9" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#007CBD;strokeColor=none;fontColor=#FFFFFF;fontStyle=1;fontSize=22;labelBackgroundColor=none;" parent="1" vertex="1">
-          <mxGeometry x="1437.5" y="994.5" width="40" height="38" as="geometry" />
-        </mxCell>
-        <mxCell id="k1J5Uft5zTIaOylSxwT3-11" value="&lt;span&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/span&gt;&lt;br&gt;" style="text;html=1;align=left;verticalAlign=top;spacingTop=-4;fontSize=14;labelBackgroundColor=none;whiteSpace=wrap;" parent="1" vertex="1">
+        <mxCell id="k1J5Uft5zTIaOylSxwT3-11" value="&lt;div&gt;Reconhecimento Inteligente:&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Rekognition compara:&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;í ½í±ƒ PadrÃµes faciais (distÃ¢ncia entre olhos/nariz)&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;í ½í°• CaracterÃ­sticas da raÃ§a&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;í ¼í¿·ï¸ Marcas Ãºnicas (manchas, coleiras)&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=top;spacingTop=-4;fontSize=14;labelBackgroundColor=none;whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="1490" y="52" width="449" height="118" as="geometry" />
         </mxCell>
-        <mxCell id="k1J5Uft5zTIaOylSxwT3-12" value="&lt;span&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/span&gt;&lt;br&gt;" style="text;html=1;align=left;verticalAlign=top;spacingTop=-4;fontSize=14;labelBackgroundColor=none;whiteSpace=wrap;" parent="1" vertex="1">
-          <mxGeometry x="1489" y="175" width="450" height="115" as="geometry" />
+        <mxCell id="k1J5Uft5zTIaOylSxwT3-13" value="&lt;div&gt;Sistema de LocalizaÃ§Ã£o:&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Novo: Integrei o Amazon Location Service para:&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;í ½í·ºï¸ Plotar em mapa os Ãºltimos avistamentos&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;í ½í´” Alertar quando pet for visto prÃ³ximo&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=top;spacingTop=-4;fontSize=14;labelBackgroundColor=none;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="1491" y="230" width="450" height="117" as="geometry" />
         </mxCell>
-        <mxCell id="k1J5Uft5zTIaOylSxwT3-13" value="&lt;span&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/span&gt;&lt;br&gt;" style="text;html=1;align=left;verticalAlign=top;spacingTop=-4;fontSize=14;labelBackgroundColor=none;whiteSpace=wrap;" parent="1" vertex="1">
-          <mxGeometry x="1489" y="293" width="450" height="117" as="geometry" />
+        <mxCell id="k1J5Uft5zTIaOylSxwT3-14" value="&lt;div&gt;MÃ³dulo de SaÃºde AvanÃ§ado:&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Nova tabela DynamoDB com:&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;í ½í³ ParÃ¢metros ideais por raÃ§a&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;âš–ï¸ Peso ideal x idade&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;í ½í²Š Vacinas recomendadas&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=top;spacingTop=-4;fontSize=14;labelBackgroundColor=none;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="1488.5" y="375.5" width="450" height="121" as="geometry" />
         </mxCell>
-        <mxCell id="k1J5Uft5zTIaOylSxwT3-14" value="&lt;span&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/span&gt;&lt;br&gt;" style="text;html=1;align=left;verticalAlign=top;spacingTop=-4;fontSize=14;labelBackgroundColor=none;whiteSpace=wrap;" parent="1" vertex="1">
-          <mxGeometry x="1489" y="409" width="450" height="121" as="geometry" />
+        <mxCell id="k1J5Uft5zTIaOylSxwT3-16" value="&lt;div&gt;Engine gera:&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;í ½íº¨ Alertas proativos (ex.: &quot;Seu Golden precisa de vacina antirrÃ¡bica!&quot;)&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;í ¾íµ— RecomendaÃ§Ãµes nutricionais&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=top;spacingTop=-4;fontSize=14;labelBackgroundColor=none;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="1490" y="550" width="450" height="118" as="geometry" />
         </mxCell>
-        <mxCell id="k1J5Uft5zTIaOylSxwT3-15" value="&lt;span&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/span&gt;&lt;br&gt;" style="text;html=1;align=left;verticalAlign=top;spacingTop=-4;fontSize=14;labelBackgroundColor=none;whiteSpace=wrap;" parent="1" vertex="1">
-          <mxGeometry x="1490" y="526" width="449" height="114" as="geometry" />
+        <mxCell id="k1J5Uft5zTIaOylSxwT3-17" value="&lt;div&gt;Canais de NotificaÃ§Ã£o:&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;í ½í´” Push notification (via Pinpoint)&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;í ½í³§ E-mail com infogrÃ¡ficos&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;í ½í³± SMS para alertas urgentes&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=top;spacingTop=-4;fontSize=14;labelBackgroundColor=none;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="1488.5" y="668" width="449" height="113" as="geometry" />
         </mxCell>
-        <mxCell id="k1J5Uft5zTIaOylSxwT3-16" value="&lt;span&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/span&gt;&lt;br&gt;" style="text;html=1;align=left;verticalAlign=top;spacingTop=-4;fontSize=14;labelBackgroundColor=none;whiteSpace=wrap;" parent="1" vertex="1">
-          <mxGeometry x="1490" y="642" width="450" height="118" as="geometry" />
-        </mxCell>
-        <mxCell id="k1J5Uft5zTIaOylSxwT3-17" value="&lt;span&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/span&gt;&lt;br&gt;" style="text;html=1;align=left;verticalAlign=top;spacingTop=-4;fontSize=14;labelBackgroundColor=none;whiteSpace=wrap;" parent="1" vertex="1">
-          <mxGeometry x="1490" y="757" width="449" height="113" as="geometry" />
-        </mxCell>
-        <mxCell id="k1J5Uft5zTIaOylSxwT3-18" value="&lt;span&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/span&gt;&lt;br&gt;" style="text;html=1;align=left;verticalAlign=top;spacingTop=-4;fontSize=14;labelBackgroundColor=none;whiteSpace=wrap;" parent="1" vertex="1">
-          <mxGeometry x="1490" y="876" width="449" height="124" as="geometry" />
-        </mxCell>
-        <mxCell id="k1J5Uft5zTIaOylSxwT3-19" value="&lt;span&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/span&gt;&lt;br&gt;" style="text;html=1;align=left;verticalAlign=top;spacingTop=-4;fontSize=14;labelBackgroundColor=none;whiteSpace=wrap;" parent="1" vertex="1">
-          <mxGeometry x="1490" y="995" width="449" height="115" as="geometry" />
-        </mxCell>
-        <mxCell id="k1J5Uft5zTIaOylSxwT3-22" value="10" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#007CBD;strokeColor=none;fontColor=#FFFFFF;fontStyle=1;fontSize=22;labelBackgroundColor=none;" parent="1" vertex="1">
-          <mxGeometry x="1438.5" y="1120" width="40" height="38" as="geometry" />
-        </mxCell>
-        <mxCell id="k1J5Uft5zTIaOylSxwT3-23" value="&lt;span&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/span&gt;&lt;br&gt;" style="text;html=1;align=left;verticalAlign=top;spacingTop=-4;fontSize=14;labelBackgroundColor=none;whiteSpace=wrap;" parent="1" vertex="1">
-          <mxGeometry x="1491" y="1120.5" width="449" height="115" as="geometry" />
-        </mxCell>
-        <mxCell id="k1J5Uft5zTIaOylSxwT3-24" value="11" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#007CBD;strokeColor=none;fontColor=#FFFFFF;fontStyle=1;fontSize=22;labelBackgroundColor=none;" parent="1" vertex="1">
-          <mxGeometry x="1437" y="1240" width="40" height="38" as="geometry" />
-        </mxCell>
-        <mxCell id="k1J5Uft5zTIaOylSxwT3-25" value="&lt;span&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/span&gt;&lt;br&gt;" style="text;html=1;align=left;verticalAlign=top;spacingTop=-4;fontSize=14;labelBackgroundColor=none;whiteSpace=wrap;" parent="1" vertex="1">
-          <mxGeometry x="1489.5" y="1240.5" width="449" height="115" as="geometry" />
+        <mxCell id="k1J5Uft5zTIaOylSxwT3-18" value="&lt;div&gt;Custos Otimizados:&lt;/div&gt;&lt;div&gt;âœ”ï¸ S3 Intelligent-Tiering para fotos&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;âœ”ï¸ DynamoDB On-Demand para tabelas&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;âœ”ï¸ Lambda com timeout configurado&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=top;spacingTop=-4;fontSize=14;labelBackgroundColor=none;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="1488.5" y="810" width="449" height="124" as="geometry" />
         </mxCell>
         <mxCell id="lAokXNOGOpVL1pWmOQTy-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;flowAnimation=1;shadow=1;" edge="1" parent="1" source="lAokXNOGOpVL1pWmOQTy-16" target="lAokXNOGOpVL1pWmOQTy-17">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="lAokXNOGOpVL1pWmOQTy-16" value="Amazon S3" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=#ffffff;fillColor=#232F3E;dashed=0;verticalLabelPosition=middle;verticalAlign=bottom;align=center;html=1;whiteSpace=wrap;fontSize=10;fontStyle=1;spacing=3;shape=mxgraph.aws4.productIcon;prIcon=mxgraph.aws4.s3;" vertex="1" parent="1">
-          <mxGeometry x="134.5" y="301.5" width="80" height="100" as="geometry" />
+          <mxGeometry x="134.5" y="301.5" width="83" height="100" as="geometry" />
         </mxCell>
         <mxCell id="lAokXNOGOpVL1pWmOQTy-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;flowAnimation=1;shadow=1;" edge="1" parent="1" source="lAokXNOGOpVL1pWmOQTy-17" target="lAokXNOGOpVL1pWmOQTy-19">
           <mxGeometry relative="1" as="geometry" />
@@ -97,8 +67,11 @@
         <mxCell id="lAokXNOGOpVL1pWmOQTy-31" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;flowAnimation=1;shadow=1;" edge="1" parent="1" source="lAokXNOGOpVL1pWmOQTy-17" target="lAokXNOGOpVL1pWmOQTy-28">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
+        <mxCell id="lAokXNOGOpVL1pWmOQTy-53" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="lAokXNOGOpVL1pWmOQTy-17" target="lAokXNOGOpVL1pWmOQTy-52">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="lAokXNOGOpVL1pWmOQTy-17" value="AWS Lambda" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=#ffffff;fillColor=#232F3E;dashed=0;verticalLabelPosition=middle;verticalAlign=bottom;align=center;html=1;whiteSpace=wrap;fontSize=10;fontStyle=1;spacing=3;shape=mxgraph.aws4.productIcon;prIcon=mxgraph.aws4.lambda;" vertex="1" parent="1">
-          <mxGeometry x="4.5" y="590" width="80" height="100" as="geometry" />
+          <mxGeometry x="4.5" y="590" width="83" height="100" as="geometry" />
         </mxCell>
         <mxCell id="lAokXNOGOpVL1pWmOQTy-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;flowAnimation=1;shadow=1;" edge="1" parent="1" source="lAokXNOGOpVL1pWmOQTy-19" target="lAokXNOGOpVL1pWmOQTy-21">
           <mxGeometry relative="1" as="geometry" />
@@ -107,19 +80,19 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="lAokXNOGOpVL1pWmOQTy-19" value="Amazon Rekognition" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=#ffffff;fillColor=#232F3E;dashed=0;verticalLabelPosition=middle;verticalAlign=bottom;align=center;html=1;whiteSpace=wrap;fontSize=10;fontStyle=1;spacing=3;shape=mxgraph.aws4.productIcon;prIcon=mxgraph.aws4.rekognition;" vertex="1" parent="1">
-          <mxGeometry x="30" y="890" width="80" height="110" as="geometry" />
+          <mxGeometry x="30" y="890" width="83" height="110" as="geometry" />
         </mxCell>
-        <mxCell id="lAokXNOGOpVL1pWmOQTy-26" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;flowAnimation=1;shadow=1;" edge="1" parent="1" source="lAokXNOGOpVL1pWmOQTy-21" target="lAokXNOGOpVL1pWmOQTy-16">
+        <mxCell id="lAokXNOGOpVL1pWmOQTy-51" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="lAokXNOGOpVL1pWmOQTy-21" target="lAokXNOGOpVL1pWmOQTy-17">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="lAokXNOGOpVL1pWmOQTy-21" value="Amazon DynamoDB" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=#ffffff;fillColor=#232F3E;dashed=0;verticalLabelPosition=middle;verticalAlign=bottom;align=center;html=1;whiteSpace=wrap;fontSize=10;fontStyle=1;spacing=3;shape=mxgraph.aws4.productIcon;prIcon=mxgraph.aws4.dynamodb;" vertex="1" parent="1">
-          <mxGeometry x="390" y="475" width="80" height="110" as="geometry" />
+        <mxCell id="lAokXNOGOpVL1pWmOQTy-21" value="&lt;font style=&quot;font-size: 11px;&quot;&gt;Amazon DynamoDB&lt;br&gt;Pets Pedidos&lt;/font&gt;" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=#ffffff;fillColor=#232F3E;dashed=0;verticalLabelPosition=middle;verticalAlign=bottom;align=center;html=1;whiteSpace=wrap;fontSize=10;fontStyle=1;spacing=3;shape=mxgraph.aws4.productIcon;prIcon=mxgraph.aws4.dynamodb;" vertex="1" parent="1">
+          <mxGeometry x="390" y="475" width="83" height="110" as="geometry" />
         </mxCell>
         <mxCell id="lAokXNOGOpVL1pWmOQTy-30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;flowAnimation=1;shadow=1;" edge="1" parent="1" source="lAokXNOGOpVL1pWmOQTy-28" target="lAokXNOGOpVL1pWmOQTy-17">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="lAokXNOGOpVL1pWmOQTy-28" value="Amazon CloudWatch" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=#ffffff;fillColor=#232F3E;dashed=0;verticalLabelPosition=middle;verticalAlign=bottom;align=center;html=1;whiteSpace=wrap;fontSize=10;fontStyle=1;spacing=3;shape=mxgraph.aws4.productIcon;prIcon=mxgraph.aws4.cloudwatch;" vertex="1" parent="1">
-          <mxGeometry x="260" y="585" width="80" height="110" as="geometry" />
+          <mxGeometry x="260" y="585" width="83" height="110" as="geometry" />
         </mxCell>
         <mxCell id="lAokXNOGOpVL1pWmOQTy-33" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;flowAnimation=1;shadow=1;" edge="1" parent="1" source="lAokXNOGOpVL1pWmOQTy-32" target="lAokXNOGOpVL1pWmOQTy-16">
           <mxGeometry relative="1" as="geometry" />
@@ -134,7 +107,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="lAokXNOGOpVL1pWmOQTy-34" value="Amazon DynamoDB" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=#ffffff;fillColor=#232F3E;dashed=0;verticalLabelPosition=middle;verticalAlign=bottom;align=center;html=1;whiteSpace=wrap;fontSize=10;fontStyle=1;spacing=3;shape=mxgraph.aws4.productIcon;prIcon=mxgraph.aws4.dynamodb;" vertex="1" parent="1">
-          <mxGeometry x="550" y="700" width="80" height="110" as="geometry" />
+          <mxGeometry x="550" y="700" width="83" height="110" as="geometry" />
         </mxCell>
         <mxCell id="lAokXNOGOpVL1pWmOQTy-37" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;flowAnimation=1;shadow=1;" edge="1" parent="1" source="lAokXNOGOpVL1pWmOQTy-36" target="lAokXNOGOpVL1pWmOQTy-34">
           <mxGeometry relative="1" as="geometry" />
@@ -143,19 +116,25 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="lAokXNOGOpVL1pWmOQTy-36" value="AWS Lambda" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=#ffffff;fillColor=#232F3E;dashed=0;verticalLabelPosition=middle;verticalAlign=bottom;align=center;html=1;whiteSpace=wrap;fontSize=10;fontStyle=1;spacing=3;shape=mxgraph.aws4.productIcon;prIcon=mxgraph.aws4.lambda;" vertex="1" parent="1">
-          <mxGeometry x="690" y="550" width="80" height="100" as="geometry" />
+          <mxGeometry x="690" y="550" width="83" height="100" as="geometry" />
         </mxCell>
         <mxCell id="lAokXNOGOpVL1pWmOQTy-41" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;flowAnimation=1;shadow=1;" edge="1" parent="1" source="lAokXNOGOpVL1pWmOQTy-38" target="lAokXNOGOpVL1pWmOQTy-36">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="lAokXNOGOpVL1pWmOQTy-38" value="Amazon DynamoDB" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=#ffffff;fillColor=#232F3E;dashed=0;verticalLabelPosition=middle;verticalAlign=bottom;align=center;html=1;whiteSpace=wrap;fontSize=10;fontStyle=1;spacing=3;shape=mxgraph.aws4.productIcon;prIcon=mxgraph.aws4.dynamodb;" vertex="1" parent="1">
-          <mxGeometry x="850" y="390" width="80" height="110" as="geometry" />
+          <mxGeometry x="850" y="390" width="83" height="110" as="geometry" />
         </mxCell>
         <mxCell id="lAokXNOGOpVL1pWmOQTy-44" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;flowAnimation=1;shadow=1;" edge="1" parent="1" source="lAokXNOGOpVL1pWmOQTy-42" target="lAokXNOGOpVL1pWmOQTy-32">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="lAokXNOGOpVL1pWmOQTy-42" value="Amazon SNS" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=#ffffff;fillColor=#232F3E;dashed=0;verticalLabelPosition=middle;verticalAlign=bottom;align=center;html=1;whiteSpace=wrap;fontSize=10;fontStyle=1;spacing=3;shape=mxgraph.aws4.productIcon;prIcon=mxgraph.aws4.sns;" vertex="1" parent="1">
-          <mxGeometry x="1032.5" y="175" width="80" height="100" as="geometry" />
+          <mxGeometry x="1032.5" y="175" width="83" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="lAokXNOGOpVL1pWmOQTy-54" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="lAokXNOGOpVL1pWmOQTy-52" target="lAokXNOGOpVL1pWmOQTy-36">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lAokXNOGOpVL1pWmOQTy-52" value="" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#232F3D;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.all_products;" vertex="1" parent="1">
+          <mxGeometry x="507" y="848" width="78" height="78" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
