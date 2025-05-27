@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let timeLeft = timeLimit;
     let timerInterval;
     let gameStarted = false;
-    let bossMaxHealth = 550;
+    let bossMaxHealth = 750;
     let bossCurrentHealth = bossMaxHealth;
     let questionWeights = {
         'easy': 10,
@@ -131,7 +131,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
         shuffledOptions.forEach(option => {
             const optionButton = document.createElement('button');
-            optionButton.className = ('option-btn');
+            optionButton.className = 'option-btn';
             optionButton.textContent = option;
             optionButton.addEventListener('click', () => checkAnswer(option, question.correct_answer, question.explanation));
             optionsContainer.appendChild(optionButton);
