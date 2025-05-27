@@ -51,6 +51,9 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
+    // Controle de fase atual do boss
+    let currentBossPhase = null;
+
     // Carregar background
     function loadBackground() {
         const bg = new Image();
@@ -84,9 +87,16 @@ document.addEventListener('DOMContentLoaded', () => {
             const response = await fetch(`../../assets/data/question/${difficulty}.json`);
             if (!response.ok) throw new Error('Falha ao carregar perguntas');
             
-            questions = await response.json();
-            questions = shuffleArray(questions).slice(0, 80); // Pegar 10 perguntas aleatórias
-            
+            let loadedQuestions = await response.json();
+            // Remover perguntas duplicadas pelo texto da pergunta
+            const uniqueQuestionsMap = {};
+            loadedQuestions.forEach(q => {
+                uniqueQuestionsMap[q.question] = q;
+            });
+            loadedQuestions = Object.values(uniqueQuestionsMap);
+            // Embaralhar e pegar até 80 perguntas únicas
+            questions = shuffleArray(loadedQuestions).slice(0, 80);
+
             // Atualizar contador de perguntas
             questionsCount.textContent = `Perguntas: 0/${questions.length}`;
             
@@ -241,13 +251,20 @@ function checkAnswer(selectedAnswer, correctAnswer, explanation) {
     // Verificar se o boss mudou de fase
     function checkBossPhase() {
         const healthPercentage = (bossCurrentHealth / bossMaxHealth) * 100;
-        
+        let newPhase = null;
+
         for (const [threshold, phase] of Object.entries(bossPhases)) {
             if (healthPercentage <= threshold && healthPercentage > (threshold - 15)) {
-                bossImage.src = phase.image;
-                feedback.textContent = phase.message;
+                newPhase = threshold;
                 break;
             }
+        }
+
+        if (newPhase && currentBossPhase !== newPhase) {
+            const phase = bossPhases[newPhase];
+            bossImage.src = phase.image;
+            feedback.textContent = phase.message;
+            currentBossPhase = newPhase;
         }
     }
     
@@ -602,7 +619,8 @@ function showShareModal(text) {
     textArea.style.borderRadius = '5px';
     textArea.readOnly = true;
     textArea.style.fontFamily = '"Jersey 15", sans-serif';
-    
+    textArea.style.textShadow = "-2px -2px 0px black, -2px 2px 0px black, 2px 2px 0px black, 2px -2px 0px black";
+
     const closeBtn = document.createElement('button');
     closeBtn.textContent = 'Fechar';
     closeBtn.style.padding = '0.7rem 1.5rem';
@@ -615,15 +633,13 @@ function showShareModal(text) {
     closeBtn.style.fontSize = '1rem';
     closeBtn.style.transition = 'all 0.3s';
     closeBtn.onclick = () => document.body.removeChild(modal);
-    
+
     closeBtn.onmouseover = () => {
         closeBtn.style.background = '#c342ff';
-        closeBtn.style.transform = 'scale(1.05)';
     };
     
     closeBtn.onmouseout = () => {
         closeBtn.style.background = '#ae00ff';
-        closeBtn.style.transform = 'scale(1)';
     };
     
     content.appendChild(title);

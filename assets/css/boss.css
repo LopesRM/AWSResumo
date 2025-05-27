@@ -100,13 +100,13 @@
     color: white;
     border: 1px solid white;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    padding: 1rem;
     padding: 0.8rem;
     border-radius: 5px;
     cursor: pointer;
     transition: all 0.2s;
     font-family: "Jersey 15", sans-serif;
     font-size: 1rem;
+    text-shadow: -2 -2  0 black, 2 -2 0 black, -2 2 0 black, 2 2 0 black;
 }
 
 .option-btn:hover {
