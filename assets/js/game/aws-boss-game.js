@@ -113,6 +113,11 @@ document.addEventListener('DOMContentLoaded', () => {
         if (currentQuestionIndex >= questions.length) {
             endGame();
             return;
+        } else if (bossCurrentHealth <= 0) {
+            feedback.textContent = 'Você derrotou o AWS Boss!';
+            feedback.style.color = 'lime';
+            endGame();
+            return;         
         }
         
         const question = questions[currentQuestionIndex];
@@ -126,7 +131,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
         shuffledOptions.forEach(option => {
             const optionButton = document.createElement('button');
-            optionButton.className = 'option-btn';
+            optionButton.className = ('option-btn');
             optionButton.textContent = option;
             optionButton.addEventListener('click', () => checkAnswer(option, question.correct_answer, question.explanation));
             optionsContainer.appendChild(optionButton);
