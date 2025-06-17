@@ -1,24 +1,262 @@
-[
+[ 
   {
-    "question": "Como você implementaria um padrão de backoff exponencial em chamadas à API da AWS?",
-    "correct_answer": "Usando retries com intervalos crescentes entre as tentativas",
+    "question": "As habilidades da equipe de FinOps a capacidade de amadurecer, ao longo do tempo, descrito como o modelo de Maturidade, Qual das seguintes opções descreve o seu conceito? ",
+    "correct_answer": "Rastejar, Andar, Correr",
     "incorrect_answers": [
-      "Configurando um limite fixo de requisições por segundo",
-      "Usando Amazon SQS para todas as chamadas de API",
-      "Implementando um circuito breaker com AWS Lambda"
+      "Informar, Otimizar, Operar",
+      "No local, Hibrido, Nuvem",
+      "Principios, Capacidades, Fases"
     ],
-    "difficulty": "hard",
-    "category": "Best Practices"
+    "difficulty": "medium",
+    "category": "FinOps",
+    "explanation": "O modelo de Maturidade FinOps descreve o progresso das habilidades da equipe de FinOps em três etapas: Rastejar, Andar e Correr. Essas etapas refletem a evolução das práticas de FinOps dentro de uma organização, desde a conscientização inicial até a otimização avançada dos custos na nuvem."
   },
   {
-    "question": "Qual estratégia de implantação permite rollback mais rápido em caso de falha?",
-    "correct_answer": "Blue/Green Deployment",
+    "question": "Qual das alternativas decreve o obejtivo/motivação das Persona Finance no modelo de FinOps",
+    "correct_answer": "Promover a responsabilidade financeira e a transparência dos custos na nuvem que não ultrapesse o orçamento",
     "incorrect_answers": [
-      "Canary Deployment",
-      "Rolling Deployment",
-      "A/B Testing Deployment"
+      "Faça orçamento, previês e relátrios precisos sobre custos de nuvem e tecnologia",
+      "Gestão de relacionamento entre plataformas e nuvem e tecnologia",
+      "Fornecer serviços rapidos de alta quealidade para organizações"
     ],
-    "difficulty": "hard",
-    "category": "DevOps"
+    "difficulty": "medium",
+    "category": "FinOps",
+    "explanation": "A Persona Finance no modelo de FinOps é responsável por promover a responsabilidade financeira e garantir que os custos na nuvem sejam transparentes e não ultrapassem o orçamento. Isso envolve monitorar gastos, prever custos futuros e garantir que as práticas financeiras estejam alinhadas com os objetivos da organização."
+  },
+  {
+    "question": "Qual das alternativas descreve o objetivo/motivação das Persona de Tecnologia no modelo de FinOps?",
+    "correct_answer": "Fornecer serviços rápidos e de alta qualidade para organizações",
+    "incorrect_answers": [
+      "Promover a responsabilidade financeira e a transparência dos custos na nuvem que não ultrapasse o orçamento",
+      "Faça orçamento, previês e relátrios precisos sobre custos de nuvem e tecnologia",
+      "Gestão de relacionamento entre plataformas e nuvem e tecnologia"
+    ],
+    "difficulty": "medium",
+    "category": "FinOps",
+    "explanation": "A Persona de Tecnologia no modelo de FinOps é responsável por fornecer serviços rápidos e de alta qualidade para as organizações. Isso envolve a implementação de soluções tecnológicas eficientes que atendam às necessidades dos negócios, ao mesmo tempo em que gerencia os custos associados a essas soluções."
+  },
+  {
+    "question": "Qual das alternativas descreve o objetivo/motivação das Persona de Plataforma no modelo de FinOps?",
+    "correct_answer": "Faça orçamento, previsões e relatórios precisos sobre custos de nuvem e tecnologia",
+    "incorrect_answers": [
+      "Fornecer serviços rápidos e de alta qualidade para organizações",
+      "Promover a responsabilidade financeira e a transparência dos custos na nuvem que não ultrapasse o orçamento",
+      "Gestão de relacionamento entre plataformas e nuvem e tecnologia"
+    ],
+    "difficulty": "medium",
+    "category": "FinOps",
+    "explanation": "A Persona de Plataforma no modelo de FinOps é responsável por fazer orçamento, previsões e relatórios precisos sobre os custos de nuvem e tecnologia. Isso envolve a coleta e análise de dados financeiros para garantir que os gastos estejam alinhados com os objetivos da organização e que as decisões financeiras sejam informadas."
+  },
+  {
+    "question": "Qual das alternativas descreve o objetivo/motivação das Persona de Negócios no modelo de FinOps?",
+    "correct_answer": "Gestão de relacionamento entre plataformas e nuvem e tecnologia",
+    "incorrect_answers": [
+      "Fornecer serviços rápidos e de alta qualidade para organizações",
+      "Faça orçamento, previsões e relatórios precisos sobre custos de nuvem e tecnologia",
+      "Promover a responsabilidade financeira e a transparência dos custos na nuvem que não ultrapasse o orçamento"
+    ],
+    "difficulty": "medium",
+    "category": "FinOps",
+    "explanation": "A Persona de Negócios no modelo de FinOps é responsável pela gestão do relacionamento entre as plataformas e a nuvem e tecnologia. Isso envolve garantir que as soluções tecnológicas atendam às necessidades do negócio e que haja uma comunicação eficaz entre as equipes de tecnologia e finanças para otimizar os custos e melhorar a eficiência operacional."
+  },
+  {
+    "question": "Qual é o objetivo principal do modelo de Maturidade FinOps?",
+    "correct_answer": "Ajudar as organizações a evoluir suas práticas de FinOps",
+    "incorrect_answers": [
+      "Reduzir custos operacionais",
+      "Aumentar a segurança na nuvem",
+      "Melhorar a eficiência dos desenvolvedores"
+    ],
+    "difficulty": "medium",
+    "category": "FinOps",
+    "explanation": "O modelo de Maturidade FinOps tem como objetivo ajudar as organizações a evoluir suas práticas de FinOps, permitindo que elas progridam de uma compreensão básica dos custos na nuvem para uma otimização avançada e contínua desses custos. Isso envolve a implementação de processos, ferramentas e práticas que promovam a responsabilidade financeira e a transparência dos custos na nuvem."
+  },
+  {
+    "question": "Qual é a primeira etapa do modelo de Maturidade FinOps?",
+    "correct_answer": "Rastejar",
+    "incorrect_answers": ["Andar", "Correr", "Informar"],
+    "difficulty": "medium",
+    "category": "FinOps",
+    "explanation": "A primeira etapa do modelo de Maturidade FinOps é 'Rastejar', onde a equipe começa a aprender sobre FinOps e a conscientizar-se dos custos na nuvem. Essa etapa é fundamental para estabelecer uma base sólida para as práticas de FinOps dentro da organização."
+  },
+  {
+    "question": "O que significa a etapa 'Andar' no modelo de Maturidade FinOps?",
+    "correct_answer": "A equipe começa a implementar práticas básicas de FinOps",
+    "incorrect_answers": [
+      "A equipe está totalmente madura em FinOps",
+      "A equipe está apenas começando a aprender sobre FinOps",
+      "A equipe está focada em reduzir custos operacionais"
+    ],
+    "difficulty": "medium",
+    "category": "FinOps",
+    "explanation": "A etapa 'Andar' no modelo de Maturidade FinOps indica que a equipe começou a implementar práticas básicas de FinOps, como monitoramento de custos e relatórios. Essa etapa é um passo importante para avançar na maturidade das práticas de FinOps dentro da organização."
+  },
+  {
+    "question": "Qual é o objetivo da etapa 'Correr' no modelo de Maturidade FinOps?",
+    "correct_answer": "A equipe otimiza continuamente os custos na nuvem",
+    "incorrect_answers": [
+      "A equipe está apenas começando a aprender sobre FinOps",
+      "A equipe está focada em reduzir custos operacionais",
+      "A equipe não tem práticas de FinOps implementadas"
+    ],
+    "difficulty": "medium",
+    "category": "FinOps",
+    "explanation": "A etapa 'Correr' no modelo de Maturidade FinOps representa o estágio mais avançado, onde a equipe está continuamente otimizando os custos na nuvem e implementando práticas avançadas de FinOps. Isso inclui a automação de processos, a análise de dados em tempo real e a colaboração eficaz entre as equipes de finanças e tecnologia."
+  },
+  {
+    "question": "Qual é a principal função da Persona Finance no modelo de FinOps?",
+    "correct_answer": "Promover a responsabilidade financeira e a transparência dos custos na nuvem",
+    "incorrect_answers": [
+      "Fornecer serviços rápidos e de alta qualidade para organizações",
+      "Faça orçamento, previsões e relatórios precisos sobre custos de nuvem e tecnologia",
+      "Gestão de relacionamento entre plataformas e nuvem e tecnologia"
+    ],
+    "difficulty": "medium",
+    "category": "FinOps",
+    "explanation": "A Persona Finance no modelo de FinOps é responsável por promover a responsabilidade financeira e garantir que os custos na nuvem sejam transparentes e não ultrapassem o orçamento. Isso envolve monitorar gastos, prever custos futuros e garantir que as práticas financeiras estejam alinhadas com os objetivos da organização."
+  },
+  {
+    "question": "O _________ do finops framework descreve os fundamentos de resultados comerciais que empresas e organizações devem alcançar para ter sucesso com o FinOps.",
+    "correct_answer": "Dominios",
+    "incorrect_answers": [
+      "Princípios",
+      "Capacidades",
+      "Fases"
+    ],
+    "difficulty": "medium",
+    "category": "FinOps",
+    "explanation": "Os Domínios do framework FinOps descrevem os fundamentos de resultados comerciais que empresas e organizações devem alcançar para ter sucesso com o FinOps. Eles fornecem uma estrutura para entender as áreas-chave que precisam ser abordadas para implementar práticas eficazes de FinOps."
+  },
+  {
+    "question": "Qual é o objetivo principal dos Domínios no framework FinOps?",
+    "correct_answer": "Descrever os fundamentos de resultados comerciais que empresas e organizações devem alcançar para ter sucesso com o FinOps",
+    "incorrect_answers": [
+      "Fornecer uma lista de ferramentas de FinOps",
+      "Definir as etapas do modelo de Maturidade FinOps",
+      "Estabelecer as responsabilidades das Personas no modelo de FinOps"
+    ],
+    "difficulty": "medium",
+    "category": "FinOps",
+    "explanation": "O objetivo principal dos Domínios no framework FinOps é descrever os fundamentos de resultados comerciais que empresas e organizações devem alcançar para ter sucesso com o FinOps. Eles ajudam a orientar as práticas de FinOps e a garantir que as equipes estejam focadas nas áreas certas para otimizar os custos na nuvem."
+  },
+  {
+    "question": "RH é uma persona aliada?",
+    "correct_answer": "Sim",
+    "incorrect_answers": ["Não"],
+    "difficulty": "medium",
+    "category": "FinOps",
+    "explanation": "Sim, RH é uma persona aliada no modelo de FinOps. As equipes de RH podem colaborar com as equipes de FinOps para garantir que os custos relacionados a pessoal e recursos humanos sejam gerenciados de forma eficaz, contribuindo para a responsabilidade financeira e a transparência dos custos na nuvem."
+    
+  },
+  {
+    "question": "FinOpes geram impactos positivos para a empresa de forma tecnica finanças e culturais?",
+    "correct_answer": "Sim",
+    "incorrect_answers": ["Não"],
+    "difficulty": "medium",
+    "category": "FinOps",
+    "explanation": "Sim, FinOps gera impactos positivos para a empresa de forma técnica, financeira e cultural. Ele promove uma cultura de responsabilidade financeira, melhora a colaboração entre as equipes de tecnologia e finanças e ajuda a otimizar os custos na nuvem, resultando em benefícios significativos para a organização como um todo."
+  },
+  {
+    "question": "As três etapas de casos de negócios",
+    "correct_answer": "Informar, Otimizar, Operar",
+    "incorrect_answers": [
+      "Rastejar, Andar, Correr",
+      "No local, Hibrido, Nuvem",
+      "Principios, Capacidades, Fases"
+    ],
+    "difficulty": "medium",
+    "category": "FinOps",
+    "explanation": "As três etapas de casos de negócios no contexto de FinOps são Informar, Otimizar e Operar. Essas etapas ajudam as organizações a entender melhor seus custos na nuvem, otimizar o uso de recursos e operar de forma eficiente, garantindo que os investimentos em nuvem sejam alinhados com os objetivos de negócios."
+  },
+  {
+    "question": "Qual é o objetivo da etapa 'Informar' nos casos de negócios de FinOps?",
+    "correct_answer": "Fornecer visibilidade e compreensão dos custos na nuvem",
+    "incorrect_answers": [
+      "Otimizar o uso de recursos na nuvem",
+      "Implementar práticas avançadas de FinOps",
+      "Reduzir custos operacionais"
+    ],
+    "difficulty": "medium",
+    "category": "FinOps",
+    "explanation": "A etapa 'Informar' nos casos de negócios de FinOps tem como objetivo fornecer visibilidade e compreensão dos custos na nuvem. Isso envolve a coleta e análise de dados financeiros para garantir que as equipes tenham uma visão clara dos gastos e possam tomar decisões informadas sobre o uso de recursos na nuvem."
+  },
+  {
+    "question": "Ao trabalhar com partes interessadas durante a operação, queremos garantir que as partes interessadas estejam cientes dos custos e do valor dos serviços de nuvem?",
+    "correct_answer": "Sim",
+    "incorrect_answers": ["Não"],
+    "difficulty": "medium",
+    "category": "FinOps",
+    "explanation": "Sim, ao trabalhar com partes interessadas durante a operação, é importante garantir que elas estejam cientes dos custos e do valor dos serviços de nuvem. Isso ajuda a promover a responsabilidade financeira e a transparência, permitindo que as partes interessadas entendam como os recursos estão sendo utilizados e quais são os benefícios associados aos investimentos em nuvem."
+  },
+  {
+    "question":"_________ é a forma de otimizar e avaliar os requisitos de trabalho de nuvem, para garantir que os recursos sejam usados ​​de forma eficiente e eficaz.",
+    "correct_answer": "Otimizar",
+    "incorrect_answers": [
+      "Informar",
+      "Operar",
+      "Rastejar"
+    ],
+    "explanation": "Otimizar é a prática de avaliar os requisitos de trabalho na nuvem para garantir que os recursos sejam usados de forma eficiente e eficaz. Isso envolve a análise dos custos e o ajuste dos recursos para maximizar o valor obtido com os investimentos em nuvem.",
+    "difficulty": "medium"
+  
+  },
+  {
+    "question": "_______ é uma forma de otimização avaliação de requisitos e carga de trabalho na nuvem, e em seguida, comparar recursos dimensionado de forma eficiente com menor desperdico",
+    "correct_answer": "Right-Size",
+    "incorrect_answers": [
+      "Informar",
+      "Operar",
+      "Rastejar"
+    ],
+    "difficulty": "medium",
+    "category": "FinOps",
+    "explanation": "Right-Size é uma prática de otimização que envolve avaliar os requisitos e a carga de trabalho na nuvem, comparando os recursos dimensionados para garantir que sejam usados de forma eficiente e com o menor desperdício possível. Isso ajuda a reduzir custos e melhorar a eficiência operacional."
+
+  },
+  {
+    "question": "FinOps é uma operação estrutural e cultural, que maximiza o valor comercial de empresas a nuvem, auxiliando em decisões basesasdas nos dados e responsabilidade financeira por meio da colaboração de partes envolvidas?",
+    "correct_answer": "Sim",
+    "incorrect_answers": ["Não"],
+    "difficulty": "medium",
+    "category": "FinOps",
+    "explanation": "Sim, FinOps é uma operação estrutural e cultural que visa maximizar o valor comercial das empresas na nuvem. Ele auxilia na tomada de decisões baseadas em dados e promove a responsabilidade financeira por meio da colaboração entre as partes envolvidas, garantindo que os investimentos em nuvem sejam otimizados e alinhados com os objetivos de negócios."
+
+  },
+  {
+    "question":"Qual persona é responsavel por aspecto tecnicos de adoção de nuvem?",
+    "correct_answer": "Persona de Engenharia",
+    "incorrect_answers": [
+      "Persona de Negócios",
+      "Persona de Finanças",
+      "Persona de Plataforma"
+    ],
+    "difficulty": "medium",
+    "category": "FinOps",
+    "explanation": "A Persona de Engenharia é responsável pelos aspectos técnicos da adoção de nuvem, incluindo a implementação de soluções tecnológicas, a otimização de recursos e a garantia de que as práticas de FinOps sejam seguidas para maximizar o valor dos investimentos em nuvem."
+  },
+  {
+    "question": "Qual é a maior dificuldade de operar em cloud",
+    "correct_answer": "A falta de previsão e controle sobre os custos",
+    "incorrect_answers": [
+      "A complexidade da infraestrutura",
+      "A segurança dos dados",
+      "A integração com sistemas legados"
+    ],
+    "difficulty": "medium",
+    "category": "FinOps",
+    "explanation": "A maior dificuldade de operar em nuvem é a falta de previsão e controle sobre os custos. Isso pode levar a gastos inesperados e dificuldades em gerenciar o orçamento, tornando essencial a implementação de práticas eficazes de FinOps para garantir a responsabilidade financeira e a transparência dos custos na nuvem."
+  },
+  {
+    "question": "Qual dominio assume compromisso com os provedores publicos de nuvem  para usar um tipo de recurso?",
+    "correct_answer": "Otimize o uso e custo",
+    "incorrect_answers": [
+      "Informar e educar",
+      "Gerenciar e governar",
+      "Planejar e projetar"
+    ],
+    "difficulty": "medium",
+    "category": "FinOps",
+    "explanation": "O domínio 'Otimize o uso e custo' assume o compromisso com os provedores públicos de nuvem para usar um tipo de recurso. Isso envolve a análise e otimização do uso de recursos na nuvem para garantir que sejam utilizados de forma eficiente e eficaz, minimizando desperdícios e maximizando o valor obtido com os investimentos em nuvem."
+
   }
 ]
